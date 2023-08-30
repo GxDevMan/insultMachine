@@ -1,0 +1,3278 @@
+fileFormatVersion: 2
+guid: 86a2607f5a4a7ff4483b42c6d2cea024
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8165998371892419969
+    second: Game UI 1_0
+  - first:
+      213: 9013663626945103002
+    second: Game UI 1_1
+  - first:
+      213: -2329384805645653845
+    second: Game UI 1_2
+  - first:
+      213: -7246647359662726979
+    second: Game UI 1_3
+  - first:
+      213: 7773622010055311572
+    second: Game UI 1_4
+  - first:
+      213: -2588211512148018180
+    second: Game UI 1_5
+  - first:
+      213: 2877791814637841627
+    second: Game UI 1_6
+  - first:
+      213: 2332867166989986770
+    second: Game UI 1_7
+  - first:
+      213: -2616593476307624096
+    second: Game UI 1_8
+  - first:
+      213: 3299416507820270950
+    second: Game UI 1_9
+  - first:
+      213: 3804586698293192895
+    second: Game UI 1_10
+  - first:
+      213: -6591757945117150132
+    second: Game UI 1_11
+  - first:
+      213: 7967860858682029121
+    second: Game UI 1_12
+  - first:
+      213: 5087277321975202433
+    second: Game UI 1_13
+  - first:
+      213: -2675565313176951661
+    second: Game UI 1_14
+  - first:
+      213: 7136817908099157760
+    second: Game UI 1_15
+  - first:
+      213: 7698978537283544407
+    second: Game UI 1_16
+  - first:
+      213: 4814697445029327406
+    second: Game UI 1_17
+  - first:
+      213: -7476319577357070393
+    second: Game UI 1_18
+  - first:
+      213: -5725076288521133954
+    second: Game UI 1_19
+  - first:
+      213: -8948948119525528163
+    second: Game UI 1_20
+  - first:
+      213: -1626202302299287439
+    second: Game UI 1_21
+  - first:
+      213: 3259418930621390532
+    second: Game UI 1_22
+  - first:
+      213: -2474621149685750560
+    second: Game UI 1_23
+  - first:
+      213: -3523337599197903302
+    second: Game UI 1_24
+  - first:
+      213: -1842042921175025056
+    second: Game UI 1_25
+  - first:
+      213: -6544385958439617281
+    second: Game UI 1_26
+  - first:
+      213: 7862552967827467845
+    second: Game UI 1_27
+  - first:
+      213: 3218431414644602152
+    second: Game UI 1_28
+  - first:
+      213: -4938819415477721835
+    second: Game UI 1_29
+  - first:
+      213: -3008565622369888165
+    second: Game UI 1_30
+  - first:
+      213: 4235560350753108794
+    second: Game UI 1_31
+  - first:
+      213: 4263381443266245563
+    second: Game UI 1_32
+  - first:
+      213: 6744553248330471684
+    second: Game UI 1_33
+  - first:
+      213: 5459396969449573557
+    second: Game UI 1_34
+  - first:
+      213: -7581868207157853977
+    second: Game UI 1_35
+  - first:
+      213: -7727882460446648267
+    second: Game UI 1_36
+  - first:
+      213: 131989195720598616
+    second: Game UI 1_37
+  - first:
+      213: 2603596796926465080
+    second: Game UI 1_38
+  - first:
+      213: -2277443868408701699
+    second: Game UI 1_39
+  - first:
+      213: 1974313325886473926
+    second: Game UI 1_40
+  - first:
+      213: 5852006073674498890
+    second: Game UI 1_41
+  - first:
+      213: 4354913067278582265
+    second: Game UI 1_42
+  - first:
+      213: -5545703728103422667
+    second: Game UI 1_43
+  - first:
+      213: 8016417130752214178
+    second: Game UI 1_44
+  - first:
+      213: -4376023736095607656
+    second: Game UI 1_45
+  - first:
+      213: -5974110287448842857
+    second: Game UI 1_46
+  - first:
+      213: -1907262112232885795
+    second: Game UI 1_47
+  - first:
+      213: 8042500976910477871
+    second: Game UI 1_48
+  - first:
+      213: -7115703690696744315
+    second: Game UI 1_49
+  - first:
+      213: 8508354456929533214
+    second: Game UI 1_50
+  - first:
+      213: -3385776268616419420
+    second: Game UI 1_51
+  - first:
+      213: -5236255872531747290
+    second: Game UI 1_52
+  - first:
+      213: 3278730941960873351
+    second: Game UI 1_53
+  - first:
+      213: -1545124246725656460
+    second: Game UI 1_54
+  - first:
+      213: 2147395896610137608
+    second: Game UI 1_55
+  - first:
+      213: -2362347558958236650
+    second: Game UI 1_56
+  - first:
+      213: 1377567060302868637
+    second: Game UI 1_57
+  - first:
+      213: 935778760853261729
+    second: Game UI 1_58
+  - first:
+      213: -5970807786997734955
+    second: Game UI 1_59
+  - first:
+      213: -3697217713190676165
+    second: Game UI 1_60
+  - first:
+      213: -8311891084720280162
+    second: Game UI 1_61
+  - first:
+      213: -1010768418947001334
+    second: Game UI 1_62
+  - first:
+      213: 3158983985402718892
+    second: Game UI 1_63
+  - first:
+      213: -106269849434464236
+    second: Game UI 1_64
+  - first:
+      213: 5948046414100005122
+    second: Game UI 1_65
+  - first:
+      213: 3308242497246947562
+    second: Game UI 1_66
+  - first:
+      213: 894572288192843924
+    second: Game UI 1_67
+  - first:
+      213: 2419181805387399935
+    second: Game UI 1_68
+  - first:
+      213: -1472568101924179366
+    second: Game UI 1_69
+  - first:
+      213: -1191031819333933331
+    second: Game UI 1_70
+  - first:
+      213: -7800829568196739995
+    second: Game UI 1_71
+  - first:
+      213: 8460161763557179048
+    second: Game UI 1_72
+  - first:
+      213: -7005260968237344346
+    second: Game UI 1_73
+  - first:
+      213: -8210974047252894083
+    second: Game UI 1_74
+  - first:
+      213: 8653835991595315746
+    second: Game UI 1_75
+  - first:
+      213: -8952746753115033412
+    second: Game UI 1_76
+  - first:
+      213: -5740876614646828505
+    second: Game UI 1_77
+  - first:
+      213: -523455938257054327
+    second: Game UI 1_78
+  - first:
+      213: 1966083555353944769
+    second: Game UI 1_79
+  - first:
+      213: 2513808340598402042
+    second: Game UI 1_80
+  - first:
+      213: 3274732443823583381
+    second: Game UI 1_81
+  - first:
+      213: 4634082114852054915
+    second: Game UI 1_82
+  - first:
+      213: -3556225050615523466
+    second: Game UI 1_83
+  - first:
+      213: 454693440870432325
+    second: Game UI 1_84
+  - first:
+      213: -8669445256650063930
+    second: Game UI 1_85
+  - first:
+      213: 741619749544057451
+    second: Game UI 1_86
+  - first:
+      213: 4150321771319782476
+    second: Game UI 1_87
+  - first:
+      213: -7640520446210369093
+    second: Game UI 1_88
+  - first:
+      213: -5825317365921772511
+    second: Game UI 1_89
+  - first:
+      213: -8683519878059974789
+    second: Game UI 1_90
+  - first:
+      213: 5960556270939461681
+    second: Game UI 1_91
+  - first:
+      213: 8555305322751030809
+    second: Game UI 1_92
+  - first:
+      213: -290996637661156808
+    second: Game UI 1_93
+  - first:
+      213: -5369220266422083450
+    second: Game UI 1_94
+  - first:
+      213: -6260018005231743756
+    second: Game UI 1_95
+  - first:
+      213: 6999255405902694526
+    second: Game UI 1_96
+  - first:
+      213: -3897018950332755689
+    second: Game UI 1_97
+  - first:
+      213: 685427657100740312
+    second: Game UI 1_98
+  - first:
+      213: -5714143042882972566
+    second: Game UI 1_99
+  - first:
+      213: -6547834788470775714
+    second: Game UI 1_100
+  - first:
+      213: -6500249932970419278
+    second: Game UI 1_101
+  - first:
+      213: 4413543635649358445
+    second: Game UI 1_102
+  - first:
+      213: -6112478906644188908
+    second: Game UI 1_103
+  - first:
+      213: 5300610829745868437
+    second: Game UI 1_104
+  - first:
+      213: 6914295075575144311
+    second: Game UI 1_105
+  - first:
+      213: 6340122265534594258
+    second: Game UI 1_106
+  - first:
+      213: 5568357420882572116
+    second: Game UI 1_107
+  - first:
+      213: 229022932666115208
+    second: Game UI 1_108
+  - first:
+      213: -7301374423705305127
+    second: Game UI 1_109
+  - first:
+      213: -2225316048909740797
+    second: Game UI 1_110
+  - first:
+      213: 292183156364994685
+    second: Game UI 1_111
+  - first:
+      213: -3877256015394622558
+    second: Game UI 1_112
+  - first:
+      213: 291730429797964963
+    second: Game UI 1_113
+  - first:
+      213: -1386865599024214514
+    second: Game UI 1_114
+  - first:
+      213: -5705730566988556858
+    second: Game UI 1_115
+  - first:
+      213: 3555636360217630932
+    second: Game UI 1_116
+  - first:
+      213: 8569134973201501636
+    second: Game UI 1_117
+  - first:
+      213: -240798146500768448
+    second: Game UI 1_118
+  - first:
+      213: -7137618385322098970
+    second: Game UI 1_119
+  - first:
+      213: 2746392456119899321
+    second: Game UI 1_120
+  - first:
+      213: 4743692419969978669
+    second: Game UI 1_121
+  - first:
+      213: -7341255032786345772
+    second: Game UI 1_122
+  - first:
+      213: -4504065433394765417
+    second: Game UI 1_123
+  - first:
+      213: 6389237330093758514
+    second: Game UI 1_124
+  - first:
+      213: 4030360141803326536
+    second: Game UI 1_125
+  - first:
+      213: -2092111247726226914
+    second: Game UI 1_126
+  - first:
+      213: 4176859353916146854
+    second: Game UI 1_127
+  - first:
+      213: 8167459564456918476
+    second: Game UI 1_128
+  - first:
+      213: -104950581763866391
+    second: Game UI 1_129
+  - first:
+      213: 1685764284771251793
+    second: Game UI 1_130
+  - first:
+      213: -1017403686086347765
+    second: Game UI 1_131
+  - first:
+      213: -5115710501072483456
+    second: Game UI 1_132
+  - first:
+      213: -7171889603294926340
+    second: Game UI 1_133
+  - first:
+      213: 1478743845977469199
+    second: Game UI 1_134
+  - first:
+      213: 2482562310949773817
+    second: Game UI 1_135
+  - first:
+      213: -7264103684501609060
+    second: Game UI 1_136
+  - first:
+      213: -5587609006938675288
+    second: Game UI 1_137
+  - first:
+      213: -7667087068290371550
+    second: Game UI 1_138
+  - first:
+      213: -6478836163305371424
+    second: Game UI 1_139
+  - first:
+      213: 2703241066333376353
+    second: Game UI 1_140
+  - first:
+      213: 3993583888224990625
+    second: Game UI 1_141
+  - first:
+      213: 2296403615722918885
+    second: Game UI 1_142
+  - first:
+      213: 6642308717826199416
+    second: Game UI 1_143
+  - first:
+      213: -6097484057335644554
+    second: Game UI 1_144
+  - first:
+      213: -6826178685194108243
+    second: Game UI 1_145
+  - first:
+      213: 6660529094460357687
+    second: Game UI 1_146
+  - first:
+      213: 5883751523031460158
+    second: Game UI 1_147
+  - first:
+      213: 2788936942715485963
+    second: Game UI 1_148
+  - first:
+      213: -3550349498483918619
+    second: Game UI 1_149
+  - first:
+      213: 5877764976391904706
+    second: Game UI 1_150
+  - first:
+      213: -1313001969306407077
+    second: Game UI 1_151
+  - first:
+      213: 788530347910111414
+    second: Game UI 1_152
+  - first:
+      213: 5500288705350293311
+    second: Game UI 1_153
+  - first:
+      213: -6431009481929170583
+    second: Game UI 1_154
+  - first:
+      213: 5462142617402464904
+    second: Game UI 1_155
+  - first:
+      213: -4365730089873703892
+    second: Game UI 1_156
+  - first:
+      213: -2083177102266319490
+    second: Game UI 1_157
+  - first:
+      213: 4477377327561936145
+    second: Game UI 1_158
+  - first:
+      213: -4173704039104868297
+    second: Game UI 1_159
+  - first:
+      213: 5774234908917984260
+    second: Game UI 1_160
+  - first:
+      213: -2455710838665779028
+    second: Game UI 1_161
+  - first:
+      213: -2309215065101227535
+    second: Game UI 1_162
+  - first:
+      213: 5097964933812485646
+    second: Game UI 1_163
+  - first:
+      213: -7700587210901749365
+    second: Game UI 1_164
+  - first:
+      213: -6019751122209054080
+    second: Game UI 1_165
+  - first:
+      213: -2092080730421580545
+    second: Game UI 1_166
+  - first:
+      213: 4925197971447674174
+    second: Game UI 1_167
+  - first:
+      213: -6894081693361025059
+    second: Game UI 1_168
+  - first:
+      213: -7929614284526299395
+    second: Game UI 1_169
+  - first:
+      213: 6038808573276305955
+    second: Game UI 1_170
+  - first:
+      213: 8430985882991759969
+    second: Game UI 1_171
+  - first:
+      213: 4483267921402031123
+    second: Game UI 1_172
+  - first:
+      213: -6500671111278505442
+    second: Game UI 1_173
+  - first:
+      213: 5970445322266011614
+    second: Game UI 1_174
+  - first:
+      213: 5312580622773921434
+    second: Game UI 1_175
+  - first:
+      213: 3986658577041695195
+    second: Game UI 1_176
+  - first:
+      213: -5827322402745023836
+    second: Game UI 1_177
+  - first:
+      213: 8440164922397967090
+    second: Game UI 1_178
+  - first:
+      213: -640547794587548287
+    second: Game UI 1_179
+  - first:
+      213: -6651183712679437292
+    second: Game UI 1_180
+  - first:
+      213: 2434567340939544831
+    second: Game UI 1_181
+  - first:
+      213: -2974493073797912296
+    second: Game UI 1_182
+  - first:
+      213: -754717129487015548
+    second: Game UI 1_183
+  - first:
+      213: -7509053754601444346
+    second: Game UI 1_184
+  - first:
+      213: -3996311472137803079
+    second: Game UI 1_185
+  - first:
+      213: -7411879621821648314
+    second: Game UI 1_186
+  - first:
+      213: -5343073879753364200
+    second: Game UI 1_187
+  - first:
+      213: -5432748047133404538
+    second: Game UI 1_188
+  - first:
+      213: -1867009033596324178
+    second: Game UI 1_189
+  - first:
+      213: -8060024974440359467
+    second: Game UI 1_190
+  - first:
+      213: 6981271139922229641
+    second: Game UI 1_191
+  - first:
+      213: -1532110886988300013
+    second: Game UI 1_192
+  - first:
+      213: 2184781485554507522
+    second: Game UI 1_193
+  - first:
+      213: -4043159044562612150
+    second: Game UI 1_194
+  - first:
+      213: -9214252814894857124
+    second: Game UI 1_195
+  - first:
+      213: 2530725309605753001
+    second: Game UI 1_196
+  - first:
+      213: -3977733139559111493
+    second: Game UI 1_197
+  - first:
+      213: -2654429919534790018
+    second: Game UI 1_198
+  - first:
+      213: -633410492805398512
+    second: Game UI 1_199
+  - first:
+      213: -7222864722466633553
+    second: Game UI 1_200
+  - first:
+      213: -7782463773736381656
+    second: Game UI 1_201
+  - first:
+      213: -8377770663748636764
+    second: Game UI 1_202
+  - first:
+      213: 4375577544086757547
+    second: Game UI 1_203
+  - first:
+      213: 16476257443282852
+    second: Game UI 1_204
+  - first:
+      213: 2165144515571809410
+    second: Game UI 1_205
+  - first:
+      213: -730350600381335929
+    second: Game UI 1_206
+  - first:
+      213: -3683920423676102911
+    second: Game UI 1_207
+  - first:
+      213: 1629689266962739976
+    second: Game UI 1_208
+  - first:
+      213: 8792113971928274117
+    second: Game UI 1_209
+  - first:
+      213: 498282708337996057
+    second: Game UI 1_210
+  - first:
+      213: 2137709968263993864
+    second: Game UI 1_211
+  - first:
+      213: -5868325507413076415
+    second: Game UI 1_212
+  - first:
+      213: -8725226187257014441
+    second: Game UI 1_213
+  - first:
+      213: 3407120012828827775
+    second: Game UI 1_214
+  - first:
+      213: -3616313634654319434
+    second: Game UI 1_215
+  - first:
+      213: 4125420725497241603
+    second: Game UI 1_216
+  - first:
+      213: 8310920448029996012
+    second: Game UI 1_217
+  - first:
+      213: 7117698808943406737
+    second: Game UI 1_218
+  - first:
+      213: -5703274597737768675
+    second: Game UI 1_219
+  - first:
+      213: 3009801024303805354
+    second: Game UI 1_220
+  - first:
+      213: 3829440166010653514
+    second: Game UI 1_221
+  - first:
+      213: -7877543692087060517
+    second: Game UI 1_222
+  - first:
+      213: -4864060937171407744
+    second: Game UI 1_223
+  - first:
+      213: 4258949561782428809
+    second: Game UI 1_224
+  - first:
+      213: 8624632843398895281
+    second: Game UI 1_225
+  - first:
+      213: -4001757494837925232
+    second: Game UI 1_226
+  - first:
+      213: 1271893942430284931
+    second: Game UI 1_227
+  - first:
+      213: -2891990631843858349
+    second: Game UI 1_228
+  - first:
+      213: -202242887432905767
+    second: Game UI 1_229
+  - first:
+      213: -4762768034106334062
+    second: Game UI 1_230
+  - first:
+      213: 6739783654938298443
+    second: Game UI 1_231
+  - first:
+      213: 4003943216422922840
+    second: Game UI 1_232
+  - first:
+      213: 1926211314436715720
+    second: Game UI 1_233
+  - first:
+      213: -8430539030599814273
+    second: Game UI 1_234
+  - first:
+      213: 5962934374264766893
+    second: Game UI 1_235
+  - first:
+      213: 7978081692744509238
+    second: Game UI 1_236
+  - first:
+      213: 7789360301345273467
+    second: Game UI 1_237
+  - first:
+      213: -2230848638860302736
+    second: Game UI 1_238
+  - first:
+      213: 6022103347305762521
+    second: Game UI 1_239
+  - first:
+      213: 3958488079753113622
+    second: Game UI 1_240
+  - first:
+      213: -1879426624597885710
+    second: Game UI 1_241
+  - first:
+      213: -6452454397653518513
+    second: Game UI 1_242
+  - first:
+      213: -7680838011533117741
+    second: Game UI 1_243
+  - first:
+      213: -3657115577268223517
+    second: Game UI 1_244
+  - first:
+      213: -6469300321569771955
+    second: Game UI 1_245
+  - first:
+      213: 7404108293373226881
+    second: Game UI 1_246
+  - first:
+      213: 6819949182149899245
+    second: Game UI 1_247
+  - first:
+      213: -4567329331620764515
+    second: Game UI 1_248
+  - first:
+      213: -77836843602914843
+    second: Game UI 1_249
+  - first:
+      213: -7607298295212560659
+    second: Game UI 1_250
+  - first:
+      213: 6153074445819979321
+    second: Game UI 1_251
+  - first:
+      213: 3381748909450229504
+    second: Game UI 1_252
+  - first:
+      213: -4171371656626657115
+    second: Game UI 1_253
+  - first:
+      213: -4308163299981463221
+    second: Game UI 1_254
+  - first:
+      213: 2316024109161805118
+    second: Game UI 1_255
+  - first:
+      213: 7522297622250671441
+    second: Game UI 1_256
+  - first:
+      213: -8576236788524202382
+    second: Game UI 1_257
+  - first:
+      213: 1994797799520916738
+    second: Game UI 1_258
+  - first:
+      213: 392945942667416523
+    second: Game UI 1_259
+  - first:
+      213: 1823808277309172011
+    second: Game UI 1_260
+  - first:
+      213: -1542271322385163605
+    second: Game UI 1_261
+  - first:
+      213: 6715511919237274326
+    second: Game UI 1_262
+  - first:
+      213: 7100326164660642998
+    second: Game UI 1_263
+  - first:
+      213: 3231858051349362045
+    second: Game UI 1_264
+  - first:
+      213: -5789806545590591020
+    second: Game UI 1_265
+  - first:
+      213: 4606332501559862223
+    second: Game UI 1_266
+  - first:
+      213: 7178884095139458876
+    second: Game UI 1_267
+  - first:
+      213: -4524686450734561339
+    second: Game UI 1_268
+  - first:
+      213: 46363997226734338
+    second: Game UI 1_269
+  - first:
+      213: 3224251602198472161
+    second: Game UI 1_270
+  - first:
+      213: -5655017924658702391
+    second: Game UI 1_271
+  - first:
+      213: 9083608843794686961
+    second: Game UI 1_272
+  - first:
+      213: 7301252460991699723
+    second: Game UI 1_273
+  - first:
+      213: -6502773270949920814
+    second: Game UI 1_274
+  - first:
+      213: 4238130026459087219
+    second: Game UI 1_275
+  - first:
+      213: 7989251893662068329
+    second: Game UI 1_276
+  - first:
+      213: 7609411522330271672
+    second: Game UI 1_277
+  - first:
+      213: -7356447390635600522
+    second: Game UI 1_278
+  - first:
+      213: -3302817444756940099
+    second: Game UI 1_279
+  - first:
+      213: -458859158255930690
+    second: Game UI 1_280
+  - first:
+      213: 8450625121283719141
+    second: Game UI 1_281
+  - first:
+      213: -8050798971877900660
+    second: Game UI 1_282
+  - first:
+      213: -588893505131058095
+    second: Game UI 1_283
+  - first:
+      213: 1192080524983984501
+    second: Game UI 1_284
+  - first:
+      213: 1660603953466119179
+    second: Game UI 1_285
+  - first:
+      213: 1729569035882931178
+    second: Game UI 1_286
+  - first:
+      213: 3457505271813856636
+    second: Game UI 1_287
+  - first:
+      213: -3945966134080924559
+    second: Game UI 1_288
+  - first:
+      213: -7553861985708454248
+    second: Game UI 1_289
+  - first:
+      213: -6816510134438169509
+    second: Game UI 1_290
+  - first:
+      213: -4362137281379312578
+    second: Game UI 1_291
+  - first:
+      213: -7830650374266528463
+    second: Game UI 1_292
+  - first:
+      213: 4555253702279962752
+    second: Game UI 1_293
+  - first:
+      213: 1788664075660360179
+    second: Game UI 1_294
+  - first:
+      213: 2163152509580005346
+    second: Game UI 1_295
+  - first:
+      213: -975290610360027316
+    second: Game UI 1_296
+  - first:
+      213: -8601976548364604154
+    second: Game UI 1_297
+  - first:
+      213: 1077164069220700305
+    second: Game UI 1_298
+  - first:
+      213: 3836406193366108052
+    second: Game UI 1_299
+  - first:
+      213: -728111779011947160
+    second: Game UI 1_300
+  - first:
+      213: -8417036360386117572
+    second: Game UI 1_301
+  - first:
+      213: 1387904757304648585
+    second: Game UI 1_302
+  - first:
+      213: 1316823694497923076
+    second: Game UI 1_303
+  - first:
+      213: -1552021725132914946
+    second: Game UI 1_304
+  - first:
+      213: 6202977596670237385
+    second: Game UI 1_305
+  - first:
+      213: 4858493978810981270
+    second: Game UI 1_306
+  - first:
+      213: 4746645396270405520
+    second: Game UI 1_307
+  - first:
+      213: -34538534929385330
+    second: Game UI 1_308
+  - first:
+      213: 6018290929404101342
+    second: Game UI 1_309
+  - first:
+      213: 6591236696082512561
+    second: Game UI 1_310
+  - first:
+      213: 2756900481908309770
+    second: Game UI 1_311
+  - first:
+      213: 3516914215598855562
+    second: Game UI 1_312
+  - first:
+      213: 7410542324280748981
+    second: Game UI 1_313
+  - first:
+      213: 3189204350730296530
+    second: Game UI 1_314
+  - first:
+      213: -6663767062837178006
+    second: Game UI 1_315
+  - first:
+      213: -124272139574563209
+    second: Game UI 1_316
+  - first:
+      213: -204026120068733503
+    second: Game UI 1_317
+  - first:
+      213: 585557584703652735
+    second: Game UI 1_318
+  - first:
+      213: -904607138855792810
+    second: Game UI 1_319
+  - first:
+      213: 277146601382872573
+    second: Game UI 1_320
+  - first:
+      213: -851253407582454856
+    second: Game UI 1_321
+  - first:
+      213: 166885582476719810
+    second: Game UI 1_322
+  - first:
+      213: 5449627444307913853
+    second: Game UI 1_323
+  - first:
+      213: -4280164833946827125
+    second: Game UI 1_324
+  - first:
+      213: -2263103027756858184
+    second: Game UI 1_325
+  - first:
+      213: -3997358817122785791
+    second: Game UI 1_326
+  - first:
+      213: 380192320694691794
+    second: Game UI 1_327
+  - first:
+      213: -4140817179470037409
+    second: Game UI 1_328
+  - first:
+      213: -898377033771640625
+    second: Game UI 1_329
+  - first:
+      213: -6079906014527365745
+    second: Game UI 1_330
+  - first:
+      213: -4685494678278506241
+    second: Game UI 1_331
+  - first:
+      213: 1868177154021927186
+    second: Game UI 1_332
+  - first:
+      213: 3076421486919557113
+    second: Game UI 1_333
+  - first:
+      213: 6211187703153730707
+    second: Game UI 1_334
+  - first:
+      213: -8147480739194803552
+    second: Game UI 1_335
+  - first:
+      213: 4148245040441607979
+    second: Game UI 1_336
+  - first:
+      213: -7320788944167861724
+    second: Game UI 1_337
+  - first:
+      213: 5512211189018484186
+    second: Game UI 1_338
+  - first:
+      213: 6831837157105629279
+    second: Game UI 1_339
+  - first:
+      213: 32041423911419030
+    second: Game UI 1_340
+  - first:
+      213: -3360527448648616792
+    second: Game UI 1_341
+  - first:
+      213: -8505979136332986220
+    second: Game UI 1_342
+  - first:
+      213: -9018828008200377450
+    second: Game UI 1_343
+  - first:
+      213: -8502948398042345339
+    second: Game UI 1_344
+  - first:
+      213: 4737760784638869689
+    second: Game UI 1_345
+  - first:
+      213: -6751599407663743068
+    second: Game UI 1_346
+  - first:
+      213: -7016132500540016472
+    second: Game UI 1_347
+  - first:
+      213: -9105632665286274197
+    second: Game UI 1_348
+  - first:
+      213: 1566303792828348370
+    second: Game UI 1_349
+  - first:
+      213: -2468715443331241735
+    second: Game UI 1_350
+  - first:
+      213: 844680541426201295
+    second: Game UI 1_351
+  - first:
+      213: -3386205539883351792
+    second: Game UI 1_352
+  - first:
+      213: 2427479894675565982
+    second: Game UI 1_353
+  - first:
+      213: -6405582717332078147
+    second: Game UI 1_354
+  - first:
+      213: 5423006528926106820
+    second: Game UI 1_355
+  - first:
+      213: -6699160236754419279
+    second: Game UI 1_356
+  - first:
+      213: 6092132764012685222
+    second: Game UI 1_357
+  - first:
+      213: 3086888201823641738
+    second: Game UI 1_358
+  - first:
+      213: -7177847955642900161
+    second: Game UI 1_359
+  - first:
+      213: 4668201231344982150
+    second: Game UI 1_360
+  - first:
+      213: -3744553199139584097
+    second: Game UI 1_361
+  - first:
+      213: -2052173664999035980
+    second: Game UI 1_362
+  - first:
+      213: -4502716859990689659
+    second: Game UI 1_363
+  - first:
+      213: -9209549013865486770
+    second: Game UI 1_364
+  - first:
+      213: -4825022061181108138
+    second: Game UI 1_365
+  - first:
+      213: 9176378589225683769
+    second: Game UI 1_366
+  - first:
+      213: -6033176354393626955
+    second: Game UI 1_367
+  - first:
+      213: -8440205624223696111
+    second: Game UI 1_368
+  - first:
+      213: -7036571866050110287
+    second: Game UI 1_369
+  - first:
+      213: 7153989732854202093
+    second: Game UI 1_370
+  - first:
+      213: 8737365756051034515
+    second: Game UI 1_371
+  - first:
+      213: -8095102132363238274
+    second: Game UI 1_372
+  - first:
+      213: -305267762730131102
+    second: Game UI 1_373
+  - first:
+      213: 4197127286767049781
+    second: Game UI 1_374
+  - first:
+      213: -7723302160129811202
+    second: Game UI 1_375
+  - first:
+      213: 5677509722632215450
+    second: Game UI 1_376
+  - first:
+      213: 7662151175704817670
+    second: Game UI 1_377
+  - first:
+      213: 8623075938320564713
+    second: Game UI 1_378
+  - first:
+      213: -2980253589827710185
+    second: Game UI 1_379
+  - first:
+      213: -2534903831684042125
+    second: Game UI 1_380
+  - first:
+      213: -1073130519326453986
+    second: Game UI 1_381
+  - first:
+      213: 1593241410839569087
+    second: Game UI 1_382
+  - first:
+      213: 3583938381463769139
+    second: Game UI 1_383
+  - first:
+      213: 1037975160767951418
+    second: Game UI 1_384
+  - first:
+      213: -6084541961114590870
+    second: Game UI 1_385
+  - first:
+      213: -4884198554603262777
+    second: Game UI 1_386
+  - first:
+      213: 1843056681331942563
+    second: Game UI 1_387
+  - first:
+      213: -6768375159050446740
+    second: Game UI 1_388
+  - first:
+      213: -7785931010483553032
+    second: Game UI 1_389
+  - first:
+      213: -314422954148905874
+    second: Game UI 1_390
+  - first:
+      213: 1653973354175024232
+    second: Game UI 1_391
+  - first:
+      213: 5226091655940225543
+    second: Game UI 1_392
+  - first:
+      213: -1020307641143430034
+    second: Game UI 1_393
+  - first:
+      213: -2522958735010671988
+    second: Game UI 1_394
+  - first:
+      213: 632013188250037327
+    second: Game UI 1_395
+  - first:
+      213: 2682019636292711503
+    second: Game UI 1_396
+  - first:
+      213: 3300640323199581789
+    second: Game UI 1_397
+  - first:
+      213: -5089436559351597355
+    second: Game UI 1_398
+  - first:
+      213: -2926937132207858503
+    second: Game UI 1_399
+  - first:
+      213: -6321329708206382799
+    second: Game UI 1_400
+  - first:
+      213: 9010031484147774037
+    second: Game UI 1_401
+  - first:
+      213: -9048425086601329589
+    second: Game UI 1_402
+  - first:
+      213: -3009673082962004111
+    second: Game UI 1_403
+  - first:
+      213: 357727598152576743
+    second: Game UI 1_404
+  - first:
+      213: -6593670852931246272
+    second: Game UI 1_405
+  - first:
+      213: -8347575237703255515
+    second: Game UI 1_406
+  - first:
+      213: -6255910383849857695
+    second: Game UI 1_407
+  - first:
+      213: -7469518982553976925
+    second: Game UI 1_408
+  - first:
+      213: 1032001624464079483
+    second: Game UI 1_409
+  - first:
+      213: 3935059808820010635
+    second: Game UI 1_410
+  - first:
+      213: 4334392212536226473
+    second: Game UI 1_411
+  - first:
+      213: 6507874095132473285
+    second: Game UI 1_412
+  - first:
+      213: 9167523971377382917
+    second: Game UI 1_413
+  - first:
+      213: 1748268127796194697
+    second: Game UI 1_414
+  - first:
+      213: -3315933322138785271
+    second: Game UI 1_415
+  - first:
+      213: 403318922519608924
+    second: Game UI 1_416
+  - first:
+      213: -809733365753530747
+    second: Game UI 1_417
+  - first:
+      213: 479846709814094964
+    second: Game UI 1_418
+  - first:
+      213: 8852565394937849435
+    second: Game UI 1_419
+  - first:
+      213: 1411342903619404380
+    second: Game UI 1_420
+  - first:
+      213: -8174646210986024391
+    second: Game UI 1_421
+  - first:
+      213: -7642098983513443487
+    second: Game UI 1_422
+  - first:
+      213: 7247896522899601770
+    second: Game UI 1_423
+  - first:
+      213: 8743921084523178891
+    second: Game UI 1_424
+  - first:
+      213: -3386834387451136945
+    second: Game UI 1_425
+  - first:
+      213: 8701049097331337509
+    second: Game UI 1_426
+  - first:
+      213: 3530658979759746880
+    second: Game UI 1_427
+  - first:
+      213: 7214483196689130756
+    second: Game UI 1_428
+  - first:
+      213: 8095271706497330405
+    second: Game UI 1_429
+  - first:
+      213: -2334075456083808103
+    second: Game UI 1_430
+  - first:
+      213: -4454866388238075699
+    second: Game UI 1_431
+  - first:
+      213: 7853665251184518439
+    second: Game UI 1_432
+  - first:
+      213: -4048093367401921991
+    second: Game UI 1_433
+  - first:
+      213: -732648681006700067
+    second: Game UI 1_434
+  - first:
+      213: -2128560040498897952
+    second: Game UI 1_435
+  - first:
+      213: 3288918099203048204
+    second: Game UI 1_436
+  - first:
+      213: -8450619291217079278
+    second: Game UI 1_437
+  - first:
+      213: 3187200150861572027
+    second: Game UI 1_438
+  - first:
+      213: 6563957854700902626
+    second: Game UI 1_439
+  - first:
+      213: -4125885134331089806
+    second: Game UI 1_440
+  - first:
+      213: 3802044305682217169
+    second: Game UI 1_441
+  - first:
+      213: -993602389863611234
+    second: Game UI 1_442
+  - first:
+      213: -7233921072236043366
+    second: Game UI 1_443
+  - first:
+      213: 4044106581974774498
+    second: Game UI 1_444
+  - first:
+      213: -4624475079394399689
+    second: Game UI 1_445
+  - first:
+      213: 3071164976086207319
+    second: Game UI 1_446
+  - first:
+      213: 8781108908280002060
+    second: Game UI 1_447
+  - first:
+      213: -2997107440088755947
+    second: Game UI 1_448
+  - first:
+      213: -4580237582112653109
+    second: Game UI 1_449
+  - first:
+      213: 491168282974983313
+    second: Game UI 1_450
+  - first:
+      213: 3201388841128563342
+    second: Game UI 1_451
+  - first:
+      213: -8578510682059839876
+    second: Game UI 1_452
+  - first:
+      213: -2062641113475364198
+    second: Game UI 1_453
+  - first:
+      213: 3866708489263282728
+    second: Game UI 1_454
+  - first:
+      213: -9158462811424844241
+    second: Game UI 1_455
+  - first:
+      213: -1034881029754979432
+    second: Game UI 1_456
+  - first:
+      213: 6570051709777237044
+    second: Game UI 1_457
+  - first:
+      213: 7895482193503595230
+    second: Game UI 1_458
+  - first:
+      213: -602723719186195812
+    second: Game UI 1_459
+  - first:
+      213: -3207067243154730598
+    second: Game UI 1_460
+  - first:
+      213: -8591668475770140979
+    second: Game UI 1_461
+  - first:
+      213: -1201590470405250817
+    second: Game UI 1_462
+  - first:
+      213: -1756533833493749951
+    second: Game UI 1_463
+  - first:
+      213: 88396100302134523
+    second: Game UI 1_464
+  - first:
+      213: -2006971935946174667
+    second: Game UI 1_465
+  - first:
+      213: -6120166888953250960
+    second: Game UI 1_466
+  - first:
+      213: -1547874916629983734
+    second: Game UI 1_467
+  - first:
+      213: 2790590724723122877
+    second: Game UI 1_468
+  - first:
+      213: 2366945775254430618
+    second: Game UI 1_469
+  - first:
+      213: 7488962874593169591
+    second: Game UI 1_470
+  - first:
+      213: -2829670347835549806
+    second: Game UI 1_471
+  - first:
+      213: 1869473408200453697
+    second: Game UI 1_472
+  - first:
+      213: 7348400275641949538
+    second: Game UI 1_473
+  - first:
+      213: -4711059067890124674
+    second: Game UI 1_474
+  - first:
+      213: -6580555840379666959
+    second: Game UI 1_475
+  - first:
+      213: 8213509917990118419
+    second: Game UI 1_476
+  - first:
+      213: -4587834398359701355
+    second: Game UI 1_477
+  - first:
+      213: 7173233166891041537
+    second: Game UI 1_478
+  - first:
+      213: -5781995218334918389
+    second: Game UI 1_479
+  - first:
+      213: -4814824623109120650
+    second: Game UI 1_480
+  - first:
+      213: -2449997814313518940
+    second: Game UI 1_481
+  - first:
+      213: 7125904024477350458
+    second: Game UI 1_482
+  - first:
+      213: 8900894440205201586
+    second: Game UI 1_483
+  - first:
+      213: -4019683398904453002
+    second: Game UI 1_484
+  - first:
+      213: 4090407075149663995
+    second: Game UI 1_485
+  - first:
+      213: -6634408929487651395
+    second: Game UI 1_486
+  - first:
+      213: -7372212833029280721
+    second: Game UI 1_487
+  - first:
+      213: -2615744931891091843
+    second: Game UI 1_488
+  - first:
+      213: -2003754547502042600
+    second: Game UI 1_489
+  - first:
+      213: -2188140331516771730
+    second: Game UI 1_490
+  - first:
+      213: 3865452942134635982
+    second: Game UI 1_491
+  - first:
+      213: 3431589303157150525
+    second: Game UI 1_492
+  - first:
+      213: -445385760622194371
+    second: Game UI 1_493
+  - first:
+      213: -1534137439930008912
+    second: Game UI 1_494
+  - first:
+      213: 1099015602540061256
+    second: Game UI 1_495
+  - first:
+      213: -4318617386028586015
+    second: Game UI 1_496
+  - first:
+      213: 7447643192433124312
+    second: Game UI 1_497
+  - first:
+      213: 2084619570828882365
+    second: Game UI 1_498
+  - first:
+      213: -4630116036264711352
+    second: Game UI 1_499
+  - first:
+      213: 9192393608494018336
+    second: Game UI 1_500
+  - first:
+      213: -8983567235235287396
+    second: Game UI 1_501
+  - first:
+      213: 8464653172244450027
+    second: Game UI 1_502
+  - first:
+      213: 6025502250342502937
+    second: Game UI 1_503
+  - first:
+      213: 7057830091190137613
+    second: Game UI 1_504
+  - first:
+      213: 8792484309019272534
+    second: Game UI 1_505
+  - first:
+      213: 8981084393243046740
+    second: Game UI 1_506
+  - first:
+      213: 5436847297505885077
+    second: Game UI 1_507
+  - first:
+      213: -2830604214830426022
+    second: Game UI 1_508
+  - first:
+      213: 5156292636339811975
+    second: Game UI 1_509
+  - first:
+      213: 4003254579975168893
+    second: Game UI 1_510
+  - first:
+      213: 2627732846665805759
+    second: Game UI 1_511
+  - first:
+      213: 8431717928215072177
+    second: Game UI 1_512
+  - first:
+      213: -4747611397904958836
+    second: Game UI 1_513
+  - first:
+      213: 1231280056377661152
+    second: Game UI 1_514
+  - first:
+      213: 7882674363697694499
+    second: Game UI 1_515
+  - first:
+      213: -4531160006464279123
+    second: Game UI 1_516
+  - first:
+      213: 2866986207859511008
+    second: Game UI 1_517
+  - first:
+      213: 3502334216658339167
+    second: Game UI 1_518
+  - first:
+      213: -5310980419868420951
+    second: Game UI 1_519
+  - first:
+      213: 7946292733736267935
+    second: Game UI 1_520
+  - first:
+      213: -4793822648802989297
+    second: Game UI 1_521
+  - first:
+      213: -1052803636280924574
+    second: Game UI 1_522
+  - first:
+      213: -5788399074508286978
+    second: Game UI 1_523
+  - first:
+      213: 3560167567976297394
+    second: Game UI 1_524
+  - first:
+      213: -9075230016587900982
+    second: Game UI 1_525
+  - first:
+      213: -8173079288043092922
+    second: Game UI 1_526
+  - first:
+      213: -6058639443481494110
+    second: Game UI 1_527
+  - first:
+      213: -5277348821997010186
+    second: Game UI 1_528
+  - first:
+      213: 5688810925281591388
+    second: Game UI 1_529
+  - first:
+      213: -9031428887736617206
+    second: Game UI 1_530
+  - first:
+      213: 7962523356242734687
+    second: Game UI 1_531
+  - first:
+      213: 3135433983767185100
+    second: Game UI 1_532
+  - first:
+      213: 3069523538418102651
+    second: Game UI 1_533
+  - first:
+      213: 712400769021373225
+    second: Game UI 1_534
+  - first:
+      213: 5131269764423341900
+    second: Game UI 1_535
+  - first:
+      213: 1736898511137488832
+    second: Game UI 1_536
+  - first:
+      213: 261308638185099546
+    second: Game UI 1_537
+  - first:
+      213: -9179384392778731777
+    second: Game UI 1_538
+  - first:
+      213: -3617174525833627543
+    second: Game UI 1_539
+  - first:
+      213: -2953634813029035806
+    second: Game UI 1_540
+  - first:
+      213: -1905320638763256542
+    second: Game UI 1_541
+  - first:
+      213: -7797382197724034906
+    second: Game UI 1_542
+  - first:
+      213: -2102477986429061467
+    second: Game UI 1_543
+  - first:
+      213: 1673425714529447763
+    second: Game UI 1_544
+  - first:
+      213: 1290238042971606313
+    second: Game UI 1_545
+  - first:
+      213: 2984826912648198008
+    second: Game UI 1_546
+  - first:
+      213: -1103252674080383377
+    second: Game UI 1_547
+  - first:
+      213: -6576301690934277598
+    second: Game UI 1_548
+  - first:
+      213: 1715341408787714628
+    second: Game UI 1_549
+  - first:
+      213: 2990489251083885638
+    second: Game UI 1_550
+  - first:
+      213: -7703495824351270796
+    second: Game UI 1_551
+  - first:
+      213: -4978290957627915865
+    second: Game UI 1_552
+  - first:
+      213: 4781607744834769810
+    second: Game UI 1_553
+  - first:
+      213: -4256478830595577772
+    second: Game UI 1_554
+  - first:
+      213: -6048152491672904468
+    second: Game UI 1_555
+  - first:
+      213: -37452937026964389
+    second: Game UI 1_556
+  - first:
+      213: -8858223741682764476
+    second: Game UI 1_557
+  - first:
+      213: 7073952938999074062
+    second: Game UI 1_558
+  - first:
+      213: 8331074491272538768
+    second: Game UI 1_559
+  - first:
+      213: 7930242093907853683
+    second: Game UI 1_560
+  - first:
+      213: 9086385178182032889
+    second: Game UI 1_561
+  - first:
+      213: -7941787846140561131
+    second: Game UI 1_562
+  - first:
+      213: -3055876172095246028
+    second: Game UI 1_563
+  - first:
+      213: 7819363899710540764
+    second: Game UI 1_564
+  - first:
+      213: -2088562477368218918
+    second: Game UI 1_565
+  - first:
+      213: 158103053542410027
+    second: Game UI 1_566
+  - first:
+      213: 6371654575749085782
+    second: Game UI 1_567
+  - first:
+      213: 8242599998225762866
+    second: Game UI 1_568
+  - first:
+      213: 1450002624490023248
+    second: Game UI 1_569
+  - first:
+      213: 1253304632776583990
+    second: Game UI 1_570
+  - first:
+      213: -160311073827224006
+    second: Game UI 1_571
+  - first:
+      213: -6313668261692871678
+    second: Game UI 1_572
+  - first:
+      213: 6856396930418485838
+    second: Game UI 1_573
+  - first:
+      213: 2129411138197894632
+    second: Game UI 1_574
+  - first:
+      213: -6014905103157886944
+    second: Game UI 1_575
+  - first:
+      213: -1490319644385836448
+    second: Game UI 1_576
+  - first:
+      213: 9168988125771634453
+    second: Game UI 1_577
+  - first:
+      213: 7527524501164876513
+    second: Game UI 1_578
+  - first:
+      213: -8055730462062152731
+    second: Game UI 1_579
+  - first:
+      213: -2419297957299097036
+    second: Game UI 1_580
+  - first:
+      213: 5749489243309992523
+    second: Game UI 1_581
+  - first:
+      213: -3744335593390330730
+    second: Game UI 1_582
+  - first:
+      213: -1090489035688990720
+    second: Game UI 1_583
+  - first:
+      213: 3814522026895228795
+    second: Game UI 1_584
+  - first:
+      213: -2890855199371441471
+    second: Game UI 1_585
+  - first:
+      213: -6884490670299949847
+    second: Game UI 1_586
+  - first:
+      213: -3295833594794847718
+    second: Game UI 1_587
+  - first:
+      213: 1505772897996207491
+    second: Game UI 1_588
+  - first:
+      213: 240110823537777577
+    second: Game UI 1_589
+  - first:
+      213: 115683557102470616
+    second: Game UI 1_590
+  - first:
+      213: -2442814124006863748
+    second: Game UI 1_591
+  - first:
+      213: -1768594675661286735
+    second: Game UI 1_592
+  - first:
+      213: -5247865534004118090
+    second: Game UI 1_593
+  - first:
+      213: -2534168277766895030
+    second: Game UI 1_594
+  - first:
+      213: -3076592174476874716
+    second: Game UI 1_595
+  - first:
+      213: -6683135032249821551
+    second: Game UI 1_596
+  - first:
+      213: 6162817110182115353
+    second: Game UI 1_597
+  - first:
+      213: 969906554990702378
+    second: Game UI 1_598
+  - first:
+      213: 4629503596725997927
+    second: Game UI 1_599
+  - first:
+      213: 6417688434350094444
+    second: Game UI 1_600
+  - first:
+      213: 8850725608129334837
+    second: Game UI 1_601
+  - first:
+      213: -1259045324796578833
+    second: Game UI 1_602
+  - first:
+      213: -8273728340486657306
+    second: Game UI 1_603
+  - first:
+      213: -4882584269623125940
+    second: Game UI 1_604
+  - first:
+      213: 8220549113177064673
+    second: Game UI 1_605
+  - first:
+      213: 1995448199226097643
+    second: Game UI 1_606
+  - first:
+      213: -3068107745412525304
+    second: Game UI 1_607
+  - first:
+      213: 7502203641796135087
+    second: Game UI 1_608
+  - first:
+      213: -4663244666880731319
+    second: Game UI 1_609
+  - first:
+      213: 4641360910924250725
+    second: Game UI 1_610
+  - first:
+      213: 1231580233315548844
+    second: Game UI 1_611
+  - first:
+      213: -9124461408466520136
+    second: Game UI 1_612
+  - first:
+      213: 7537779500865073626
+    second: Game UI 1_613
+  - first:
+      213: 8472704110090708133
+    second: Game UI 1_614
+  - first:
+      213: -2623493480551850455
+    second: Game UI 1_615
+  - first:
+      213: -8845898028868326820
+    second: Game UI 1_616
+  - first:
+      213: -4935424585108989703
+    second: Game UI 1_617
+  - first:
+      213: -5068454461008679176
+    second: Game UI 1_618
+  - first:
+      213: 5364040509669591060
+    second: Game UI 1_619
+  - first:
+      213: 6202527994764953561
+    second: Game UI 1_620
+  - first:
+      213: 317607414558630954
+    second: Game UI 1_621
+  - first:
+      213: -1058541960055996410
+    second: Game UI 1_622
+  - first:
+      213: -3159498958114097415
+    second: Game UI 1_623
+  - first:
+      213: -2478508247551666111
+    second: Game UI 1_624
+  - first:
+      213: -7736448471350973607
+    second: Game UI 1_625
+  - first:
+      213: -4843604458402260925
+    second: Game UI 1_626
+  - first:
+      213: 6915736516775354159
+    second: Game UI 1_627
+  - first:
+      213: -5092285624932727798
+    second: Game UI 1_628
+  - first:
+      213: 2576152122339160857
+    second: Game UI 1_629
+  - first:
+      213: -577271024084401147
+    second: Game UI 1_630
+  - first:
+      213: 6031703582530326951
+    second: Game UI 1_631
+  - first:
+      213: -7141656415808707943
+    second: Game UI 1_632
+  - first:
+      213: -860392487342242429
+    second: Game UI 1_633
+  - first:
+      213: 7978777929589998428
+    second: Game UI 1_634
+  - first:
+      213: 6886220638755220766
+    second: Game UI 1_635
+  - first:
+      213: -9195178546635602830
+    second: Game UI 1_636
+  - first:
+      213: 6719756580656818755
+    second: Game UI 1_637
+  - first:
+      213: -5642539865278789008
+    second: Game UI 1_638
+  - first:
+      213: 4188141915834858576
+    second: Game UI 1_639
+  - first:
+      213: -5739078566978347151
+    second: Game UI 1_640
+  - first:
+      213: -348129790596302978
+    second: Game UI 1_641
+  - first:
+      213: 5914467154000841485
+    second: Game UI 1_642
+  - first:
+      213: 2785970193569042677
+    second: Game UI 1_643
+  - first:
+      213: 1239437950678971894
+    second: Game UI 1_644
+  - first:
+      213: -6823283401777338433
+    second: Game UI 1_645
+  - first:
+      213: 263770508742993393
+    second: Game UI 1_646
+  - first:
+      213: -4940010947800697321
+    second: Game UI 1_647
+  - first:
+      213: 6520729500049718449
+    second: Game UI 1_648
+  - first:
+      213: -5235722590704410791
+    second: Game UI 1_649
+  - first:
+      213: -987532249221175505
+    second: Game UI 1_650
+  - first:
+      213: -4659627121292166144
+    second: Game UI 1_651
+  - first:
+      213: 3421885834447603158
+    second: Game UI 1_652
+  - first:
+      213: 2984056214332199374
+    second: Game UI 1_653
+  - first:
+      213: -2046180710128032539
+    second: Game UI 1_654
+  - first:
+      213: 2660664158039375034
+    second: Game UI 1_655
+  - first:
+      213: -4303502063963145646
+    second: Game UI 1_656
+  - first:
+      213: -8510484814531100684
+    second: Game UI 1_657
+  - first:
+      213: -577912021081908240
+    second: Game UI 1_658
+  - first:
+      213: -3590966690371270841
+    second: Game UI 1_659
+  - first:
+      213: 177803971663874460
+    second: Game UI 1_660
+  - first:
+      213: 3376957981035983508
+    second: Game UI 1_661
+  - first:
+      213: -3485648124987229357
+    second: Game UI 1_662
+  - first:
+      213: -4218111126925893438
+    second: Game UI 1_663
+  - first:
+      213: 5347622560470279080
+    second: Game UI 1_664
+  - first:
+      213: 717858946705770193
+    second: Game UI 1_665
+  - first:
+      213: -429637136507683183
+    second: Game UI 1_666
+  - first:
+      213: 3342177296103492204
+    second: Game UI 1_667
+  - first:
+      213: -5628610722501081401
+    second: Game UI 1_668
+  - first:
+      213: 1962573080760353271
+    second: Game UI 1_669
+  - first:
+      213: 8196940316298088859
+    second: Game UI 1_670
+  - first:
+      213: -6603216444705008119
+    second: Game UI 1_671
+  - first:
+      213: 6636190066632970703
+    second: Game UI 1_672
+  - first:
+      213: 4004196303641313015
+    second: Game UI 1_673
+  - first:
+      213: -3549474988962238474
+    second: Game UI 1_674
+  - first:
+      213: -3720069677032349910
+    second: Game UI 1_675
+  - first:
+      213: 5217692792009562086
+    second: Game UI 1_676
+  - first:
+      213: 7064141583613921379
+    second: Game UI 1_677
+  - first:
+      213: 2856747240176479451
+    second: Game UI 1_678
+  - first:
+      213: 4524297292041425114
+    second: Game UI 1_679
+  - first:
+      213: 982446563546841045
+    second: Game UI 1_680
+  - first:
+      213: 4214203491127339049
+    second: Game UI 1_681
+  - first:
+      213: -3433837412873771682
+    second: Game UI 1_682
+  - first:
+      213: 211246891117595593
+    second: Game UI 1_683
+  - first:
+      213: 1076732160884147938
+    second: Game UI 1_684
+  - first:
+      213: -6467346783370288160
+    second: Game UI 1_685
+  - first:
+      213: 60875465252904787
+    second: Game UI 1_686
+  - first:
+      213: -1407681720496271628
+    second: Game UI 1_687
+  - first:
+      213: -5047300673348024254
+    second: Game UI 1_688
+  - first:
+      213: 5701036476959011344
+    second: Game UI 1_689
+  - first:
+      213: -7542767350052624469
+    second: Game UI 1_690
+  - first:
+      213: -2800339836282071629
+    second: Game UI 1_691
+  - first:
+      213: -1339846938469985489
+    second: Game UI 1_692
+  - first:
+      213: -3375842073165983270
+    second: Game UI 1_693
+  - first:
+      213: -7243263669973271228
+    second: Game UI 1_694
+  - first:
+      213: -74682967187986326
+    second: Game UI 1_695
+  - first:
+      213: 25401105686734708
+    second: Game UI 1_696
+  - first:
+      213: 2681833919474869324
+    second: Game UI 1_697
+  - first:
+      213: 6905147642706071526
+    second: Game UI 1_698
+  - first:
+      213: -7007116759526927673
+    second: Game UI 1_699
+  - first:
+      213: -3539983688484057143
+    second: Game UI 1_700
+  - first:
+      213: 7354708283332153431
+    second: Game UI 1_701
+  - first:
+      213: 396700890256522923
+    second: Game UI 1_702
+  - first:
+      213: -4495463682878715806
+    second: Game UI 1_703
+  - first:
+      213: -3011036689758390921
+    second: Game UI 1_704
+  - first:
+      213: 4682883762869049470
+    second: Game UI 1_705
+  - first:
+      213: 1357628991521735428
+    second: Game UI 1_706
+  - first:
+      213: -3601405555260519500
+    second: Game UI 1_707
+  - first:
+      213: -4753443709890595471
+    second: Game UI 1_708
+  - first:
+      213: 2542573963391597422
+    second: Game UI 1_709
+  - first:
+      213: -4891476360682603383
+    second: Game UI 1_710
+  - first:
+      213: -7202869774700973870
+    second: Game UI 1_711
+  - first:
+      213: -2505907515214135204
+    second: Game UI 1_712
+  - first:
+      213: 2892813614606935985
+    second: Game UI 1_713
+  - first:
+      213: -1263905980068398193
+    second: Game UI 1_714
+  - first:
+      213: 454791401310518350
+    second: Game UI 1_715
+  - first:
+      213: 1197739182354034943
+    second: Game UI 1_716
+  - first:
+      213: -1274385672527522467
+    second: Game UI 1_717
+  - first:
+      213: 3742813409442205239
+    second: Game UI 1_718
+  - first:
+      213: 8350665826275476733
+    second: Game UI 1_719
+  - first:
+      213: 4699469373711976589
+    second: Game UI 1_720
+  - first:
+      213: -290389757356493470
+    second: Game UI 1_721
+  - first:
+      213: 26039100339240171
+    second: Game UI 1_722
+  - first:
+      213: 7439412555394402805
+    second: Game UI 1_723
+  - first:
+      213: -6509087442799403306
+    second: Game UI 1_724
+  - first:
+      213: -7531297194426372096
+    second: Game UI 1_725
+  - first:
+      213: 7149743850649706336
+    second: Game UI 1_726
+  - first:
+      213: -6814671712229249985
+    second: Game UI 1_727
+  - first:
+      213: -582362268060916697
+    second: Game UI 1_728
+  - first:
+      213: -8719347729031114378
+    second: Game UI 1_729
+  - first:
+      213: -2608277983095224730
+    second: Game UI 1_730
+  - first:
+      213: -7612579201930763185
+    second: Game UI 1_731
+  - first:
+      213: 6157671567151543229
+    second: Game UI 1_732
+  - first:
+      213: -3730825245224205008
+    second: Game UI 1_733
+  - first:
+      213: 502304336380493190
+    second: Game UI 1_734
+  - first:
+      213: -7831322215848494810
+    second: Game UI 1_735
+  - first:
+      213: -8993515415703659607
+    second: Game UI 1_736
+  - first:
+      213: -5064214082414117101
+    second: Game UI 1_737
+  - first:
+      213: 7282012737486185321
+    second: Game UI 1_738
+  - first:
+      213: -7620430465653404608
+    second: Game UI 1_739
+  - first:
+      213: -3043854826748425990
+    second: Game UI 1_740
+  - first:
+      213: 8541522207589858051
+    second: Game UI 1_741
+  - first:
+      213: -1731228555874961540
+    second: Game UI 1_742
+  - first:
+      213: -4427523576865669842
+    second: Game UI 1_743
+  - first:
+      213: -7224255999942860948
+    second: Game UI 1_744
+  - first:
+      213: 3968296216083451518
+    second: Game UI 1_745
+  - first:
+      213: 5811447159638466251
+    second: Game UI 1_746
+  - first:
+      213: 676472608090167099
+    second: Game UI 1_747
+  - first:
+      213: -2395668866949859436
+    second: Game UI 1_748
+  - first:
+      213: -6119895007060524400
+    second: Game UI 1_749
+  - first:
+      213: -2386128018228249132
+    second: Game UI 1_750
+  - first:
+      213: 243940491110845799
+    second: Game UI 1_751
+  - first:
+      213: 5712571150082284381
+    second: Game UI 1_752
+  - first:
+      213: 1388678563984750788
+    second: Game UI 1_753
+  - first:
+      213: -4971711763858369807
+    second: Game UI 1_754
+  - first:
+      213: 7603743986875050496
+    second: Game UI 1_755
+  - first:
+      213: -876794003724558785
+    second: Game UI 1_756
+  - first:
+      213: 5040303393135698858
+    second: Game UI 1_757
+  - first:
+      213: -5334418971741614687
+    second: Game UI 1_758
+  - first:
+      213: -4534793196976234581
+    second: Game UI 1_759
+  - first:
+      213: 3731159256233084078
+    second: Game UI 1_760
+  - first:
+      213: -83917366467295774
+    second: Game UI 1_761
+  - first:
+      213: 4470594801286229491
+    second: Game UI 1_762
+  - first:
+      213: -534946591760480735
+    second: Game UI 1_763
+  - first:
+      213: 4323806382505162258
+    second: Game UI 1_764
+  - first:
+      213: -1535718064220406305
+    second: Game UI 1_765
+  - first:
+      213: 8798642801594407244
+    second: Game UI 1_766
+  - first:
+      213: -175583582817729153
+    second: Game UI 1_767
+  - first:
+      213: 6452652659650154653
+    second: Game UI 1_768
+  - first:
+      213: 4078635976321115017
+    second: Game UI 1_769
+  - first:
+      213: 6308680842134064935
+    second: Game UI 1_770
+  - first:
+      213: 4549988796905073629
+    second: Game UI 1_771
+  - first:
+      213: 2386747579729025016
+    second: Game UI 1_772
+  - first:
+      213: -4607192264372032868
+    second: Game UI 1_773
+  - first:
+      213: -7490634697504544692
+    second: Game UI 1_774
+  - first:
+      213: 4248074523004580722
+    second: Game UI 1_775
+  - first:
+      213: 5260212933544002813
+    second: Game UI 1_776
+  - first:
+      213: 6473405113943256199
+    second: Game UI 1_777
+  - first:
+      213: -7000412355239343491
+    second: Game UI 1_0
+  - first:
+      213: 579842065991208828
+    second: Game UI 1_1
+  - first:
+      213: -8242580941770291334
+    second: Game UI 1_2
+  - first:
+      213: 484684932422360554
+    second: Game UI 1_3
+  - first:
+      213: -3476160579230057720
+    second: Game UI 1_4
+  - first:
+      213: 788554265653983164
+    second: Game UI 1_5
+  - first:
+      213: -7890557797880219923
+    second: Game UI 1_6
+  - first:
+      213: -9152803493932149541
+    second: Game UI 1_7
+  - first:
+      213: 1081861615277333756
+    second: Game UI 1_8
+  - first:
+      213: 5209963601225578095
+    second: Game UI 1_9
+  - first:
+      213: -4427274250299318790
+    second: Game UI 1_10
+  - first:
+      213: 5347844310636348391
+    second: Game UI 1_11
+  - first:
+      213: -6061899078928709546
+    second: Game UI 1_12
+  - first:
+      213: 656923485237306908
+    second: Game UI 1_13
+  - first:
+      213: 4199526490561455508
+    second: Game UI 1_14
+  - first:
+      213: 1336875440627591923
+    second: Game UI 1_15
+  - first:
+      213: 5633108632956824277
+    second: Game UI 1_16
+  - first:
+      213: -2024752316336922613
+    second: Game UI 1_17
+  - first:
+      213: -3030400090948675154
+    second: Game UI 1_18
+  - first:
+      213: -2102532141690304936
+    second: Game UI 1_19
+  - first:
+      213: 5737484140947509527
+    second: Game UI 1_20
+  - first:
+      213: 3746765385480082007
+    second: Game UI 1_21
+  - first:
+      213: -8171208036458597859
+    second: Game UI 1_22
+  - first:
+      213: 1064848706495184148
+    second: Game UI 1_23
+  - first:
+      213: -8349535755546043784
+    second: Game UI 1_24
+  - first:
+      213: -5983020082233711343
+    second: Game UI 1_25
+  - first:
+      213: -6223855424392830536
+    second: Game UI 1_26
+  - first:
+      213: 3341235679008387243
+    second: Game UI 1_27
+  - first:
+      213: -5548472053009157389
+    second: Game UI 1_28
+  - first:
+      213: -461152783655594444
+    second: Game UI 1_29
+  - first:
+      213: -6176540442304381601
+    second: Game UI 1_30
+  - first:
+      213: -9051683428815390515
+    second: Game UI 1_31
+  - first:
+      213: -6704445926605027101
+    second: Game UI 1_32
+  - first:
+      213: -5549639874074625040
+    second: Game UI 1_33
+  - first:
+      213: 205433298488001278
+    second: Game UI 1_34
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 24
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Game UI 1_0
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 437
+        width: 202
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7a04bc7d0a89de90800000000000000
+      internalID: -7000412355239343491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game UI 1_1
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 291
+        width: 238
+        height: 175
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f0c3179430c0800800000000000000
+      internalID: 579842065991208828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game UI 1_2
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 407
+        width: 201
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a778065fd487c9d80800000000000000
+      internalID: -8242580941770291334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game UI 1_3
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 378
+        width: 201
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aedd409c062f9b600800000000000000
+      internalID: 484684932422360554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game UI 1_4
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 349
+        width: 201
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80bb6c4ee5232cfc0800000000000000
+      internalID: -3476160579230057720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game UI 1_5
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 319
+        width: 201
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb7bc6a3de181fa00800000000000000
+      internalID: 788554265653983164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game UI 1_6
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 290
+        width: 201
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de639a12d7b1f7290800000000000000
+      internalID: -7890557797880219923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game UI 1_7
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 221
+        width: 155
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd4583547b5baf080800000000000000
+      internalID: -9152803493932149541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game UI 1_8
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 222
+        width: 137
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfc5cba386b830f00800000000000000
+      internalID: 1081861615277333756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game UI 1_9
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 221
+        width: 137
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f66f3cfaa428d4840800000000000000
+      internalID: 5209963601225578095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game UI 1_10
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 157
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afddcaba6892f82c0800000000000000
+      internalID: -4427274250299318790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game UI 1_11
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 157
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e3c291011c573a40800000000000000
+      internalID: 5347844310636348391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game UI 1_12
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 157
+        width: 44
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 658cf20b7eecfdba0800000000000000
+      internalID: -6061899078928709546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game UI 1_13
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 157
+        width: 44
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c166e26ed6cdd1900800000000000000
+      internalID: 656923485237306908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game UI 1_14
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 157
+        width: 44
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49522c6d717b74a30800000000000000
+      internalID: 4199526490561455508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game UI 1_15
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 157
+        width: 43
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fa2d8351298d8210800000000000000
+      internalID: 1336875440627591923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game UI 1_16
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 157
+        width: 44
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dae398c472dc2e40800000000000000
+      internalID: 5633108632956824277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game UI 1_17
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 157
+        width: 44
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b00a692fe72a6e3e0800000000000000
+      internalID: -2024752316336922613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game UI 1_18
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 157
+        width: 44
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea951bb4c2bd1f5d0800000000000000
+      internalID: -3030400090948675154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game UI 1_19
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 94
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85645b5282e42d2e0800000000000000
+      internalID: -2102532141690304936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game UI 1_20
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 94
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7111d9d7d63af9f40800000000000000
+      internalID: 5737484140947509527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game UI 1_21
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 94
+        width: 47
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7521542544f2ff330800000000000000
+      internalID: 3746765385480082007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game UI 1_22
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 94
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d12711175990a9e80800000000000000
+      internalID: -8171208036458597859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game UI 1_23
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 94
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41dfd2ab14a17ce00800000000000000
+      internalID: 1064848706495184148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game UI 1_24
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 94
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87a5143d77d702c80800000000000000
+      internalID: -8349535755546043784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game UI 1_25
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 94
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1156e624fea08fca0800000000000000
+      internalID: -5983020082233711343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game UI 1_26
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 94
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b16da7877c60a9a0800000000000000
+      internalID: -6223855424392830536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game UI 1_27
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 94
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba0f72eb5247e5e20800000000000000
+      internalID: 3341235679008387243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game UI 1_28
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 31
+        width: 53
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f2f43a901edff2b0800000000000000
+      internalID: -5548472053009157389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game UI 1_29
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 31
+        width: 53
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 436960f8cf7a999f0800000000000000
+      internalID: -461152783655594444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game UI 1_30
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 29
+        width: 41
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5dfc934135884aa0800000000000000
+      internalID: -6176540442304381601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game UI 1_31
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 29
+        width: 42
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc83b2e11e5f16280800000000000000
+      internalID: -9051683428815390515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game UI 1_32
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 32
+        width: 40
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e884e093f505f2a0800000000000000
+      internalID: -6704445926605027101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game UI 1_33
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 34
+        width: 41
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fb307210f7bbf2b0800000000000000
+      internalID: -5549639874074625040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game UI 1_34
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 32
+        width: 147
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef20a6d1f78d9d200800000000000000
+      internalID: 205433298488001278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
