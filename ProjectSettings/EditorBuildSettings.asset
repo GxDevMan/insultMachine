@@ -4,5 +4,23 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/CharacterSelect.unity
+    guid: 851962f640118964baae2802502a61dc
+  - enabled: 1
+    path: Assets/Scenes/MapSelect.unity
+    guid: 1f25d8c5fd56206418c0a3f3e22aaf90
+  - enabled: 1
+    path: Assets/Scenes/FlipCoin.unity
+    guid: abadd35dbac9c3348915dd90b1a9c735
+  - enabled: 1
+    path: Assets/Scenes/GameProper.unity
+    guid: d13b3e4a0f6d74244a76b0c1ef6eef2d
+  - enabled: 1
+    path: Assets/Scenes/WinBanner.unity
+    guid: fec5c6e0d29c5f94ea3c80666dbc5990
+  - enabled: 1
+    path: Assets/Scenes/EvaluateBanner.unity
+    guid: 454d3f197afa7734794d2d1d67f2755f
   m_configObjects: {}
