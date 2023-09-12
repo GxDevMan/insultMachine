@@ -1,0 +1,944 @@
+fileFormatVersion: 2
+guid: c0924a03ae00813499ba2e30f813e114
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2998456997483478692
+    second: New Game UI 2_0
+  - first:
+      213: -2026315903182094724
+    second: New Game UI 2_1
+  - first:
+      213: 7534465094720302208
+    second: New Game UI 2_2
+  - first:
+      213: -4750307265833957606
+    second: New Game UI 2_3
+  - first:
+      213: 689655370419953110
+    second: New Game UI 2_4
+  - first:
+      213: 3787574291406945678
+    second: New Game UI 2_5
+  - first:
+      213: 1108257978278306674
+    second: New Game UI 2_6
+  - first:
+      213: -5960483168109721340
+    second: New Game UI 2_7
+  - first:
+      213: -9000823603165085904
+    second: New Game UI 2_8
+  - first:
+      213: 191264381685997584
+    second: New Game UI 2_9
+  - first:
+      213: 6099694416830172085
+    second: New Game UI 2_10
+  - first:
+      213: -543196799163765716
+    second: New Game UI 2_11
+  - first:
+      213: 3724606200665201622
+    second: New Game UI 2_12
+  - first:
+      213: -3370852393268628948
+    second: New Game UI 2_13
+  - first:
+      213: 3348502458972765936
+    second: New Game UI 2_14
+  - first:
+      213: 2177562971955997903
+    second: New Game UI 2_15
+  - first:
+      213: 5096025038940807394
+    second: New Game UI 2_16
+  - first:
+      213: -2807123948409400009
+    second: New Game UI 2_17
+  - first:
+      213: -3291975439115443222
+    second: New Game UI 2_18
+  - first:
+      213: -2284957670720490521
+    second: New Game UI 2_19
+  - first:
+      213: -1246422218653263299
+    second: New Game UI 2_20
+  - first:
+      213: 1084240698158715431
+    second: New Game UI 2_21
+  - first:
+      213: 1568485768012317241
+    second: New Game UI 2_22
+  - first:
+      213: 3308869283194504665
+    second: New Game UI 2_23
+  - first:
+      213: 3307593766668080996
+    second: New Game UI 2_24
+  - first:
+      213: 742857631004033640
+    second: New Game UI 2_25
+  - first:
+      213: -8696050971699122422
+    second: New Game UI 2_26
+  - first:
+      213: 8589065894868486907
+    second: New Game UI 2_27
+  - first:
+      213: 630265724874128368
+    second: New Game UI 2_28
+  - first:
+      213: -2429775261791339121
+    second: New Game UI 2_29
+  - first:
+      213: -3215223256871979875
+    second: New Game UI 2_30
+  - first:
+      213: 2304723386107989154
+    second: New Game UI 2_31
+  - first:
+      213: 6020442015196181606
+    second: New Game UI 2_32
+  - first:
+      213: 8497713926700596666
+    second: New Game UI 2_33
+  - first:
+      213: -5958054665485325847
+    second: New Game UI 2_34
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: New Game UI 2_0
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 3499
+        width: 1607
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ae7941b0c8ac9920800000000000000
+      internalID: 2998456997483478692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Game UI 2_1
+      rect:
+        serializedVersion: 2
+        x: 1913
+        y: 2335
+        width: 1896
+        height: 1393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e3b140c6411e3e0800000000000000
+      internalID: -2026315903182094724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Game UI 2_2
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 3263
+        width: 1603
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08c2267951ccf8860800000000000000
+      internalID: 7534465094720302208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Game UI 2_3
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 3026
+        width: 1607
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a17820eb5b4831eb0800000000000000
+      internalID: -4750307265833957606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Game UI 2_4
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 2800
+        width: 1601
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dd525bc7e5229900800000000000000
+      internalID: 689655370419953110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Game UI 2_5
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 2563
+        width: 1601
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8d76b720ca209430800000000000000
+      internalID: 3787574291406945678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Game UI 2_6
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 2325
+        width: 1601
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27365ca62c2516f00800000000000000
+      internalID: 1108257978278306674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Game UI 2_7
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1776
+        width: 1237
+        height: 407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 409002b732c184da0800000000000000
+      internalID: -5960483168109721340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Game UI 2_8
+      rect:
+        serializedVersion: 2
+        x: 1513
+        y: 1780
+        width: 1089
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03fb46f0f96a61380800000000000000
+      internalID: -9000823603165085904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Game UI 2_9
+      rect:
+        serializedVersion: 2
+        x: 2712
+        y: 1776
+        width: 1088
+        height: 407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 010249811f187a200800000000000000
+      internalID: 191264381685997584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Game UI 2_10
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 1263
+        width: 349
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bb889921c776a450800000000000000
+      internalID: 6099694416830172085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Game UI 2_11
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 1263
+        width: 346
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2ce6be936d2678f0800000000000000
+      internalID: -543196799163765716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Game UI 2_12
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 1263
+        width: 345
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dbddde0b9570b330800000000000000
+      internalID: 3724606200665201622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Game UI 2_13
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 1263
+        width: 346
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c22b2fc9b935831d0800000000000000
+      internalID: -3370852393268628948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Game UI 2_14
+      rect:
+        serializedVersion: 2
+        x: 1817
+        y: 1263
+        width: 346
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fef79cce35487e20800000000000000
+      internalID: 3348502458972765936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Game UI 2_15
+      rect:
+        serializedVersion: 2
+        x: 2220
+        y: 1263
+        width: 343
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcc2b7b5cf1483e10800000000000000
+      internalID: 2177562971955997903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Game UI 2_16
+      rect:
+        serializedVersion: 2
+        x: 2622
+        y: 1263
+        width: 347
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e02094e5c7b8b640800000000000000
+      internalID: 5096025038940807394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Game UI 2_17
+      rect:
+        serializedVersion: 2
+        x: 3024
+        y: 1263
+        width: 348
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 735d09644a71b09d0800000000000000
+      internalID: -2807123948409400009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Game UI 2_18
+      rect:
+        serializedVersion: 2
+        x: 3425
+        y: 1263
+        width: 349
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae3a63e97cd8052d0800000000000000
+      internalID: -3291975439115443222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Game UI 2_19
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 751
+        width: 371
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e3b6edca133a40e0800000000000000
+      internalID: -2284957670720490521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Game UI 2_20
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 753
+        width: 369
+        height: 361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3a94019891d3bee0800000000000000
+      internalID: -1246422218653263299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Game UI 2_21
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 753
+        width: 368
+        height: 361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72295c0ab2ffb0f00800000000000000
+      internalID: 1084240698158715431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Game UI 2_22
+      rect:
+        serializedVersion: 2
+        x: 1409
+        y: 753
+        width: 367
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93241adee7164c510800000000000000
+      internalID: 1568485768012317241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Game UI 2_23
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 753
+        width: 365
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d58209f4177bed20800000000000000
+      internalID: 3308869283194504665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Game UI 2_24
+      rect:
+        serializedVersion: 2
+        x: 2214
+        y: 753
+        width: 363
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4671c83a10fe6ed20800000000000000
+      internalID: 3307593766668080996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Game UI 2_25
+      rect:
+        serializedVersion: 2
+        x: 2612
+        y: 753
+        width: 366
+        height: 361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8620fae54192f4a00800000000000000
+      internalID: 742857631004033640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Game UI 2_26
+      rect:
+        serializedVersion: 2
+        x: 3017
+        y: 753
+        width: 366
+        height: 361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0fee2307bb615780800000000000000
+      internalID: -8696050971699122422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Game UI 2_27
+      rect:
+        serializedVersion: 2
+        x: 3417
+        y: 751
+        width: 367
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfa0f00bced723770800000000000000
+      internalID: 8589065894868486907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Game UI 2_28
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 253
+        width: 418
+        height: 406
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fbf93566572fb800800000000000000
+      internalID: 630265724874128368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Game UI 2_29
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 253
+        width: 417
+        height: 406
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8d35ecd544b74ed0800000000000000
+      internalID: -2429775261791339121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Game UI 2_30
+      rect:
+        serializedVersion: 2
+        x: 1142
+        y: 237
+        width: 316
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d94329c9b7b3163d0800000000000000
+      internalID: -3215223256871979875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Game UI 2_31
+      rect:
+        serializedVersion: 2
+        x: 1499
+        y: 237
+        width: 328
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac808e65b50cff10800000000000000
+      internalID: 2304723386107989154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Game UI 2_32
+      rect:
+        serializedVersion: 2
+        x: 1865
+        y: 263
+        width: 322
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 664fa9a7d18ec8350800000000000000
+      internalID: 6020442015196181606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Game UI 2_33
+      rect:
+        serializedVersion: 2
+        x: 2212
+        y: 274
+        width: 322
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abdf0e32bc1fde570800000000000000
+      internalID: 8497713926700596666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Game UI 2_34
+      rect:
+        serializedVersion: 2
+        x: 2589
+        y: 257
+        width: 1162
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e9636f49dcb05da0800000000000000
+      internalID: -5958054665485325847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
