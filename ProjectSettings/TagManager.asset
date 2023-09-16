@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - CharacterImage
+  - P1 Select
+  - P2 Select
+  - Player 1 Avatar
+  - Player 2 Avatar
   layers:
   - Default
   - TransparentFX

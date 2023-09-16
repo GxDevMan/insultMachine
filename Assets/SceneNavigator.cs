@@ -14,6 +14,9 @@ public class SceneNavigator : MonoBehaviour
         "EvaluateBanner",
     };
 
+    // Add a variable to store the selected map
+    public static string selectedMap;
+
     private void Start()
     {
         // Initialize currentIndex to the build index of the current scene
@@ -26,7 +29,16 @@ public class SceneNavigator : MonoBehaviour
         {
             currentIndex++;
             Debug.Log("Loading next scene: " + sceneNames[currentIndex]);
-            SceneManager.LoadScene(sceneNames[currentIndex]);
+
+            // If the next scene is GameProper, set the selected map before loading it
+            if (sceneNames[currentIndex] == "GameProper")
+            {
+                SceneManager.LoadScene("MapSelect");
+            }
+            else
+            {
+                SceneManager.LoadScene(sceneNames[currentIndex]);
+            }
         }
     }
 
