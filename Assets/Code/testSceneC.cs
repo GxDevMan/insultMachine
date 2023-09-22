@@ -35,7 +35,7 @@ public class testSceneC : MonoBehaviour
         if (!string.IsNullOrEmpty(result))
         {
             VerdictData verdictdata = JsonUtility.FromJson<VerdictData>(result);
-            List<int> judgementNumbers = verdictdata.verdict;
+            List<double> judgementNumbers = verdictdata.verdict;
 
             if (judgementNumbers.Count > 0)
             {
@@ -76,6 +76,6 @@ public class testSceneC : MonoBehaviour
     [System.Serializable]
     public class VerdictData
     {
-        public List<int> verdict;
+        public List<double> verdict;
     }
 }
