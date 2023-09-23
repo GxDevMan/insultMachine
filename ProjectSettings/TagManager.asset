@@ -9,6 +9,7 @@ TagManager:
   - P2 Select
   - Player 1 Avatar
   - Player 2 Avatar
+  - Player Avatar
   layers:
   - Default
   - TransparentFX

@@ -6,11 +6,6 @@ public class RadioToggleGroup : MonoBehaviour
 {
     public Toggle mapToggle1;
     public Toggle mapToggle2;
-
-    // Add references to your map images here
-    public Image mapImage1;
-    public Image mapImage2;
-
     public Toggle[] mapToggles; // Array of map toggles
 
     private void Start()
@@ -18,32 +13,42 @@ public class RadioToggleGroup : MonoBehaviour
         // Initialize the radio toggle group
         InitializeRadioToggleGroup(mapToggles);
 
-        // Make sure one of the toggles is selected by default (map 1).
-        mapToggle1.isOn = true;
+        // Load the last selected map from MapManager (default to Map1 if not found)
+        MapManager.Instance.selectedMap = PlayerPrefs.GetString("SelectedMap", "Map1");
 
-        // Debug message to show that Map1 is the default selection
-        Debug.Log("Default Map Selection: Map1");
+        // Set the toggle based on the loaded map
+        if (MapManager.Instance.selectedMap == "Map1")
+        {
+            mapToggle1.isOn = true;
+        }
+        else if (MapManager.Instance.selectedMap == "Map2")
+        {
+            mapToggle2.isOn = true;
+        }
+
+        // Debug the selected map
+        Debug.Log("Selected Map: " + MapManager.Instance.selectedMap);
+
     }
 
     public void TransitionToFlipCoinScene()
     {
-        // Check which toggle is selected and load the corresponding scene.
+        // Check which toggle is selected and save the selected map in PlayerPrefs
         if (mapToggle1.isOn)
         {
-            // Set the selected map
-            SceneNavigator.selectedMap = "Map1";
-
-            // Load the FlipCoin scene with map 1 data.
-            SceneManager.LoadScene("FlipCoin");
+            MapManager.Instance.selectedMap = "Map1";
         }
         else if (mapToggle2.isOn)
         {
-            // Set the selected map
-            SceneNavigator.selectedMap = "Map2";
-
-            // Load the FlipCoin scene with map 2 data.
-            SceneManager.LoadScene("FlipCoin");
+            MapManager.Instance.selectedMap = "Map2";
         }
+
+        // Save the selected map in PlayerPrefs
+        PlayerPrefs.SetString("SelectedMap", MapManager.Instance.selectedMap);
+        PlayerPrefs.Save();
+
+        // Load the FlipCoin scene
+        SceneManager.LoadScene("FlipCoin");
     }
 
     private void InitializeRadioToggleGroup(Toggle[] toggles)
@@ -69,5 +74,9 @@ public class RadioToggleGroup : MonoBehaviour
             // Debug message to show which map is chosen
             Debug.Log("Selected Map: " + (changedToggle == mapToggle1 ? "Map1" : "Map2"));
         }
+            else
+    {
+        Debug.Log("Toggle turned off.");
+    }
     }
 }

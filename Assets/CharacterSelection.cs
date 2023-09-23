@@ -3,57 +3,147 @@ using UnityEngine.UI;
 
 public class CharacterSelection : MonoBehaviour
 {
-    public GameObject cursorPrefabP1;
-    public GameObject cursorPrefabP2;
-    public Text player1IndicatorText;
-    public Text player2IndicatorText;
-    public GameObject player1Avatar; // Reference to Player 1 Avatar Image
-    public GameObject player2Avatar; // Reference to Player 2 Avatar Image
+    public Image player1CharacterImage;
+    public Image player2CharacterImage;
+    private int player1CurrentCharacterIndex = 0;
+    private int player2CurrentCharacterIndex = 1;
 
-    private GameObject currentCursorP1;
-    private GameObject currentCursorP2;
-
-    private void Update()
+    private void Start()
     {
-        if (Input.GetMouseButtonDown(0))
+        // Load the selected characters from PlayerPrefs, or set them to default (0 and 1) if not found
+        int player1Index = PlayerPrefs.GetInt("Player1CharacterIndex", 0);
+        int player2Index = PlayerPrefs.GetInt("Player2CharacterIndex", 1);
+
+        // Set the initial character images based on the saved or default indices
+        UpdateCharacterImage(player1CharacterImage, player1Index);
+        UpdateCharacterImage(player2CharacterImage, player2Index);
+
+        // Set the selected characters in the CharacterManager
+        CharacterManager.instance.SetSelectedCharacters(player1Index, player2Index);
+
+        // Display debug information for the initial character selections
+        Debug.Log("Player 1 selected character index: " + player1Index);
+        Debug.Log("Player 2 selected character index: " + player2Index);
+
+        // Load the selected character sprites based on their indices
+        Sprite player1Sprite = CharacterManager.instance.GetPlayer1CharacterSprite();
+        Sprite player2Sprite = CharacterManager.instance.GetPlayer2CharacterSprite();
+
+        // Update the character images in the scene
+        player1CharacterImage.sprite = player1Sprite;
+        player2CharacterImage.sprite = player2Sprite;
+    }
+
+
+    // Called when the Right button is clicked for Player 1
+    public void Player1NextCharacter()
+    {
+        player1CurrentCharacterIndex = (player1CurrentCharacterIndex + 1) % CharacterManager.instance.characters.Count;
+        UpdateCharacterImage(player1CharacterImage, player1CurrentCharacterIndex);
+
+        // Map the character name to the desired label
+        string selectedCharacterName = CharacterManager.instance.characters[player1CurrentCharacterIndex].name;
+        string selectedCharacterLabel = GetCharacterLabel(selectedCharacterName);
+
+        Debug.Log("Setting Player 1 character name to: " + selectedCharacterLabel);
+
+        // Save the selected character index for Player 1
+        PlayerPrefs.SetInt("Player1CharacterIndex", player1CurrentCharacterIndex);
+        PlayerPrefs.SetString("character_TotoyIdle", selectedCharacterLabel);
+
+        // Display debug information for the selected character for Player 1
+        Debug.Log("Player 1 selected character: " + CharacterManager.instance.characters[player1CurrentCharacterIndex].name);
+    }
+
+    // Called when the Left button is clicked for Player 1
+    public void Player1PreviousCharacter()
+    {
+        player1CurrentCharacterIndex = (player1CurrentCharacterIndex - 1 + CharacterManager.instance.characters.Count) % CharacterManager.instance.characters.Count;
+        UpdateCharacterImage(player1CharacterImage, player1CurrentCharacterIndex);
+
+        // Map the character name to the desired label
+        string selectedCharacterName = CharacterManager.instance.characters[player1CurrentCharacterIndex].name;
+        string selectedCharacterLabel = GetCharacterLabel(selectedCharacterName);
+
+        // Save the selected character index for Player 1
+        PlayerPrefs.SetInt("Player1CharacterIndex", player1CurrentCharacterIndex);
+        PlayerPrefs.SetString("character_TotoyIdle", selectedCharacterLabel);
+
+        // Display debug information for the selected character for Player 1
+        Debug.Log("Player 1 selected character: " + CharacterManager.instance.characters[player1CurrentCharacterIndex].name);
+    }
+
+    // Called when the Right button is clicked for Player 2
+    public void Player2NextCharacter()
+    {
+        player2CurrentCharacterIndex = (player2CurrentCharacterIndex + 1) % CharacterManager.instance.characters.Count;
+        UpdateCharacterImage(player2CharacterImage, player2CurrentCharacterIndex);
+
+        // Map the character name to the desired label
+        string selectedCharacterName = CharacterManager.instance.characters[player2CurrentCharacterIndex].name;
+        string selectedCharacterLabel = GetCharacterLabel(selectedCharacterName);
+
+        // Save the selected character index for Player 2
+        PlayerPrefs.SetInt("Player2CharacterIndex", player2CurrentCharacterIndex);
+        PlayerPrefs.SetString("character_AsianMomIdle", selectedCharacterLabel);
+
+        // Display debug information for the selected character for Player 2
+        Debug.Log("Player 2 selected character: " + CharacterManager.instance.characters[player2CurrentCharacterIndex].name);
+    }
+
+    // Called when the Left button is clicked for Player 2
+    public void Player2PreviousCharacter()
+    {
+        player2CurrentCharacterIndex = (player2CurrentCharacterIndex - 1 + CharacterManager.instance.characters.Count) % CharacterManager.instance.characters.Count;
+        UpdateCharacterImage(player2CharacterImage, player2CurrentCharacterIndex);
+
+        // Map the character name to the desired label
+        string selectedCharacterName = CharacterManager.instance.characters[player2CurrentCharacterIndex].name;
+        string selectedCharacterLabel = GetCharacterLabel(selectedCharacterName);
+
+        // Save the selected character index for Player 2
+        PlayerPrefs.SetInt("Player2CharacterIndex", player2CurrentCharacterIndex);
+        PlayerPrefs.SetString("character_AsianMomIdle", selectedCharacterLabel);
+
+        // Display debug information for the selected character for Player 2
+        Debug.Log("Player 2 selected character: " + CharacterManager.instance.characters[player2CurrentCharacterIndex].name);
+    }
+
+    private string GetCharacterLabel(string characterName)
+    {
+        // Map character names to labels
+        switch (characterName)
         {
-            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
-
-            if (hit.collider != null)
-            {
-                Debug.Log("Mouse clicked on object with tag: " + hit.collider.tag);
-
-                if (hit.collider.CompareTag("Player 1 Avatar"))
-                {
-                    Debug.Log("Player 1 Avatar selected");
-                    HandleCharacterSelection(cursorPrefabP1, ref currentCursorP1, "P1 Select", player1IndicatorText, player1Avatar);
-                }
-                else if (hit.collider.CompareTag("Player 2 Avatar"))
-                {
-                    Debug.Log("Player 2 Avatar selected");
-                    HandleCharacterSelection(cursorPrefabP2, ref currentCursorP2, "P2 Select", player2IndicatorText, player2Avatar);
-                }
-            }
+            case "character_TotoyIdle":
+                return "Totoy";
+            case "character_AsianMomIdle":
+                return "Karen";
+            default:
+                return characterName; // If not found, use the original name
         }
     }
 
-    private void HandleCharacterSelection(GameObject cursorPrefab, ref GameObject currentCursor, string playerIndicator, Text indicatorText, GameObject avatarImage)
+    private void UpdateCharacterImage(Image image, int index)
     {
-        // Destroy the current cursor for the other player if it exists
-        if (currentCursor != null)
-        {
-            Destroy(currentCursor);
-        }
+        image.sprite = CharacterManager.instance.characters[index];
+    }
 
-        // Instantiate the cursor for the selected player
-        Vector3 characterPosition = cursorPrefab.transform.position;
-        currentCursor = Instantiate(cursorPrefab, characterPosition, Quaternion.identity);
-        Debug.Log(playerIndicator + " Cursor instantiated");
+    // Function to reset character selections to default
+    public void ResetCharacterSelection()
+    {
+        PlayerPrefs.DeleteKey("Player1CharacterIndex");
+        PlayerPrefs.DeleteKey("Player2CharacterIndex");
 
-        // Set the indicator text
-        indicatorText.text = playerIndicator;
+        // Set character selections to default (0)
+        player1CurrentCharacterIndex = 0;
+        player2CurrentCharacterIndex = 1;
 
-        // You can do additional actions with the avatarImage GameObject here if needed.
+        // Update character images to default
+        UpdateCharacterImage(player1CharacterImage, player1CurrentCharacterIndex);
+        UpdateCharacterImage(player2CharacterImage, player2CurrentCharacterIndex);
+
+        // Display debug information for the default character selections
+        Debug.Log("Player 1 selected character: " + CharacterManager.instance.characters[player1CurrentCharacterIndex].name);
+        Debug.Log("Player 2 selected character: " + CharacterManager.instance.characters[player2CurrentCharacterIndex].name);
     }
 }

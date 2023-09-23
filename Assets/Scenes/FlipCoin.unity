@@ -1358,8 +1358,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 13.4, y: 299}
-  m_SizeDelta: {x: 278.04504, y: 106.72252}
+  m_AnchoredPosition: {x: 17.9, y: 299}
+  m_SizeDelta: {x: 245.5022, y: 108.8068}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1051973905
 MonoBehaviour:
@@ -1543,6 +1543,10 @@ MonoBehaviour:
   spins: 2
   headsSpinSpeed: 900
   tailsSpinSpeed: 500
+  player1CharacterImage: {fileID: 425734005}
+  player2CharacterImage: {fileID: 2059551344}
+  player1CharacterNameText: {fileID: 1051973905}
+  player2CharacterNameText: {fileID: 940480068}
 --- !u!212 &1197062719
 SpriteRenderer:
   m_ObjectHideFlags: 0

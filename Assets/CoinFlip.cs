@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class CoinFlip : MonoBehaviour
@@ -12,6 +13,12 @@ public class CoinFlip : MonoBehaviour
     public int spins = 2;
     public float headsSpinSpeed = 900f; // Spin speed for heads.
     public float tailsSpinSpeed = 500f; // Spin speed for tails.
+    public Image player1CharacterImage; // Reference to Player 1's character image.
+    public Image player2CharacterImage; // Reference to Player 2's character image.
+
+    public Text player1CharacterNameText;
+    public Text player2CharacterNameText;
+
 
     private bool isHeads;
     private SpriteRenderer coinRenderer;
@@ -22,6 +29,28 @@ public class CoinFlip : MonoBehaviour
         player1Checkmark.SetActive(false);
         player2Checkmark.SetActive(false);
         StartCoroutine(SpinCoin());
+
+        // Load the selected character names from PlayerPrefs
+        string player1CharacterName = PlayerPrefs.GetString("character_TotoyIdle");
+        string player2CharacterName = PlayerPrefs.GetString("character_AsianMomIdle");
+
+        // Update the character names in the scene
+        player1CharacterNameText.text = player1CharacterName;
+        player2CharacterNameText.text = player2CharacterName;
+
+        // Load the selected character sprites from CharacterManager
+        Sprite player1CharacterSprite = CharacterManager.instance.GetPlayer1CharacterSprite();
+        Sprite player2CharacterSprite = CharacterManager.instance.GetPlayer2CharacterSprite();
+
+        // Update the character images in the scene
+        player1CharacterImage.sprite = player1CharacterSprite;
+        player2CharacterImage.sprite = player2CharacterSprite;
+    }
+
+    private Sprite FindCharacterSprite(string characterName)
+    {
+        // Find the character sprite based on the name in the characters list
+        return CharacterManager.instance.characters.Find(sprite => sprite.name == characterName);
     }
 
     private IEnumerator SpinCoin()
@@ -59,13 +88,13 @@ public class CoinFlip : MonoBehaviour
         {
             Debug.Log("Player 1 (Heads) goes first.");
             player1Checkmark.SetActive(true);
-            Debug.Log("Currently showing: " + (coinRenderer.sprite == headsSprite ? "Heads" : "Tails"));
+            player2Checkmark.SetActive(false); // Hide Player 2's checkmark
         }
         else
         {
             Debug.Log("Player 2 (Tails) goes first.");
+            player1Checkmark.SetActive(false); // Hide Player 1's checkmark
             player2Checkmark.SetActive(true);
-            Debug.Log("Currently showing: " + (coinRenderer.sprite == headsSprite ? "Heads" : "Tails"));
         }
 
         // Transition to the "GameProper" scene after a delay (e.g., 2 seconds).
