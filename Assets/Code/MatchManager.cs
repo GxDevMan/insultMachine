@@ -1,38 +1,36 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
+﻿using System.Collections;
+using UnityEngine;
 
-public class testSceneC : MonoBehaviour
+public class MatchManager : MonoBehaviour
 {
-    public InputField inputArea;
-    public InputField outputArea;
-    public Button sendText;
-    private string sqlLoc;
-
-    private aiRequester theJudge;
-    private int matchId;
-    public bool cnnsvmSetting { get; set; }
-    private SQLliteHandler handleSql;
+    public static MatchManager instance;
     public playerObj player1 { get; set; }
     public playerObj player2 { get; set; }
+    public bool cnnsvmSetting { get; set; }
+    public int matchId { get; set; }
 
-    public playerObj currentPlayer;
-    string firstPlayer;
+
+    private SQLliteHandler handleSql;
+    private string sqlLoc;
+
+    private playerObj currentPlayer;
+
+    public string firstPlayer { get; set; }
+    private aiRequester theJudge;
+
+    public double result { get; set; }
+
 
     void Start()
     {
+        handleSql.CreateTable();
         string template = "URI=file:";
         string relativeLoc = "Assets/Code/data/loggedArbitration.db";
         sqlLoc = $"{template}{relativeLoc}";
 
-        sendText.onClick.AddListener(judging);
-        
-        this.cnnsvmSetting = false;
         this.theJudge = new aiRequester();
         this.handleSql = new SQLliteHandler(sqlLoc, relativeLoc);
-        this.firstPlayer = "player1";
 
-        handleSql.CreateTable();
         player1 = new playerObj("Player 1", 100, 20, 20);
         player2 = new playerObj("Player 2", 100, 20, 20);
 
@@ -40,8 +38,7 @@ public class testSceneC : MonoBehaviour
         player1.playerId = handleSql.newPlayer(player1);
         player2.playerId = handleSql.newPlayer(player2);
 
-
-        if (firstPlayer == "player1")
+        if (firstPlayer == firstPlayer)
         {
             this.currentPlayer = player1;
         }
@@ -51,15 +48,32 @@ public class testSceneC : MonoBehaviour
         }
     }
 
-    private void judging()
+    void Update()
     {
-        StartCoroutine(ArbitrateAndSwap());
+        
     }
 
-
-    private IEnumerator ArbitrateAndSwap()
+    private void Awake()
     {
-        string input = inputArea.text;
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void judging(string text)
+    {
+        StartCoroutine(ArbitrateAndSwap(text));
+    }
+
+    private IEnumerator ArbitrateAndSwap(string text)
+    {
+        string input = text;
         yield return StartCoroutine(arbitrate(input));
 
         if (currentPlayer.playerName == "Player 1")
@@ -77,22 +91,25 @@ public class testSceneC : MonoBehaviour
     private IEnumerator arbitrate(string input)
     {
         statementObj newstatementChatFilter = new statementObj(currentPlayer.playerId, matchId, input);
-
-        // Start the coroutine and wait for it to finish
         yield return StartCoroutine(theJudge.SendJudgementPostRequest(newstatementChatFilter, handleJudgeMent));
     }
 
 
-    public void displayJudgement(statementObj ratedStatement)
+    public void newMatch()
     {
-        outputArea.text = ratedStatement.statement;
-        outputArea.text = $"ratingCNNSVM: {ratedStatement.ratingCNNSVM} ratingChatFilter: {ratedStatement.ratingChatFilter}";
+        this.matchId = handleSql.newMatch();
+
+        player1 = new playerObj("Player 1", 100, 20, 20);
+        player2 = new playerObj("Player 2", 100, 20, 20);
+
+        player1.playerId = handleSql.newPlayer(player1);
+        player2.playerId = handleSql.newPlayer(player2);
     }
 
     private void handleJudgeMent(statementObj result)
     {
         handleSql.InsertStatement(result);
-        displayJudgement(result);
+        resultJudge(result);
 
         if (this.cnnsvmSetting)
         {
@@ -118,6 +135,18 @@ public class testSceneC : MonoBehaviour
                 handleHeal(1 - result.ratingChatFilter);
             }
 
+        }
+    }
+
+    private void resultJudge(statementObj result)
+    {
+        if (this.cnnsvmSetting)
+        {
+            this.result = result.ratingCNNSVM;
+        }
+        else
+        {
+            this.result = result.ratingChatFilter;
         }
     }
 
