@@ -73,10 +73,14 @@ public class RadioToggleGroup : MonoBehaviour
 
             // Debug message to show which map is chosen
             Debug.Log("Selected Map: " + (changedToggle == mapToggle1 ? "Map1" : "Map2"));
+
+            // Update the selectedMap value in MapManager
+            MapManager.Instance.selectedMap = (changedToggle == mapToggle1 ? "Map1" : "Map2");
         }
-            else
-    {
-        Debug.Log("Toggle turned off.");
+        else
+        {
+            Debug.Log("Toggle turned off.");
+        }
     }
-    }
+
 }

@@ -2077,8 +2077,7 @@ MonoBehaviour:
   countdownPanel: {fileID: 427137177}
   gameOverPanel: {fileID: 409325395}
   isGameRunning: 0
-  Peso_1: {fileID: 4803460706155036988, guid: ca210b0e6c59e3c4eb905609876bd874, type: 3}
-  Peso_2: {fileID: -9009192115898094680, guid: ca210b0e6c59e3c4eb905609876bd874, type: 3}
+  coinFlip: {fileID: 0}
 --- !u!4 &539627192
 Transform:
   m_ObjectHideFlags: 0
@@ -3294,7 +3293,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 324512747}
   m_Direction: 0
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.97489834
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -5042,7 +5041,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000030517578, y: -6.1934814}
+  m_AnchoredPosition: {x: 0.0028076172, y: -6.1934814}
   m_SizeDelta: {x: -80.918274, y: 12.386963}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1802072890

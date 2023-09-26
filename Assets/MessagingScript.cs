@@ -30,7 +30,7 @@ public class MessagingScript : MonoBehaviour
         player1PlaceholderText = player1InputField.placeholder.GetComponent<Text>().text;
         player2PlaceholderText = player2InputField.placeholder.GetComponent<Text>().text;
 
-        DisablePlayer2InputField();
+        //DisablePlayer2InputField();
     }
 
     private void OnPlayer1ValueChanged(string text)
@@ -47,9 +47,9 @@ public class MessagingScript : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Return))
         {
-            GameProper gameProper = FindObjectOfType<GameProper>(); // Find the GameProper script
+            GameProper gameProper = FindObjectOfType<GameProper>();
 
-            if (gameProper != null && gameProper.isGameRunning) // Check if the game is running
+            if (gameProper != null && gameProper.isGameRunning)
             {
                 if (!string.IsNullOrEmpty(text) && !IsWordLimitExceeded(text))
                 {
@@ -57,15 +57,9 @@ public class MessagingScript : MonoBehaviour
                     SendMessage(sender, text);
                     ClearInputField(player1InputField);
 
+                    // Reset Player 1's timer and start it
                     gameProper.ResetPlayer1Timer();
-
-                    if (isPlayer1Turn)
-                    {
-                        gameProper.SwitchTurns();
-                        isPlayer1Turn = false;
-                    }
-
-                    ToggleInputFields(false, true); // Disable Player 1 input field, enable Player 2 input field
+                    gameProper.SwitchTurns();
                 }
                 else
                 {
@@ -83,9 +77,9 @@ public class MessagingScript : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Return))
         {
-            GameProper gameProper = FindObjectOfType<GameProper>(); // Find the GameProper script
+            GameProper gameProper = FindObjectOfType<GameProper>();
 
-            if (gameProper != null && gameProper.isGameRunning) // Check if the game is running
+            if (gameProper != null && gameProper.isGameRunning)
             {
                 if (!string.IsNullOrEmpty(text) && !IsWordLimitExceeded(text))
                 {
@@ -93,15 +87,9 @@ public class MessagingScript : MonoBehaviour
                     SendMessage(sender, text);
                     ClearInputField(player2InputField);
 
+                    // Reset Player 2's timer and start it
                     gameProper.ResetPlayer2Timer();
-
-                    if (!isPlayer1Turn)
-                    {
-                        gameProper.SwitchTurns();
-                        isPlayer1Turn = true;
-                    }
-
-                    ToggleInputFields(true, false); // Enable Player 1 input field, disable Player 2 input field
+                    gameProper.SwitchTurns();
                 }
                 else
                 {
@@ -114,6 +102,9 @@ public class MessagingScript : MonoBehaviour
             }
         }
     }
+
+
+
 
 
 
@@ -158,6 +149,12 @@ public class MessagingScript : MonoBehaviour
     public void DisablePlayer2InputField()
     {
         player2InputField.interactable = false;
+        if (!string.IsNullOrEmpty(player2InputField.text))
+        {
+            // Display "Player 2: prompt" when disabling player2InputField with content
+            SendMessage("Player 2", player2InputField.text);
+            ClearInputField(player2InputField);
+        }
     }
 
     public void EnablePlayer2InputField()
@@ -173,6 +170,12 @@ public class MessagingScript : MonoBehaviour
     public void DisablePlayer1InputField()
     {
         player1InputField.interactable = false;
+        if (!string.IsNullOrEmpty(player1InputField.text))
+        {
+            // Display "Player 1: prompt" when disabling player1InputField with content
+            SendMessage("Player 1", player1InputField.text);
+            ClearInputField(player1InputField);
+        }
     }
 
     private void ClearInputField(InputField inputField)

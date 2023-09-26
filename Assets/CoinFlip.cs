@@ -20,7 +20,7 @@ public class CoinFlip : MonoBehaviour
     public Text player2CharacterNameText;
 
 
-    private bool isHeads;
+    public bool isHeads;
     private SpriteRenderer coinRenderer;
 
     private void Start()
@@ -58,7 +58,11 @@ public class CoinFlip : MonoBehaviour
         int spinsRemaining = spins;
 
         // Determine if it's heads or tails based on spinSpeed.
-        isHeads = Random.value < (headsSpinSpeed / (headsSpinSpeed + tailsSpinSpeed));
+        bool isHeads = Random.value < (headsSpinSpeed / (headsSpinSpeed + tailsSpinSpeed));
+
+        // Store the result in PlayerPrefs
+        PlayerPrefs.SetInt("CoinResult", isHeads ? 1 : 2); // 1 for heads, 2 for tails
+
 
         while (spinsRemaining > 0)
         {

@@ -40,15 +40,42 @@ public class GameProper : MonoBehaviour
 
     public bool isGameRunning = false; // Flag to track if the game is running
 
-    void Start()
-    {
-        gameTimer = gameDuration;
-        currentPlayerTurnTimer = isPlayer1Turn ? player1TurnDuration : player2TurnDuration;
-        messagingScript.gameProper = this;
+    public CoinFlip coinFlip; // Reference to the CoinFlip script
 
-        // Start the countdown when the game starts
-        StartCountdown();
+void Start()
+{
+    gameTimer = gameDuration;
+    messagingScript.gameProper = this;
+
+    // Start the countdown when the game starts
+    StartCountdown();
+
+    // Read the result of the coin flip from PlayerPrefs
+    int coinResult = PlayerPrefs.GetInt("CoinResult", 0);
+
+    // Check the result and enable/disable text fields accordingly
+    if (coinResult == 1) // Heads
+    {
+        messagingScript.EnablePlayer1InputField();
+        messagingScript.DisablePlayer2InputField();
+
+        // Set the initial timer text and timer for Player 1
+        player1TimerText.text = player1TurnDuration.ToString();
+        currentPlayerTurnTimer = player1TurnDuration;
+        isPlayer1Turn = true;
     }
+    else if (coinResult == 2) // Tails
+    {
+        messagingScript.EnablePlayer2InputField();
+        messagingScript.DisablePlayer1InputField();
+
+        // Set the initial timer text and timer for Player 2
+        player2TimerText.text = player2TurnDuration.ToString();
+        currentPlayerTurnTimer = player2TurnDuration;
+        isPlayer1Turn = false;
+    }
+}
+
 
     void Update()
     {
@@ -146,12 +173,14 @@ public class GameProper : MonoBehaviour
         if (isPlayer1Turn)
         {
             messagingScript.EnablePlayer1InputField();
-            messagingScript.SetCurrentPlayerTurn(messagingScript.player1InputField); // Set Player 1's turn
+            messagingScript.DisablePlayer2InputField();
+            player1TimerText.text = currentPlayerTurnTimer.ToString();
         }
         else
         {
             messagingScript.EnablePlayer2InputField();
-            messagingScript.SetCurrentPlayerTurn(messagingScript.player2InputField); // Set Player 2's turn
+            messagingScript.DisablePlayer1InputField();
+            player2TimerText.text = currentPlayerTurnTimer.ToString();
         }
 
         // Check if it's Player 1's first turn, and if yes, reset their timer
@@ -161,6 +190,7 @@ public class GameProper : MonoBehaviour
             player1FirstTurn = false;
         }
     }
+
 
 
     public void ResetGameTimer()
@@ -220,11 +250,18 @@ public class GameProper : MonoBehaviour
     {
         player1TurnDuration = 20.0f;
         player1TimerText.text = "20"; // Update the UI text to show 20 seconds
+        currentPlayerTurnTimer = player1TurnDuration; // Reset the current turn timer
+        Debug.Log("Player 1 Timer Reset to 20");
     }
 
     public void ResetPlayer2Timer()
     {
         player2TurnDuration = 20.0f;
         player2TimerText.text = "20"; // Update the UI text to show 20 seconds
+        currentPlayerTurnTimer = player2TurnDuration; // Reset the current turn timer
+        Debug.Log("Player 2 Timer Reset to 20");
     }
+
+
+
 }

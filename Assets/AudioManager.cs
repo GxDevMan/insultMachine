@@ -78,6 +78,9 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
+        // Set loop to true for background music
+        audioSource.loop = true;
+
         if (!audioSource.isPlaying || audioSource.clip != music)
         {
             audioSource.clip = music;

@@ -1680,9 +1680,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'MCRONALDS
-
-'
+  m_Text: HAPPY BEE
 --- !u!222 &1551444361
 CanvasRenderer:
   m_ObjectHideFlags: 0
