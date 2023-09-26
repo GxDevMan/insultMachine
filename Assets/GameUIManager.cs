@@ -10,7 +10,8 @@ public class GameUIManager : MonoBehaviour
     public GameProper gameProper; // Reference to the GameProper script
 
     public Button menuButton;
-    public Canvas initialCanvas;
+    public GameObject menuCanvasObject;
+
 
     public Button continueButton;
     public Button mainMenuButton;
@@ -23,10 +24,10 @@ public class GameUIManager : MonoBehaviour
 
     private void Start()
     {
-        // Disable the initial canvas
-        if (initialCanvas != null)
+        // Disable the initial canvas GameObject
+        if (menuCanvasObject != null)
         {
-            initialCanvas.enabled = false;
+            menuCanvasObject.SetActive(false);
         }
 
         // Add click listeners for the sound, restart, and pause buttons
@@ -42,6 +43,7 @@ public class GameUIManager : MonoBehaviour
         mainMenuButton.onClick.AddListener(GoToMainMenu);
         quitButton.onClick.AddListener(QuitGame);
     }
+
 
     private void ToggleSound()
     {
@@ -92,31 +94,45 @@ public class GameUIManager : MonoBehaviour
             previousTimeScale = Time.timeScale; // Store the previous time scale
             Time.timeScale = 0f; // Set time scale to 0 to pause the game
             Debug.Log("Game Paused");
+
+            // Handle pausing of player input in the GameProper script (if needed)
+            if (gameProper != null)
+            {
+                gameProper.isGameRunning = false; // Pause the game in GameProper
+            }
         }
         else
         {
             Time.timeScale = previousTimeScale; // Restore the previous time scale
             Debug.Log("Game Resumed");
+
+            // Handle resuming of player input in the GameProper script (if needed)
+            if (gameProper != null)
+            {
+                gameProper.isGameRunning = true; // Resume the game in GameProper
+            }
         }
     }
 
+
     public void ShowCanvas()
     {
-        if (initialCanvas != null)
+        if (menuCanvasObject != null)
         {
-            initialCanvas.enabled = true;
+            menuCanvasObject.SetActive(true);
             TogglePause(); // Pause the game when showing the menu canvas
         }
     }
 
     public void HideCanvas()
     {
-        if (initialCanvas != null)
+        if (menuCanvasObject != null)
         {
-            initialCanvas.enabled = false;
+            menuCanvasObject.SetActive(false);
             TogglePause(); // Resume the game when hiding the menu canvas
         }
     }
+
 
     private void ContinueGame()
     {

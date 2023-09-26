@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
+using System;
 
 public class MessagingScript : MonoBehaviour
 {
@@ -9,20 +9,27 @@ public class MessagingScript : MonoBehaviour
     public Text conversationText;
     public Text player1CharacterCounter;
     public Text player2CharacterCounter;
-    public int maxWords = 20; // Maximum words allowed in the chat
+    public int maxWords = 5;
 
-    private bool isPlayer1Turn = true; // Flag to track whose turn it is
+    public GameProper gameProper;
 
-    private void Start()
+    private bool isPlayer1Turn = true;
+
+    private string player1PlaceholderText;
+    private string player2PlaceholderText;
+
+    void Start()
     {
-        // Use both onValueChanged and onEndEdit to capture text input
         player1InputField.onValueChanged.AddListener(OnPlayer1ValueChanged);
         player1InputField.onEndEdit.AddListener(OnPlayer1EndEdit);
 
         player2InputField.onValueChanged.AddListener(OnPlayer2ValueChanged);
         player2InputField.onEndEdit.AddListener(OnPlayer2EndEdit);
 
-        // Initially, it's player 1's turn, so disable player 2's input field
+        // Store the initial placeholder texts
+        player1PlaceholderText = player1InputField.placeholder.GetComponent<Text>().text;
+        player2PlaceholderText = player2InputField.placeholder.GetComponent<Text>().text;
+
         DisablePlayer2InputField();
     }
 
@@ -40,17 +47,34 @@ public class MessagingScript : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Return))
         {
-            // Check if Enter key was pressed, and the word limit is not exceeded
-            if (!IsWordLimitExceeded(text))
+            GameProper gameProper = FindObjectOfType<GameProper>(); // Find the GameProper script
+
+            if (gameProper != null && gameProper.isGameRunning) // Check if the game is running
             {
-                string sender = "Player 1";
-                SendMessage(sender, text);
-                ClearInputField(player1InputField);
+                if (!string.IsNullOrEmpty(text) && !IsWordLimitExceeded(text))
+                {
+                    string sender = "Player 1";
+                    SendMessage(sender, text);
+                    ClearInputField(player1InputField);
+
+                    gameProper.ResetPlayer1Timer();
+
+                    if (isPlayer1Turn)
+                    {
+                        gameProper.SwitchTurns();
+                        isPlayer1Turn = false;
+                    }
+
+                    ToggleInputFields(false, true); // Disable Player 1 input field, enable Player 2 input field
+                }
+                else
+                {
+                    Debug.Log("Player 1: Invalid input.");
+                }
             }
             else
             {
-                // Inform the player that the word limit is exceeded
-                Debug.Log("Player 1: Word limit exceeded.");
+                Debug.Log("Game is paused or not running. Input is not allowed.");
             }
         }
     }
@@ -59,20 +83,39 @@ public class MessagingScript : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Return))
         {
-            // Check if Enter key was pressed, and the word limit is not exceeded
-            if (!IsWordLimitExceeded(text))
+            GameProper gameProper = FindObjectOfType<GameProper>(); // Find the GameProper script
+
+            if (gameProper != null && gameProper.isGameRunning) // Check if the game is running
             {
-                string sender = "Player 2";
-                SendMessage(sender, text);
-                ClearInputField(player2InputField);
+                if (!string.IsNullOrEmpty(text) && !IsWordLimitExceeded(text))
+                {
+                    string sender = "Player 2";
+                    SendMessage(sender, text);
+                    ClearInputField(player2InputField);
+
+                    gameProper.ResetPlayer2Timer();
+
+                    if (!isPlayer1Turn)
+                    {
+                        gameProper.SwitchTurns();
+                        isPlayer1Turn = true;
+                    }
+
+                    ToggleInputFields(true, false); // Enable Player 1 input field, disable Player 2 input field
+                }
+                else
+                {
+                    Debug.Log("Player 2: Invalid input.");
+                }
             }
             else
             {
-                // Inform the player that the word limit is exceeded
-                Debug.Log("Player 2: Word limit exceeded.");
+                Debug.Log("Game is paused or not running. Input is not allowed.");
             }
         }
     }
+
+
 
     void UpdateCharacterCounter(string text, Text characterCounter)
     {
@@ -88,8 +131,8 @@ public class MessagingScript : MonoBehaviour
 
     bool IsWordLimitExceeded(string text)
     {
-        int wordCount = CountWords(text);
-        return wordCount > maxWords;
+        string[] words = text.Split(new char[] { ' ' });
+        return words.Length > maxWords; // Check if the number of words is greater than the maximum allowed words (5)
     }
 
     void SendMessage(string sender, string message)
@@ -112,33 +155,51 @@ public class MessagingScript : MonoBehaviour
         conversationText.text = currentConversation;
     }
 
-    // Disable the other player's input field
     public void DisablePlayer2InputField()
     {
         player2InputField.interactable = false;
     }
 
-    // Enable Player 2's input field
     public void EnablePlayer2InputField()
     {
         player2InputField.interactable = true;
     }
 
-    // Enable Player 1's input field
     public void EnablePlayer1InputField()
     {
         player1InputField.interactable = true;
     }
 
-    // Disable Player 1's input field
     public void DisablePlayer1InputField()
     {
         player1InputField.interactable = false;
     }
 
-    // Clear the input field
     private void ClearInputField(InputField inputField)
     {
         inputField.text = "";
     }
+
+    public void SendMessageFromInputField(InputField inputField)
+    {
+        string sender = isPlayer1Turn ? "Player 1" : "Player 2";
+        string message = inputField.text;
+        if (!string.IsNullOrEmpty(message))
+        {
+            SendMessage(sender, message);
+            ClearInputField(inputField);
+        }
+    }
+
+    public void SetCurrentPlayerTurn(InputField inputField)
+    {
+        isPlayer1Turn = (inputField == player1InputField);
+    }
+
+    private void ToggleInputFields(bool enablePlayer1, bool enablePlayer2)
+    {
+        player1InputField.interactable = enablePlayer1;
+        player2InputField.interactable = enablePlayer2;
+    }
+
 }

@@ -2,152 +2,229 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameProper : MonoBehaviour
 {
-    public float gameDuration = 180.0f; // Set the duration of your game in seconds (3 minutes)
+    public float gameDuration = 180.0f;
     private float gameTimer;
-    public Text timerText; // Reference to a UI Text component to display the game timer
+    public Text timerText;
 
-    private float turnDuration = 30.0f; // Time per turn in seconds
+    private float turnDuration = 30.0f;
+    public float player1TurnDuration = 20.0f;
+    public float player2TurnDuration = 20.0f;
+    public Text player1TimerText;
+    public Text player2TimerText;
+
     private float currentPlayerTurnTimer;
-    public MessagingScript messagingScript; // Reference to your MessagingScript
+    public MessagingScript messagingScript;
 
     private bool gameOver = false;
-    private bool isPlayer1Turn = true; // Flag to track whose turn it is
+    private bool isPlayer1Turn = true;
 
     public Text gameTimerText;
 
-    // Flag to track whether the current player's input field is disabled
     private bool currentPlayerInputDisabled = false;
 
-    // Start is called before the first frame update
+    // Add a variable to track whether it's Player 1's first turn
+    private bool player1FirstTurn = true;
+
+    // Add a variable to control the countdown
+    private float countdownDuration = 5.0f; // 5-second countdown
+    private bool isCountingDown = false;
+
+    public Text countdownTimerText;
+
+    public GameObject countdownPanel; // Reference to the Countdown Panel GameObject
+    public GameObject gameOverPanel; // Drag and drop the Game Over Panel GameObject into this field in the Inspector
+
+    public bool isGameRunning = false; // Flag to track if the game is running
+
     void Start()
     {
-        gameTimer = gameDuration; // Initialize the game timer with the game duration
-        currentPlayerTurnTimer = turnDuration;
+        gameTimer = gameDuration;
+        currentPlayerTurnTimer = isPlayer1Turn ? player1TurnDuration : player2TurnDuration;
+        messagingScript.gameProper = this;
+
+        // Start the countdown when the game starts
+        StartCountdown();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (gameOver)
         {
-            return; // Don't update timers if the game is over
+            return;
         }
 
-        // Update the game timer by subtracting deltaTime each frame
-        gameTimer -= Time.deltaTime;
-
-        // Calculate minutes and seconds for the game timer
-        int minutes = Mathf.FloorToInt(gameTimer / 60);
-        int seconds = Mathf.FloorToInt(gameTimer % 60);
-
-        // Update the UI text to display the remaining game time in the "M:SS" format
-        if (timerText != null)
+        // Check if we are in the countdown phase
+        if (isCountingDown)
         {
-            timerText.text = string.Format("{0}:{1:00}", minutes, seconds);
-        }
-        else
-        {
-            Debug.LogError("timerText is not assigned.");
-        }
+            countdownDuration -= Time.deltaTime;
 
-        // Check if the game timer has reached 0, indicating the end of the game
-        if (gameTimer <= 0)
-        {
-            EndGame();
-        }
+            // Display the countdown on the countdownTimerText
+            int countdownSeconds = Mathf.CeilToInt(countdownDuration);
+            countdownTimerText.text = "Game starts in: " + countdownSeconds.ToString();
 
-        // Update the current player's turn timer
-        currentPlayerTurnTimer -= Time.deltaTime;
-
-        // Check if the current player's turn timer has expired
-        if (currentPlayerTurnTimer <= 0)
-        {
-            Debug.Log("Player " + (isPlayer1Turn ? "1" : "2") + "'s turn timer has expired.");
-
-            // Disable the current player's input field using the reference
-            if (isPlayer1Turn)
+            if (countdownDuration <= 0)
             {
-                messagingScript.DisablePlayer1InputField();
+                // Countdown finished, start the game
+                isCountingDown = false;
+                countdownTimerText.text = ""; // Clear the countdown text
+
+                // Disable the countdown panel
+                countdownPanel.SetActive(false);
+
+                // Start the game
+                isGameRunning = true;
+            }
+        }
+        else if (isGameRunning) // Only update timers and gameplay if the game is running
+        {
+            // Game is running, update timers and gameplay
+
+            gameTimer -= Time.deltaTime;
+
+            if (gameTimer <= 0)
+            {
+                gameTimer = 0; // Ensure the timer doesn't go below zero
+                EndGame();
+            }
+
+            int minutes = Mathf.FloorToInt(gameTimer / 60);
+            int seconds = Mathf.FloorToInt(gameTimer % 60);
+
+            if (timerText != null)
+            {
+                timerText.text = string.Format("{0}:{1:00}", minutes, seconds);
             }
             else
             {
-                messagingScript.DisablePlayer2InputField();
+                Debug.LogError("timerText is not assigned.");
             }
 
-            // Switch to the other player's turn
-            SwitchTurns();
+            currentPlayerTurnTimer -= Time.deltaTime;
+            UpdateTimerText();
+
+            if (currentPlayerTurnTimer <= 0)
+            {
+                Debug.Log("Player " + (isPlayer1Turn ? "1" : "2") + "'s turn timer has expired.");
+
+                if (isPlayer1Turn)
+                {
+                    messagingScript.DisablePlayer1InputField();
+                    messagingScript.SendMessageFromInputField(messagingScript.player1InputField);
+                }
+                else
+                {
+                    messagingScript.DisablePlayer2InputField();
+                    messagingScript.SendMessageFromInputField(messagingScript.player2InputField);
+                }
+
+                SwitchTurns();
+            }
+
         }
+    }
+
+    // Function to start the countdown
+    private void StartCountdown()
+    {
+        isCountingDown = true;
+        int countdownSeconds = Mathf.CeilToInt(countdownDuration);
+        countdownTimerText.text = "Game starts in: " + countdownSeconds.ToString();
+
+        // Enable the countdown panel
+        countdownPanel.SetActive(true);
     }
 
     public void SwitchTurns()
     {
-        // Reset the turn timer for the current player
-        currentPlayerTurnTimer = turnDuration;
-
-        // Switch the turn to the other player
+        currentPlayerTurnTimer = isPlayer1Turn ? player2TurnDuration : player1TurnDuration;
         isPlayer1Turn = !isPlayer1Turn;
 
-        // Enable the current player's input field using the reference
         if (isPlayer1Turn)
         {
             messagingScript.EnablePlayer1InputField();
+            messagingScript.SetCurrentPlayerTurn(messagingScript.player1InputField); // Set Player 1's turn
         }
         else
         {
             messagingScript.EnablePlayer2InputField();
+            messagingScript.SetCurrentPlayerTurn(messagingScript.player2InputField); // Set Player 2's turn
+        }
+
+        // Check if it's Player 1's first turn, and if yes, reset their timer
+        if (isPlayer1Turn && player1FirstTurn)
+        {
+            ResetPlayer1Timer();
+            player1FirstTurn = false;
         }
     }
 
 
     public void ResetGameTimer()
     {
-        // Check if gameTimerText is assigned
         if (gameTimerText == null)
         {
             Debug.LogError("gameTimerText is not assigned.");
             return;
         }
 
-        // Reset the game timer
         gameTimer = gameDuration;
-
-        // Update the UI text for the game timer
         UpdateTimerText();
     }
 
-
     void UpdateTimerText()
     {
-        // Debug.Log to confirm that the function is called
         Debug.Log("Updating Timer Text");
+        int seconds = Mathf.CeilToInt(currentPlayerTurnTimer);
 
-        // Calculate minutes and seconds for the game timer
-        int minutes = Mathf.FloorToInt(gameTimer / 60);
-        int seconds = Mathf.FloorToInt(gameTimer % 60);
-
-        // Update the UI text to display the remaining game time in the "M:SS" format
-        if (gameTimerText != null)
+        if (isPlayer1Turn)
         {
-            gameTimerText.text = string.Format("{0}:{1:00}", minutes, seconds);
+            player1TimerText.text = seconds.ToString();
         }
         else
         {
-            Debug.LogError("gameTimerText is not assigned.");
+            player2TimerText.text = seconds.ToString();
         }
     }
 
     void EndGame()
     {
-        // Game over logic here
-        // You can trigger game over, restart the level, or any other action you want
         Debug.Log("Game over!");
-        // For example, you can reload the current scene
-        // UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
-
-        // Set the game over flag to prevent further updates
         gameOver = true;
+
+        // Display the Game Over Panel
+        gameOverPanel.SetActive(true);
+
+        // Trigger the scene transition with a delay
+        TransitionToWinBanner();
+    }
+
+    void TransitionToWinBanner()
+    {
+        StartCoroutine(DelayedTransition());
+    }
+
+    IEnumerator DelayedTransition()
+    {
+        // Wait for 5 seconds before transitioning to the "WinBanner" scene
+        yield return new WaitForSeconds(5f);
+
+        // Load the "WinBanner" scene
+        SceneManager.LoadScene("WinBanner"); // Replace with your scene name
+    }
+
+    public void ResetPlayer1Timer()
+    {
+        player1TurnDuration = 20.0f;
+        player1TimerText.text = "20"; // Update the UI text to show 20 seconds
+    }
+
+    public void ResetPlayer2Timer()
+    {
+        player2TurnDuration = 20.0f;
+        player2TimerText.text = "20"; // Update the UI text to show 20 seconds
     }
 }

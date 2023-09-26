@@ -187,6 +187,65 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &159780700
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 159780702}
+  - component: {fileID: 159780701}
+  m_Layer: 0
+  m_Name: GameProper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &159780701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159780700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abe25c2a18791124e8999941c2e38b29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameDuration: 181
+  timerText: {fileID: 0}
+  player1TurnDuration: 20
+  player2TurnDuration: 20
+  player1TimerText: {fileID: 0}
+  player2TimerText: {fileID: 0}
+  messagingScript: {fileID: 0}
+  gameTimerText: {fileID: 0}
+  countdownTimerText: {fileID: 0}
+  countdownPanel: {fileID: 0}
+  gameOverPanel: {fileID: 0}
+  isGameRunning: 0
+  isPlayer1First: 0
+  coinFlipScript: {fileID: 0}
+  player1InputField: {fileID: 0}
+  player2InputField: {fileID: 0}
+--- !u!4 &159780702
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159780700}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 888.73193, y: 548.67255, z: -89.13176}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &231204964
 GameObject:
   m_ObjectHideFlags: 0
@@ -1547,6 +1606,8 @@ MonoBehaviour:
   player2CharacterImage: {fileID: 2059551344}
   player1CharacterNameText: {fileID: 1051973905}
   player2CharacterNameText: {fileID: 940480068}
+  isHeads: 0
+  gameProper: {fileID: 159780701}
 --- !u!212 &1197062719
 SpriteRenderer:
   m_ObjectHideFlags: 0
