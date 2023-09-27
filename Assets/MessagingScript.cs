@@ -18,6 +18,9 @@ public class MessagingScript : MonoBehaviour
     private string player1PlaceholderText;
     private string player2PlaceholderText;
 
+    public AudioSource audioSource; // Drag and drop your AudioSource component here in the Unity Inspector
+
+
     void Start()
     {
         player1InputField.onValueChanged.AddListener(OnPlayer1ValueChanged);
@@ -132,8 +135,15 @@ public class MessagingScript : MonoBehaviour
         if (!string.IsNullOrEmpty(newMessage))
         {
             AddMessageToConversation(sender, newMessage);
+
+            // Play the audio clip when a message is sent
+            if (audioSource != null && audioSource.clip != null)
+            {
+                audioSource.PlayOneShot(audioSource.clip);
+            }
         }
     }
+
 
     void AddMessageToConversation(string sender, string message)
     {
