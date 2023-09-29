@@ -128,7 +128,7 @@ public class AudioManager : MonoBehaviour
         {
             PlayCharacterSelectMusic();
         }
-        else if (scene.name == "GameProper")
+        else if (scene.name == "GameProper" || scene.name == "WinBanner" || scene.name == "EvaluateBanner")
         {
             PlayGameProperMusic();
         }

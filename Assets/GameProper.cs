@@ -42,7 +42,16 @@ public class GameProper : MonoBehaviour
 
     public CoinFlip coinFlip; // Reference to the CoinFlip script
 
-void Start()
+    public AudioSource gameoverAudioSource;
+    public AudioSource countDownAudioSource;
+    public GameObject fiveSecondsLeftSoundObject; // Reference to the GameObject with the "5 seconds left" audio source
+    public AudioSource fiveSecondsLeftAudioSource; // Reference to the AudioSource for "5 seconds left" sound
+
+    public GameObject thirtySecondsLeftSoundObject; // Reference to the GameObject with the "30 seconds left" audio source
+    public AudioSource thirtySecondsLeftAudioSource; // Reference to the AudioSource for "30 seconds left" sound
+    private bool thirtySecondsLeftAudioPlayed = false;
+
+    void Start()
 {
     gameTimer = gameDuration;
     messagingScript.gameProper = this;
@@ -81,6 +90,8 @@ void Start()
     {
         if (gameOver)
         {
+            fiveSecondsLeftAudioSource.Stop();
+            thirtySecondsLeftAudioSource.Stop();
             return;
         }
 
@@ -104,12 +115,12 @@ void Start()
 
                 // Start the game
                 isGameRunning = true;
+
+                countDownAudioSource.Play();
             }
         }
         else if (isGameRunning) // Only update timers and gameplay if the game is running
         {
-            // Game is running, update timers and gameplay
-
             gameTimer -= Time.deltaTime;
 
             if (gameTimer <= 0)
@@ -124,6 +135,27 @@ void Start()
             if (timerText != null)
             {
                 timerText.text = string.Format("{0}:{1:00}", minutes, seconds);
+
+                // Check if gameTimer is 30 seconds or less
+                if (gameTimer <= 31.0f && !thirtySecondsLeftAudioPlayed)
+                {
+                    if (!thirtySecondsLeftAudioSource.isPlaying)
+                    {
+                        thirtySecondsLeftAudioSource.Play();
+                    }
+                    thirtySecondsLeftAudioPlayed = true; // Set the flag to indicate it has been played
+                }
+
+                // Set the text color based on the timer
+                if (gameTimer <= 31.0f)
+                {
+                    timerText.color = Color.red;
+                }
+                else
+                {
+                    // Reset the text color to its default
+                    timerText.color = Color.white;
+                }
             }
             else
             {
@@ -153,6 +185,7 @@ void Start()
 
         }
     }
+
 
     // Function to start the countdown
     private void StartCountdown()
@@ -207,18 +240,46 @@ void Start()
 
     void UpdateTimerText()
     {
-        Debug.Log("Updating Timer Text");
         int seconds = Mathf.CeilToInt(currentPlayerTurnTimer);
 
         if (isPlayer1Turn)
         {
             player1TimerText.text = seconds.ToString();
+            if (seconds <= 5)
+            {
+                // Change the text color to red
+                if (!fiveSecondsLeftAudioSource.isPlaying)
+                {
+                    fiveSecondsLeftAudioSource.Play();
+                }
+                player1TimerText.color = Color.red;
+            }
+            else
+            {
+                // Reset the text color to its default
+                player1TimerText.color = Color.white;
+            }
         }
         else
         {
             player2TimerText.text = seconds.ToString();
+            if (seconds <= 5)
+            {
+                // Change the text color to red
+                if (!fiveSecondsLeftAudioSource.isPlaying)
+                {
+                    fiveSecondsLeftAudioSource.Play();
+                }
+                player2TimerText.color = Color.red;
+            }
+            else
+            {
+                // Reset the text color to its default
+                player2TimerText.color = Color.white;
+            }
         }
     }
+
 
     void EndGame()
     {
@@ -228,9 +289,14 @@ void Start()
         // Display the Game Over Panel
         gameOverPanel.SetActive(true);
 
+        // Play the game over sound
+        Debug.Log("Playing game over sound...");
+        gameoverAudioSource.Play();
+
         // Trigger the scene transition with a delay
         TransitionToWinBanner();
     }
+
 
     void TransitionToWinBanner()
     {

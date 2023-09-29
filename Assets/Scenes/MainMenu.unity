@@ -165,9 +165,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenuMusic: {fileID: 8300000, guid: fc3b76e745d82fa4b8f0a4d9f2ed3625, type: 3}
-  characterSelectMusic: {fileID: 8300000, guid: 45e906644104e8a46b92ebbcfa509412,
+  characterSelectMusic: {fileID: 8300000, guid: d224bc113dd71664cb7ba9040709e02d,
     type: 3}
-  gameProperMusic: {fileID: 8300000, guid: d224bc113dd71664cb7ba9040709e02d, type: 3}
+  gameProperMusic: {fileID: 8300000, guid: 45e906644104e8a46b92ebbcfa509412, type: 3}
 --- !u!1 &33378799
 GameObject:
   m_ObjectHideFlags: 0
@@ -1526,7 +1526,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2616593476307624096, guid: 86a2607f5a4a7ff4483b42c6d2cea024,
+  m_Sprite: {fileID: -9000823603165085904, guid: c0924a03ae00813499ba2e30f813e114,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -1545,6 +1545,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 853950747}
   m_CullTransparentMesh: 0
+--- !u!1 &855397051
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 855397053}
+  - component: {fileID: 855397052}
+  m_Layer: 0
+  m_Name: CharacterManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &855397052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855397051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f1f446b8090f294f83802d07ae1fa58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characters:
+  - {fileID: 21300000, guid: c019339fc8a88d749bfd4a7468f220fc, type: 3}
+  - {fileID: 21300000, guid: bde8e5df7dd2dd745a387aa8034dc04c, type: 3}
+--- !u!4 &855397053
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855397051}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1239.9794, y: 493.28525, z: -1169.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &905112643
 GameObject:
   m_ObjectHideFlags: 0
@@ -2136,7 +2182,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2616593476307624096, guid: 86a2607f5a4a7ff4483b42c6d2cea024,
+  m_Sprite: {fileID: -9000823603165085904, guid: c0924a03ae00813499ba2e30f813e114,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -2391,7 +2437,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2616593476307624096, guid: 86a2607f5a4a7ff4483b42c6d2cea024,
+  m_Sprite: {fileID: -9000823603165085904, guid: c0924a03ae00813499ba2e30f813e114,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -2546,7 +2592,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2616593476307624096, guid: 86a2607f5a4a7ff4483b42c6d2cea024,
+  m_Sprite: {fileID: -9000823603165085904, guid: c0924a03ae00813499ba2e30f813e114,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0

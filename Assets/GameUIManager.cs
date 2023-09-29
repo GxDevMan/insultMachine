@@ -6,15 +6,17 @@ public class GameUIManager : MonoBehaviour
 {
     public Button soundButton;
     public Button restartButton;
-    public Button pauseButton;
+    public Button homeButton;
     public GameProper gameProper; // Reference to the GameProper script
 
     public Button menuButton;
     public GameObject menuCanvasObject;
+    public GameObject howToPlayCanvasObject;
 
 
     public Button continueButton;
-    public Button mainMenuButton;
+    public Button backButton;
+    public Button howToPlayButton;
     public Button quitButton;
 
     private bool soundEnabled = true;
@@ -29,29 +31,36 @@ public class GameUIManager : MonoBehaviour
         {
             menuCanvasObject.SetActive(false);
         }
+        // Disable the initial canvas GameObject
+        if (howToPlayCanvasObject != null)
+        {
+            howToPlayCanvasObject.SetActive(false);
+        }
 
         // Add click listeners for the sound, restart, and pause buttons
         soundButton.onClick.AddListener(ToggleSound);
         restartButton.onClick.AddListener(RestartGame);
-        pauseButton.onClick.AddListener(TogglePause);
+        homeButton.onClick.AddListener(GoToMainMenu);
 
         // Add a click listener for the menu button
         menuButton.onClick.AddListener(ShowCanvas);
 
         // Add click listeners for the menu buttons
         continueButton.onClick.AddListener(ContinueGame);
-        mainMenuButton.onClick.AddListener(GoToMainMenu);
+        backButton.onClick.AddListener(GoToMenuCanvas);
+        howToPlayButton.onClick.AddListener(GoToHowToPlay);
         quitButton.onClick.AddListener(QuitGame);
     }
 
 
     private void ToggleSound()
     {
+        Debug.Log("ToggleSound called");
         soundEnabled = !soundEnabled;
 
         // Implement logic to enable/disable sounds based on the 'soundEnabled' variable
-        // For example, you can use AudioListener.pause to mute/unmute audio:
-        AudioListener.pause = !soundEnabled;
+        // For example, you can use AudioListener.volume to adjust the volume:
+        AudioListener.volume = soundEnabled ? 1f : 0f;
 
         // Log the sound state
         if (soundEnabled)
@@ -95,6 +104,13 @@ public class GameUIManager : MonoBehaviour
             Time.timeScale = 0f; // Set time scale to 0 to pause the game
             Debug.Log("Game Paused");
 
+            // Stop all audio sources when paused
+            AudioSource[] allAudioSources = FindObjectsOfType<AudioSource>();
+            foreach (AudioSource audioSource in allAudioSources)
+            {
+                audioSource.Pause();
+            }
+
             // Handle pausing of player input in the GameProper script (if needed)
             if (gameProper != null)
             {
@@ -105,6 +121,13 @@ public class GameUIManager : MonoBehaviour
         {
             Time.timeScale = previousTimeScale; // Restore the previous time scale
             Debug.Log("Game Resumed");
+
+            // Resume all audio sources when resumed
+            AudioSource[] allAudioSources = FindObjectsOfType<AudioSource>();
+            foreach (AudioSource audioSource in allAudioSources)
+            {
+                audioSource.UnPause();
+            }
 
             // Handle resuming of player input in the GameProper script (if needed)
             if (gameProper != null)
@@ -133,11 +156,44 @@ public class GameUIManager : MonoBehaviour
         }
     }
 
+    public void ShowHowToPlayCanvas()
+    {
+        if (howToPlayCanvasObject != null)
+        {
+            howToPlayCanvasObject.SetActive(true);
+            TogglePause(); // Pause the game when showing the menu canvas
+        }
+    }
+
+    public void HideHowToPlayCanvas()
+    {
+        if (howToPlayCanvasObject != null)
+        {
+            howToPlayCanvasObject.SetActive(false);
+            TogglePause(); // Resume the game when hiding the menu canvas
+        }
+    }
+
 
     private void ContinueGame()
     {
         // Implement the continue functionality
         HideCanvas(); // Hide the menu canvas
+    }
+
+    private void GoToHowToPlay()
+    {
+        // Implement going back to the main menu
+        //SceneManager.LoadScene("MainMenu"); // Replace with the name of your main menu scene
+        TogglePause();
+        ShowHowToPlayCanvas();
+    }
+
+    private void GoToMenuCanvas()
+    {
+        // Implement the continue functionality
+        TogglePause();
+        HideHowToPlayCanvas(); // Hide the menu canvas
     }
 
     private void GoToMainMenu()

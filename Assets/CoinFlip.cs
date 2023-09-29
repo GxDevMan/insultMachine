@@ -23,11 +23,16 @@ public class CoinFlip : MonoBehaviour
     public bool isHeads;
     private SpriteRenderer coinRenderer;
 
+    public AudioSource coinFlipAudioSource;
+    public AudioSource checkMarkAudioSource;
+
     private void Start()
     {
+        Debug.Log("CoinFlip script started.");
         coinRenderer = GetComponent<SpriteRenderer>();
         player1Checkmark.SetActive(false);
         player2Checkmark.SetActive(false);
+        coinFlipAudioSource.Play();
         StartCoroutine(SpinCoin());
 
         // Load the selected character names from PlayerPrefs
@@ -55,6 +60,7 @@ public class CoinFlip : MonoBehaviour
 
     private IEnumerator SpinCoin()
     {
+        Debug.Log("SpinCoin coroutine started.");
         int spinsRemaining = spins;
 
         // Determine if it's heads or tails based on spinSpeed.
@@ -90,19 +96,23 @@ public class CoinFlip : MonoBehaviour
         // Show the checkmark for the respective player.
         if (isHeads)
         {
+            checkMarkAudioSource.Play();
             Debug.Log("Player 1 (Heads) goes first.");
             player1Checkmark.SetActive(true);
             player2Checkmark.SetActive(false); // Hide Player 2's checkmark
         }
         else
         {
+            checkMarkAudioSource.Play();
             Debug.Log("Player 2 (Tails) goes first.");
             player1Checkmark.SetActive(false); // Hide Player 1's checkmark
             player2Checkmark.SetActive(true);
         }
 
+        Debug.Log("SpinCoin coroutine completed.");
+
         // Transition to the "GameProper" scene after a delay (e.g., 2 seconds).
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         UnityEngine.SceneManagement.SceneManager.LoadScene("GameProper");
     }
 }
