@@ -20,9 +20,12 @@ public class MessagingScript : MonoBehaviour
 
     public AudioSource audioSource; // Drag and drop your AudioSource component here in the Unity Inspector
 
+    MatchManager matchInstance;
 
     void Start()
     {
+        matchInstance = MatchManager.instance;
+
         player1InputField.onValueChanged.AddListener(OnPlayer1ValueChanged);
         player1InputField.onEndEdit.AddListener(OnPlayer1EndEdit);
 
@@ -132,6 +135,7 @@ public class MessagingScript : MonoBehaviour
     void SendMessage(string sender, string message)
     {
         string newMessage = message;
+        matchInstance.judging(newMessage);
         if (!string.IsNullOrEmpty(newMessage))
         {
             AddMessageToConversation(sender, newMessage);

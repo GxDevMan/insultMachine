@@ -23,9 +23,9 @@ public class MatchManager : MonoBehaviour
     public double result { get; set; }
     void Start()
     {
-        
+        cnnsvmSetting = true;
         string template = "URI=file:";
-        string relativeLoc = "Assets/Code/data/loggedArbitration.db";
+        string relativeLoc = "Assets/Scripts/data/loggedArbitration.db";
         sqlLoc = $"{template}{relativeLoc}";
 
         this.theJudge = new aiRequester();
@@ -151,11 +151,15 @@ public class MatchManager : MonoBehaviour
     {
         if (currentPlayer == player1)
         {
-            player2.health -= (int)(player1.maxDamage * percentDamage);  
+            int damage = (int)(player1.maxDamage * percentDamage);
+            player2.health -= damage;
+            //Debug.Log($"player 1 damage: {damage}");
         }
         else
         {
-            player1.health -= (int)(player2.maxDamage * percentDamage);
+            int damage = (int)(player2.maxDamage * percentDamage);
+            player1.health -= damage;
+            //Debug.Log($"player 2 damage: {damage}");
         }
     }
 
@@ -163,18 +167,18 @@ public class MatchManager : MonoBehaviour
     {
         if (currentPlayer == player1)
         {
-            player2.health += (int)(player2.maxHeal * percentHeal);
-            if (player2.health > player2.maxHealth)
-            {
-                player2.health = player2.maxHealth;
-            }
-        }
-        else
-        {
             player1.health += (int)(player1.maxHeal * percentHeal);
             if (player1.health > player1.maxHealth)
             {
                 player1.health = player1.maxHealth;
+            }
+        }
+        else
+        {
+            player2.health += (int)(player2.maxHeal * percentHeal);
+            if (player2.health > player2.maxHealth)
+            {
+                player2.health = player2.maxHealth;
             }
         }
     }

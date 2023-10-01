@@ -26,8 +26,13 @@ public class CoinFlip : MonoBehaviour
     public AudioSource coinFlipAudioSource;
     public AudioSource checkMarkAudioSource;
 
+    MatchManager matchInstance;
+
     private void Start()
     {
+
+        matchInstance = MatchManager.instance;
+
         Debug.Log("CoinFlip script started.");
         coinRenderer = GetComponent<SpriteRenderer>();
         player1Checkmark.SetActive(false);
@@ -100,6 +105,8 @@ public class CoinFlip : MonoBehaviour
             Debug.Log("Player 1 (Heads) goes first.");
             player1Checkmark.SetActive(true);
             player2Checkmark.SetActive(false); // Hide Player 2's checkmark
+
+            startMatch(true);
         }
         else
         {
@@ -107,6 +114,8 @@ public class CoinFlip : MonoBehaviour
             Debug.Log("Player 2 (Tails) goes first.");
             player1Checkmark.SetActive(false); // Hide Player 1's checkmark
             player2Checkmark.SetActive(true);
+
+            startMatch(false);
         }
 
         Debug.Log("SpinCoin coroutine completed.");
@@ -114,5 +123,13 @@ public class CoinFlip : MonoBehaviour
         // Transition to the "GameProper" scene after a delay (e.g., 2 seconds).
         yield return new WaitForSeconds(3f);
         UnityEngine.SceneManagement.SceneManager.LoadScene("GameProper");
+    }
+
+    private void startMatch(bool firstPlayer)
+    {
+        playerObj player1 = new playerObj("Player 1", 100, 40, 30);
+        playerObj player2 = new playerObj("Player 1", 100, 40, 30);
+        matchInstance.newMatch(player1, player2);
+        matchInstance.setFirstPlayer(firstPlayer);
     }
 }
