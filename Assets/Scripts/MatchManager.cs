@@ -19,8 +19,8 @@ public class MatchManager : MonoBehaviour
 
     private playerObj currentPlayer;
 
-    public string firstPlayer { get; set; }
     private aiRequester theJudge;
+    public bool firstPlayer { get; set; }
 
     public double result { get; set; }
     void Start()
@@ -50,6 +50,7 @@ public class MatchManager : MonoBehaviour
 
     public void setFirstPlayer(bool firstPlayer)
     {
+        this.firstPlayer = firstPlayer;
         if (firstPlayer)
         {
             this.currentPlayer = player1;

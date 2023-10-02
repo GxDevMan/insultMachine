@@ -23,9 +23,11 @@ public class GameUIManager : MonoBehaviour
     private bool isPaused = false;
 
     private float previousTimeScale; // Store the previous time scale for resuming
+    MatchManager matchInstance;
 
     private void Start()
     {
+        matchInstance = MatchManager.instance;
         // Disable the initial canvas GameObject
         if (menuCanvasObject != null)
         {
@@ -82,6 +84,8 @@ public class GameUIManager : MonoBehaviour
 
         // Log the restart action
         Debug.Log("Game Restarted");
+
+        startMatch(matchInstance.firstPlayer);
 
         // Reset the game timer in the GameProper script
         if (gameProper != null)
@@ -206,5 +210,13 @@ public class GameUIManager : MonoBehaviour
     {
         // Implement quitting the application (only works in standalone builds)
         Application.Quit();
+    }
+
+    private void startMatch(bool firstPlayer)
+    {
+        playerObj player1 = new playerObj("Player 1", 100, 40, 30);
+        playerObj player2 = new playerObj("Player 2", 100, 40, 30);
+        matchInstance.newMatch(player1, player2);
+        matchInstance.setFirstPlayer(firstPlayer);
     }
 }
