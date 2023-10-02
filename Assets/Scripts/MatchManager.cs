@@ -7,12 +7,14 @@ public class MatchManager : MonoBehaviour
     public static event HandleResult OnFinishTurn;
     public delegate void HandleResult(double result);
 
+    public statementObj mostDamagingStatement { get; private set; }
+
     public playerObj player1 { get; set; }
     public playerObj player2 { get; set; }
     public bool cnnsvmSetting { get; set; }
     public int matchId { get; set; }
 
-    private SQLliteHandler handleSql;
+    public SQLliteHandler handleSql;
     private string sqlLoc;
 
     private playerObj currentPlayer;
@@ -23,7 +25,7 @@ public class MatchManager : MonoBehaviour
     public double result { get; set; }
     void Start()
     {
-        cnnsvmSetting = true;
+        cnnsvmSetting = false;
         string template = "URI=file:";
         string relativeLoc = "Assets/Scripts/data/loggedArbitration.db";
         sqlLoc = $"{template}{relativeLoc}";
@@ -71,7 +73,14 @@ public class MatchManager : MonoBehaviour
 
     public void judging(string text)
     {
-        StartCoroutine(arbitrate(text));
+        if (text != null)
+        {
+            StartCoroutine(arbitrate(text));
+        }
+        else
+        {
+            swapPlayers();
+        }
     }
     private IEnumerator arbitrate(string input)
     {
@@ -82,6 +91,8 @@ public class MatchManager : MonoBehaviour
     {
         handleSql.InsertStatement(result);
         resultJudge(result);
+        setMaxDamagingStatement(result);
+        
 
         if (this.cnnsvmSetting)
         {
@@ -108,6 +119,7 @@ public class MatchManager : MonoBehaviour
             }
 
         }
+
         swapPlayers();
 
         if (cnnsvmSetting)
@@ -120,7 +132,26 @@ public class MatchManager : MonoBehaviour
         }
     }
 
-    private void swapPlayers()
+    private void setMaxDamagingStatement(statementObj newStatement)
+    {
+        if (mostDamagingStatement == null)
+            mostDamagingStatement = newStatement;
+        else
+        {
+            if (cnnsvmSetting)
+            {
+                if (mostDamagingStatement.ratingCNNSVM < newStatement.ratingCNNSVM)
+                    mostDamagingStatement = newStatement;
+            }
+            else
+            {
+                if (mostDamagingStatement.ratingChatFilter < newStatement.ratingChatFilter)
+                    mostDamagingStatement = newStatement;
+            }
+        }
+    }
+
+    public void swapPlayers()
     {
         if (currentPlayer == player1)
         {

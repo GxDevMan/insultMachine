@@ -218,11 +218,11 @@ public class SQLliteHandler
         return updated;
     }
 
-    public List<statementObj> selectStatements(int matchId)
+    public List<statementObj> selectStatements(int matchId, int playerId)
     {
-        string updateStatementSql = "SELECT StatementsTable.*, PlayerTable.Name FROM StatementsTable " +
+        string selectStatementSql = "SELECT StatementsTable.*, PlayerTable.Name FROM StatementsTable " +
                                 "JOIN PlayerTable ON StatementsTable.playerId = PlayerTable.playerId " +
-                                "WHERE StatementsTable.MatchId = @matchId";
+                                "WHERE StatementsTable.MatchId = @matchId AND StatementsTable.playerId = @playerId;";
         List<statementObj> statementList = new List<statementObj>();
         try
         {
@@ -232,6 +232,7 @@ public class SQLliteHandler
                 using (IDbCommand dbCmd = dbConnection.CreateCommand())
                 {
                     dbCmd.Parameters.Add(new SqliteParameter("@matchId", matchId));
+                    dbCmd.Parameters.Add(new SqliteParameter("@playerId", playerId));
 
                     using (IDataReader reader = dbCmd.ExecuteReader())
                     {

@@ -50,40 +50,42 @@ public class GameProper : MonoBehaviour
     public GameObject thirtySecondsLeftSoundObject; // Reference to the GameObject with the "30 seconds left" audio source
     public AudioSource thirtySecondsLeftAudioSource; // Reference to the AudioSource for "30 seconds left" sound
     private bool thirtySecondsLeftAudioPlayed = false;
+    MatchManager matchInstance;
 
     void Start()
-{
-    gameTimer = gameDuration;
-    messagingScript.gameProper = this;
-
-    // Start the countdown when the game starts
-    StartCountdown();
-
-    // Read the result of the coin flip from PlayerPrefs
-    int coinResult = PlayerPrefs.GetInt("CoinResult", 0);
-
-    // Check the result and enable/disable text fields accordingly
-    if (coinResult == 1) // Heads
     {
-        messagingScript.EnablePlayer1InputField();
-        messagingScript.DisablePlayer2InputField();
+        matchInstance = MatchManager.instance;
+        gameTimer = gameDuration;
+        messagingScript.gameProper = this;
 
-        // Set the initial timer text and timer for Player 1
-        player1TimerText.text = player1TurnDuration.ToString();
-        currentPlayerTurnTimer = player1TurnDuration;
-        isPlayer1Turn = true;
-    }
-    else if (coinResult == 2) // Tails
-    {
-        messagingScript.EnablePlayer2InputField();
-        messagingScript.DisablePlayer1InputField();
+        // Start the countdown when the game starts
+        StartCountdown();
 
-        // Set the initial timer text and timer for Player 2
-        player2TimerText.text = player2TurnDuration.ToString();
-        currentPlayerTurnTimer = player2TurnDuration;
-        isPlayer1Turn = false;
+        // Read the result of the coin flip from PlayerPrefs
+        int coinResult = PlayerPrefs.GetInt("CoinResult", 0);
+
+        // Check the result and enable/disable text fields accordingly
+        if (coinResult == 1) // Heads
+        {
+            messagingScript.EnablePlayer1InputField();
+            messagingScript.DisablePlayer2InputField();
+
+            // Set the initial timer text and timer for Player 1
+            player1TimerText.text = player1TurnDuration.ToString();
+            currentPlayerTurnTimer = player1TurnDuration;
+            isPlayer1Turn = true;
+        }
+        else if (coinResult == 2) // Tails
+        {
+            messagingScript.EnablePlayer2InputField();
+            messagingScript.DisablePlayer1InputField();
+
+            // Set the initial timer text and timer for Player 2
+            player2TimerText.text = player2TurnDuration.ToString();
+            currentPlayerTurnTimer = player2TurnDuration;
+            isPlayer1Turn = false;
+        }
     }
-}
 
 
     void Update()
@@ -171,15 +173,17 @@ public class GameProper : MonoBehaviour
 
                 if (isPlayer1Turn)
                 {
+                    matchInstance.judging(null);
                     messagingScript.DisablePlayer1InputField();
                     messagingScript.SendMessageFromInputField(messagingScript.player1InputField);
                 }
                 else
                 {
+                    matchInstance.judging(null);
                     messagingScript.DisablePlayer2InputField();
                     messagingScript.SendMessageFromInputField(messagingScript.player2InputField);
                 }
-
+                
                 SwitchTurns();
             }
 
@@ -208,6 +212,7 @@ public class GameProper : MonoBehaviour
             messagingScript.EnablePlayer1InputField();
             messagingScript.DisablePlayer2InputField();
             player1TimerText.text = currentPlayerTurnTimer.ToString();
+            //matchInstance.judging(null);
         }
         else
         {

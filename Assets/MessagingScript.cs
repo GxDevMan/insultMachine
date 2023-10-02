@@ -81,6 +81,7 @@ public class MessagingScript : MonoBehaviour
 
     private void OnPlayer2EndEdit(string text)
     {
+        
         if (Input.GetKey(KeyCode.Return))
         {
             GameProper gameProper = FindObjectOfType<GameProper>();
@@ -108,11 +109,6 @@ public class MessagingScript : MonoBehaviour
             }
         }
     }
-
-
-
-
-
 
     void UpdateCharacterCounter(string text, Text characterCounter)
     {
@@ -160,16 +156,7 @@ public class MessagingScript : MonoBehaviour
         conversationText.text = currentConversation;
     }
 
-    public void DisablePlayer2InputField()
-    {
-        player2InputField.interactable = false;
-        if (!string.IsNullOrEmpty(player2InputField.text))
-        {
-            // Display "Player 2: prompt" when disabling player2InputField with content
-            SendMessage("Player 2", player2InputField.text);
-            ClearInputField(player2InputField);
-        }
-    }
+
 
     public void EnablePlayer2InputField()
     {
@@ -186,9 +173,21 @@ public class MessagingScript : MonoBehaviour
         player1InputField.interactable = false;
         if (!string.IsNullOrEmpty(player1InputField.text))
         {
+            
             // Display "Player 1: prompt" when disabling player1InputField with content
             SendMessage("Player 1", player1InputField.text);
             ClearInputField(player1InputField);
+        }
+    }
+    public void DisablePlayer2InputField()
+    {
+        player2InputField.interactable = false;
+        if (!string.IsNullOrEmpty(player2InputField.text))
+        {
+            
+            // Display "Player 2: prompt" when disabling player2InputField with content
+            SendMessage("Player 2", player2InputField.text);
+            ClearInputField(player2InputField);
         }
     }
 

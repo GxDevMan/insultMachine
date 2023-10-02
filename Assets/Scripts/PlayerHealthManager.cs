@@ -26,7 +26,16 @@ public class PlayerHealthManager : MonoBehaviour
     {
         player1HealthBar.value = matchInstance.player1.health;
         player2HealthBar.value = matchInstance.player2.health;
-    }  
+        sceneSwitch();
+    }
+    
+    private void sceneSwitch()
+    {
+        if (matchInstance.player1.health <= 0 || matchInstance.player2.health <= 0)
+        {
+            Debug.Log("Scene Must change");
+        }
+    }
 }
 
 
