@@ -19,6 +19,8 @@ public class MessagingScript : MonoBehaviour
     private string player2PlaceholderText;
 
     public AudioSource audioSource; // Drag and drop your AudioSource component here in the Unity Inspector
+    public CharacterAnimator player1CharacterAnimator;
+    public CharacterAnimator player2CharacterAnimator;
 
     MatchManager matchInstance;
 
@@ -63,6 +65,17 @@ public class MessagingScript : MonoBehaviour
                     SendMessage(sender, text);
                     ClearInputField(player1InputField);
 
+                    // Check if player1CharacterAnimator is assigned
+                    if (player1CharacterAnimator != null)
+                    {
+                        // Play the Totoy attack animation for Player 1
+                        player1CharacterAnimator.PlayPlayer1AttackAnimation();
+                    }
+                    else
+                    {
+                        Debug.LogError("Player 1 Character Animator is not assigned.");
+                    }
+
                     // Reset Player 1's timer and start it
                     gameProper.ResetPlayer1Timer();
                     gameProper.SwitchTurns();
@@ -81,7 +94,6 @@ public class MessagingScript : MonoBehaviour
 
     private void OnPlayer2EndEdit(string text)
     {
-        
         if (Input.GetKey(KeyCode.Return))
         {
             GameProper gameProper = FindObjectOfType<GameProper>();
@@ -93,6 +105,17 @@ public class MessagingScript : MonoBehaviour
                     string sender = "Player 2";
                     SendMessage(sender, text);
                     ClearInputField(player2InputField);
+
+                    // Check if player2CharacterAnimator is assigned
+                    if (player2CharacterAnimator != null)
+                    {
+                        // Play the Totoy attack animation for Player 2 (assuming you want Totoy for Player 2)
+                        player2CharacterAnimator.PlayPlayer2AttackAnimation();
+                    }
+                    else
+                    {
+                        Debug.LogError("Player 2 Character Animator is not assigned.");
+                    }
 
                     // Reset Player 2's timer and start it
                     gameProper.ResetPlayer2Timer();
@@ -109,6 +132,7 @@ public class MessagingScript : MonoBehaviour
             }
         }
     }
+
 
     void UpdateCharacterCounter(string text, Text characterCounter)
     {

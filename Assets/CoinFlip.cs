@@ -68,12 +68,11 @@ public class CoinFlip : MonoBehaviour
         Debug.Log("SpinCoin coroutine started.");
         int spinsRemaining = spins;
 
-        // Determine if it's heads or tails based on spinSpeed.
-        bool isHeads = Random.value < (headsSpinSpeed / (headsSpinSpeed + tailsSpinSpeed));
+        // Randomly determine if it's heads or tails.
+        bool isHeads = Random.value < 0.5f;
 
         // Store the result in PlayerPrefs
         PlayerPrefs.SetInt("CoinResult", isHeads ? 1 : 2); // 1 for heads, 2 for tails
-
 
         while (spinsRemaining > 0)
         {
@@ -124,6 +123,7 @@ public class CoinFlip : MonoBehaviour
         yield return new WaitForSeconds(3f);
         UnityEngine.SceneManagement.SceneManager.LoadScene("GameProper");
     }
+
 
     private void startMatch(bool firstPlayer)
     {

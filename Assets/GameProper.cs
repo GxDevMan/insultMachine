@@ -50,6 +50,7 @@ public class GameProper : MonoBehaviour
     public GameObject thirtySecondsLeftSoundObject; // Reference to the GameObject with the "30 seconds left" audio source
     public AudioSource thirtySecondsLeftAudioSource; // Reference to the AudioSource for "30 seconds left" sound
     private bool thirtySecondsLeftAudioPlayed = false;
+
     MatchManager matchInstance;
 
     void Start()
@@ -86,6 +87,8 @@ public class GameProper : MonoBehaviour
             isPlayer1Turn = false;
         }
     }
+    // Add a boolean variable to track whether "5 seconds left" audio is playing
+    private bool isFiveSecondsLeftAudioPlaying = false;
 
 
     void Update()
@@ -124,6 +127,26 @@ public class GameProper : MonoBehaviour
         else if (isGameRunning) // Only update timers and gameplay if the game is running
         {
             gameTimer -= Time.deltaTime;
+
+            // Check if gameTimer is 5 seconds or below
+            if (gameTimer <= 5.0f && !isFiveSecondsLeftAudioPlaying)
+            {
+                if (!fiveSecondsLeftAudioSource.isPlaying)
+                {
+                    fiveSecondsLeftAudioSource.Play();
+                    isFiveSecondsLeftAudioPlaying = true; // Set the flag to indicate it's playing
+                }
+            }
+
+            // Check for player input and stop the "5 seconds left" audio if input is detected
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                // Stop the "5 seconds left" audio
+                fiveSecondsLeftAudioSource.Stop();
+                isFiveSecondsLeftAudioPlaying = false;
+
+                // Handle player input here...
+            }
 
             if (gameTimer <= 0)
             {
@@ -322,6 +345,7 @@ public class GameProper : MonoBehaviour
         player1TurnDuration = 20.0f;
         player1TimerText.text = "20"; // Update the UI text to show 20 seconds
         currentPlayerTurnTimer = player1TurnDuration; // Reset the current turn timer
+        player1TimerText.color = Color.white; // Reset the text color to white
         Debug.Log("Player 1 Timer Reset to 20");
     }
 
@@ -330,8 +354,10 @@ public class GameProper : MonoBehaviour
         player2TurnDuration = 20.0f;
         player2TimerText.text = "20"; // Update the UI text to show 20 seconds
         currentPlayerTurnTimer = player2TurnDuration; // Reset the current turn timer
+        player2TimerText.color = Color.white; // Reset the text color to white
         Debug.Log("Player 2 Timer Reset to 20");
     }
+
 
 
 
