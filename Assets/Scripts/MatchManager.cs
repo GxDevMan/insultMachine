@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class MatchManager : MonoBehaviour
 {
-    public static MatchManager instance;
+    //public static MatchManager instance;
+    public static MatchManager instance { get; private set; }
     public static event HandleResult OnFinishTurn;
     public delegate void HandleResult(double result);
 
@@ -11,7 +12,9 @@ public class MatchManager : MonoBehaviour
 
     public playerObj player1 { get; set; }
     public playerObj player2 { get; set; }
-    public bool cnnsvmSetting { get; set; }
+    //public bool cnnsvmSetting { get; set; }
+    // Serialize the field to make it visible in the Inspector
+    [SerializeField] public bool cnnsvmSetting = false;
     public int matchId { get; set; }
 
     public SQLliteHandler handleSql;
@@ -23,9 +26,15 @@ public class MatchManager : MonoBehaviour
     public bool firstPlayer { get; set; }
 
     public double result { get; set; }
+
+    // Add a public property to get the CNN SVM rating
+    public double CnnSvmRating { get; private set; } = 0.0;
+    // Add a public property to get the Chat Filter rating
+    public double ChatFilterRating { get; private set; }
+
     void Start()
     {
-        cnnsvmSetting = false;
+        //cnnsvmSetting = false;
         string template = "URI=file:";
         string relativeLoc = "Assets/Scripts/data/loggedArbitration.db";
         sqlLoc = $"{template}{relativeLoc}";
@@ -33,6 +42,17 @@ public class MatchManager : MonoBehaviour
         this.theJudge = new aiRequester();
         this.handleSql = new SQLliteHandler(sqlLoc, relativeLoc);
         handleSql.CreateTable();
+    }
+
+    // Property to get and set the cnnsvmSetting value
+    public bool CnnsvmSetting
+    {
+        get { return cnnsvmSetting; }
+        set
+        {
+            cnnsvmSetting = value;
+            Debug.Log("cnnsvmSetting set to: " + cnnsvmSetting);
+        }
     }
 
     private void Awake()
@@ -93,7 +113,13 @@ public class MatchManager : MonoBehaviour
         handleSql.InsertStatement(result);
         resultJudge(result);
         setMaxDamagingStatement(result);
-        
+
+        // Store the CNN SVM rating in the public property
+        CnnSvmRating = this.cnnsvmSetting ? result.ratingCNNSVM : result.ratingChatFilter;
+
+        // Store the Chat Filter rating in the public property
+        ChatFilterRating = !this.cnnsvmSetting ? result.ratingCNNSVM : result.ratingChatFilter;
+
 
         if (this.cnnsvmSetting)
         {
@@ -132,6 +158,9 @@ public class MatchManager : MonoBehaviour
             OnFinishTurn?.Invoke(result.ratingChatFilter);
         }
     }
+
+    // Add a public property to get the most damaging statement
+    public statementObj MostDamagingStatement { get { return mostDamagingStatement; } }
 
     private void setMaxDamagingStatement(statementObj newStatement)
     {

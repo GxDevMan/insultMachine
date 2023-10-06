@@ -50,6 +50,7 @@ public class GameProper : MonoBehaviour
     public GameObject thirtySecondsLeftSoundObject; // Reference to the GameObject with the "30 seconds left" audio source
     public AudioSource thirtySecondsLeftAudioSource; // Reference to the AudioSource for "30 seconds left" sound
     private bool thirtySecondsLeftAudioPlayed = false;
+    public PlayerHealthManager playerHealthManager;
 
     MatchManager matchInstance;
 
@@ -187,6 +188,11 @@ public class GameProper : MonoBehaviour
                 Debug.LogError("timerText is not assigned.");
             }
 
+            if (matchInstance.player1.health <= 0 || matchInstance.player2.health <= 0)
+            {
+                EndGame();
+            }
+
             currentPlayerTurnTimer -= Time.deltaTime;
             UpdateTimerText();
 
@@ -206,7 +212,7 @@ public class GameProper : MonoBehaviour
                     messagingScript.DisablePlayer2InputField();
                     messagingScript.SendMessageFromInputField(messagingScript.player2InputField);
                 }
-                
+
                 SwitchTurns();
             }
 
@@ -314,12 +320,31 @@ public class GameProper : MonoBehaviour
         Debug.Log("Game over!");
         gameOver = true;
 
-        // Display the Game Over Panel
-        gameOverPanel.SetActive(true);
+        // Display the appropriate win banner or neither if it's a draw
+        if (matchInstance.player1.health <= 0 && matchInstance.player2.health > 0)
+        {
+            playerHealthManager.player2WinBanner.SetActive(true); // Player 2 wins
+        }
+        else if (matchInstance.player2.health <= 0 && matchInstance.player1.health > 0)
+        {
+            playerHealthManager.player1WinBanner.SetActive(true); // Player 1 wins
+        }
+        else
+        {
+            // Display the Game Over Panel
+            gameOverPanel.SetActive(true);
 
-        // Play the game over sound
-        Debug.Log("Playing game over sound...");
-        gameoverAudioSource.Play();
+            // Play the game over sound
+            Debug.Log("Playing game over sound...");
+            gameoverAudioSource.Play();
+        }
+        // If both players have health remaining or both are at 0, it's a draw, and neither win banner is displayed
+
+        // Calculate the actual time remaining when a player wins
+        float timeRemaining = gameTimer;
+
+        // Pass the actual time remaining to the WinBanner scene by using PlayerPrefs
+        PlayerPrefs.SetFloat("TimeRemaining", timeRemaining);
 
         // Trigger the scene transition with a delay
         TransitionToWinBanner();
