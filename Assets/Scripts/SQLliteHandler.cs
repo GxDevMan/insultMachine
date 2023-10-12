@@ -231,13 +231,22 @@ public class SQLliteHandler
                 dbConnection.Open();
                 using (IDbCommand dbCmd = dbConnection.CreateCommand())
                 {
+                    dbCmd.CommandText = selectStatementSql;
+                    Debug.Log($"Selecting: matchId: {matchId}");
+                    Debug.Log($"Selecting: PlayerId: {playerId}");
+                    Debug.Log(selectStatementSql);
+                    
+
+
                     dbCmd.Parameters.Add(new SqliteParameter("@matchId", matchId));
                     dbCmd.Parameters.Add(new SqliteParameter("@playerId", playerId));
 
                     using (IDataReader reader = dbCmd.ExecuteReader())
                     {
+
                         while (reader.Read())
                         {
+                            Debug.Log("Adding Data");
                             int StatementId = Convert.ToInt32(reader["statementId"]);
                             int PlayerId = Convert.ToInt32(reader["playerId"]);
                             int MatchId = Convert.ToInt32(reader["MatchId"]);
@@ -246,7 +255,13 @@ public class SQLliteHandler
                             double RatingChatFilter = Convert.ToDouble(reader["ratingChatFilter"]);
                             int BoolCNNSVM = Convert.ToInt32(reader["boolCNNSVM"]);
                             int BoolChatFilter = Convert.ToInt32(reader["boolChatFilter"]);
-                            int TrueEval = Convert.ToInt32(reader["trueEval"]);
+
+
+                            int TrueEval = 0;
+                            if (reader["trueEval"] != DBNull.Value)
+                            {
+                                TrueEval = Convert.ToInt32(reader["statementId"]);
+                            }
                             string PlayerName = reader["Name"].ToString();
 
                             statementObj addstatement = new statementObj(StatementId,
@@ -268,7 +283,7 @@ public class SQLliteHandler
         }
         catch (Exception e)
         {
-
+            Debug.Log($"select rate statements failed: {e.StackTrace}");
         }
         return statementList;
     }
@@ -299,7 +314,7 @@ public class SQLliteHandler
         }
         catch (Exception e)
         {
-
+            Debug.Log($"rate statement failed: {e.Message}");
         }
         return inserted;
     }
@@ -338,7 +353,7 @@ public class SQLliteHandler
         }
         catch (Exception e)
         {
-            
+            Debug.Log($"rate statements failed: {e.Message}");
         }
         return updated;
     }
@@ -363,7 +378,7 @@ public class SQLliteHandler
             }
         } catch(Exception e)
         {
-
+            Debug.Log($"new mathc failed: {e.Message}");
         }
         return matchId;
     }

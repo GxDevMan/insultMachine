@@ -17,7 +17,7 @@ public class MatchManager : MonoBehaviour
     [SerializeField] public bool cnnsvmSetting = false;
     public int matchId { get; set; }
 
-    public SQLliteHandler handleSql;
+    public SQLliteHandler handleSql { get; set; }
     private string sqlLoc;
 
     private playerObj currentPlayer;
