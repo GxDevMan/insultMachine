@@ -58,8 +58,10 @@ public class rateStatementsScript : MonoBehaviour
 
     private void PopulateStatementListUI()
     {
+        int statementCount = 0;
         foreach (var statementObj in player1Msg)
         {
+            int currentStatementIndex = statementCount;
             GameObject statementItem = Instantiate(statementEntryPrefabP1, statementListContainerP1);
             Transform container = statementItem.transform.Find("Content"); // Find the container GameObject.
             Text statementText = statementItem.GetComponentInChildren<Text>();
@@ -77,13 +79,24 @@ public class rateStatementsScript : MonoBehaviour
 
                 checkboxes[i].onValueChanged.AddListener(isChecked =>
                 {
-                    // Handle checkbox state change for checkboxes[checkboxIndex]
+                    if(checkboxIndex == 1 && isChecked)
+                    {
+                        player1Msg[currentStatementIndex].trueEval = 0;
+                    }
+                    if(checkboxIndex == 0 && isChecked)
+                    {
+                        player1Msg[currentStatementIndex].trueEval = 1;
+                    }
                 });
             }
+            statementCount++;
         }
 
+
+        statementCount = 0;
         foreach (var statementObj in player2Msg)
         {
+            int currentStatementIndex = statementCount;
             GameObject statementItem = Instantiate(statementEntryPrefabP2, statementListContainerP2);
             Transform container = statementItem.transform.Find("Content"); // Find the container GameObject.
             Text statementText = statementItem.GetComponentInChildren<Text>();
@@ -101,15 +114,24 @@ public class rateStatementsScript : MonoBehaviour
 
                 checkboxes[i].onValueChanged.AddListener(isChecked =>
                 {
-                    // Handle checkbox state change for checkboxes[checkboxIndex]
+                    if (checkboxIndex == 1 && isChecked)
+                    {
+                        player2Msg[currentStatementIndex].trueEval = 0;
+                    }
+                    if(checkboxIndex == 0 && isChecked)
+                    {
+                        player2Msg[currentStatementIndex].trueEval = 1;
+                    }
                 });
             }
+            statementCount++;
         }
     }
 
 
     void OnDestroy()
     {
+        Debug.Log("On Destroy was called");
         getData.rateStatements(player1Msg);
         getData.rateStatements(player2Msg);
     }
