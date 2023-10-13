@@ -15,11 +15,18 @@ public class rateStatementsScript : MonoBehaviour
     MatchManager matchInstance;
     public SQLliteHandler getData;
 
-    public GameObject statementPrefab;
-    public Transform statementListContainer;
+    public GameObject statementEntryPrefabP1; // Rename this variable for clarity
+    public Transform statementListContainerP1;
+    public GameObject statementEntryPrefabP2; // Rename this variable for clarity
+    public Transform statementListContainerP2;
 
     private List<statementObj> player1Msg;
     private List<statementObj> player2Msg;
+
+    public Text player1MessageText;
+    public Text player2MessageText;
+    public int maxCheckboxes = 2;
+
     void Start()
     {
         matchInstance = MatchManager.instance;
@@ -31,54 +38,72 @@ public class rateStatementsScript : MonoBehaviour
         //displayData();
     }
 
-
     void displayData()
     {
-        
+        string player1Messages = "\n";
+        string player2Messages = "\n";
 
-        
         foreach (statementObj statement in player1Msg)
         {
-            statement.trueEval = 0;
-            Debug.Log("Player 1: " + statement.statement);
+            player1Messages += "Player 1: " + statement.statement + "\n";
         }
         foreach (statementObj statement in player2Msg)
         {
-            Debug.Log("Player 2: " + statement.statement);
+            player2Messages += "Player 2: " + statement.statement + "\n";
         }
 
+        player1MessageText.text = player1Messages;
+        player2MessageText.text = player2Messages;
     }
+
     private void PopulateStatementListUI()
     {
         foreach (var statementObj in player1Msg)
         {
-            GameObject statementItem = Instantiate(statementPrefab, statementListContainer);
+            GameObject statementItem = Instantiate(statementEntryPrefabP1, statementListContainerP1);
+            Transform container = statementItem.transform.Find("Content"); // Find the container GameObject.
             Text statementText = statementItem.GetComponentInChildren<Text>();
-            Toggle toxicToggle = statementItem.GetComponentInChildren<Toggle>();
+            Toggle[] checkboxes = statementItem.GetComponentsInChildren<Toggle>();
 
-            statementText.text = statementObj.statement;
+            // Set the statement text
+            statementText.text = "Player 1: " + statementObj.statement;
+            //statementText.text = "Player 1: " + statementObj.statement + "\t\t\t\t\t\t";
+            // checkboxes[0] represents the first checkbox, checkboxes[1] represents the second checkbox, and so on.
 
-            if(statementObj.trueEval == 0)
+            // Add event listeners for each checkbox to handle changes
+            for (int i = 0; i < checkboxes.Length; i++)
             {
-                toxicToggle.isOn = false;
-            }
-            else
-            {
-                toxicToggle.isOn = true;
-            }
+                int checkboxIndex = i; // Store the index to access it inside the listener
 
-            // Add an event listener for the toggle to handle changes
-            toxicToggle.onValueChanged.AddListener(isChecked =>
-            {
-                if (isChecked)
+                checkboxes[i].onValueChanged.AddListener(isChecked =>
                 {
-                    statementObj.trueEval = 1;
-                }
-                else
+                    // Handle checkbox state change for checkboxes[checkboxIndex]
+                });
+            }
+        }
+
+        foreach (var statementObj in player2Msg)
+        {
+            GameObject statementItem = Instantiate(statementEntryPrefabP2, statementListContainerP2);
+            Transform container = statementItem.transform.Find("Content"); // Find the container GameObject.
+            Text statementText = statementItem.GetComponentInChildren<Text>();
+            Toggle[] checkboxes = statementItem.GetComponentsInChildren<Toggle>();
+            
+            // Set the statement text
+            statementText.text = "Player 2: " + statementObj.statement;
+            //statementText.text = "Player 1: " + statementObj.statement + "\t\t\t\t\t\t";
+            // checkboxes[0] represents the first checkbox, checkboxes[1] represents the second checkbox, and so on.
+
+            // Add event listeners for each checkbox to handle changes
+            for (int i = 0; i < checkboxes.Length; i++)
+            {
+                int checkboxIndex = i; // Store the index to access it inside the listener
+
+                checkboxes[i].onValueChanged.AddListener(isChecked =>
                 {
-                    statementObj.trueEval = 0;
-                }
-            });
+                    // Handle checkbox state change for checkboxes[checkboxIndex]
+                });
+            }
         }
     }
 
@@ -86,7 +111,6 @@ public class rateStatementsScript : MonoBehaviour
     void OnDestroy()
     {
         getData.rateStatements(player1Msg);
-        getData.rateStatements(player2Msg); 
+        getData.rateStatements(player2Msg);
     }
-
 }
