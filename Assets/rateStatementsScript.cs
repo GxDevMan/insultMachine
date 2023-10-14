@@ -126,6 +126,15 @@ public class rateStatementsScript : MonoBehaviour
             }
             statementCount++;
         }
+
+        // Once you've populated the UI with clones, you can destroy or deactivate the prefab.
+        // Destroy the prefab:
+        Destroy(statementEntryPrefabP1);
+        Destroy(statementEntryPrefabP2);
+
+        // Or, if you want to deactivate them (hide them) rather than destroying them:
+        // statementEntryPrefabP1.SetActive(false);
+        // statementEntryPrefabP2.SetActive(false);
     }
 
 
