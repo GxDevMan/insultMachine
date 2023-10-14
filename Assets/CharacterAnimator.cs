@@ -7,16 +7,14 @@ public class CharacterAnimator : MonoBehaviour
     public Image player1CharacterImage;
     public Image player2CharacterImage;
 
-    public Sprite[] totoySprites; // Array of Totoy sprites for animation
-    public Sprite[] karenSprites; // Array of Karen sprites for animation
+    public Sprite[] totoySprites; 
+    public Sprite[] karenSprites; 
 
     private void Awake()
     {
-        // Load the selected character indices for both players
         int player1CharacterIndex = PlayerPrefs.GetInt("Player1CharacterIndex", 0);
         int player2CharacterIndex = PlayerPrefs.GetInt("Player2CharacterIndex", 1);
 
-        // Set the initial character images based on the selected indices
         player1CharacterImage.sprite = CharacterManager.instance.characters[player1CharacterIndex];
         player2CharacterImage.sprite = CharacterManager.instance.characters[player2CharacterIndex];
     }
@@ -33,7 +31,6 @@ public class CharacterAnimator : MonoBehaviour
         {
             StartCoroutine(AnimateCharacter(player1CharacterImage, karenSprites));
         }
-        // Add more conditions for other character animations as needed
     }
 
     public void PlayPlayer2AttackAnimation()
@@ -48,7 +45,6 @@ public class CharacterAnimator : MonoBehaviour
         {
             StartCoroutine(AnimateCharacter(player2CharacterImage, karenSprites));
         }
-        // Add more conditions for other character animations as needed
     }
 
     private IEnumerator AnimateCharacter(Image characterImage, Sprite[] sprites)
@@ -60,10 +56,8 @@ public class CharacterAnimator : MonoBehaviour
         foreach (Sprite sprite in sprites)
         {
             characterImage.sprite = sprite;
-            yield return new WaitForSeconds(0.2f); // Adjust the delay as needed
+            yield return new WaitForSeconds(0.2f); 
         }
-
-        // After the animation, reset to the default sprite
         characterImage.sprite = defaultSprite;
     }
 }

@@ -70,7 +70,6 @@ public class aiRequester
                 else
                 {
                     Debug.LogError("No result or request failed.");
-
                 }
             }
         }
