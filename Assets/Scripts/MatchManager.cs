@@ -204,23 +204,39 @@ public class MatchManager : MonoBehaviour
 
     private void handleAttack(double percentDamage)
     {
+        // Calculate base damage based on percent damage
+        int baseDamage = (int)(currentPlayer.maxDamage * percentDamage);
+
+        // Calculate a random modifier within a range (e.g., -20% to +10%)
+        float randomModifier = UnityEngine.Random.Range(-0.2f, 0.1f); // Modify the range as needed
+
+        // Apply the random modifier to the base damage
+        int finalDamage = Mathf.RoundToInt(baseDamage * (1 + randomModifier));
+
         if (currentPlayer == player1)
         {
-            int damage = (int)(player1.maxDamage * percentDamage);
-            player2.health -= damage;
+            player2.health -= finalDamage;
         }
         else
         {
-            int damage = (int)(player2.maxDamage * percentDamage);
-            player1.health -= damage;
+            player1.health -= finalDamage;
         }
     }
 
     private void handleHeal(double percentHeal)
     {
+        // Calculate base heal amount based on percent heal
+        int baseHeal = (int)(currentPlayer.maxHeal * percentHeal);
+
+        // Calculate a random modifier within a range (e.g., -25% to +5%)
+        float randomModifier = UnityEngine.Random.Range(-0.25f, 0.05f); // Modify the range as needed
+
+        // Apply the random modifier to the base heal
+        int finalHeal = Mathf.RoundToInt(baseHeal * (1 + randomModifier));
+
         if (currentPlayer == player1)
         {
-            player1.health += (int)(player1.maxHeal * percentHeal);
+            player1.health += finalHeal;
             if (player1.health > player1.maxHealth)
             {
                 player1.health = player1.maxHealth;
@@ -228,7 +244,7 @@ public class MatchManager : MonoBehaviour
         }
         else
         {
-            player2.health += (int)(player2.maxHeal * percentHeal);
+            player2.health += finalHeal;
             if (player2.health > player2.maxHealth)
             {
                 player2.health = player2.maxHealth;
