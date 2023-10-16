@@ -85,7 +85,7 @@ public class GameUIManager : MonoBehaviour
         // Log the restart action
         Debug.Log("Game Restarted");
 
-        startMatch(matchInstance.firstPlayer);
+        replayStartMatch(matchInstance.firstPlayer);
 
         // Reset the game timer in the GameProper script
         if (gameProper != null)
@@ -218,5 +218,12 @@ public class GameUIManager : MonoBehaviour
         playerObj player2 = new playerObj("Player 2", 100, 40, 30);
         matchInstance.newMatch(player1, player2);
         matchInstance.setFirstPlayer(firstPlayer);
+    }
+
+    private void replayStartMatch(bool firstPlayer)
+    {
+        Debug.Log("Restarting Match");
+        matchInstance.setFirstPlayer(firstPlayer);
+        matchInstance.restartMatch();
     }
 }

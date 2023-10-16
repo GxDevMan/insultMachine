@@ -358,6 +358,52 @@ public class SQLliteHandler
         return updated;
     }
 
+    public void DeleteMatchAndStatements(int matchId)
+    {
+        using (IDbConnection dbConnection = new SqliteConnection(sqlLocString))
+        {
+            dbConnection.Open();
+            using (IDbTransaction transaction = dbConnection.BeginTransaction())
+            {
+
+                using (IDbCommand dbCmd = dbConnection.CreateCommand())
+                {
+                    // Construct a SQL query to delete statements for the given MatchId
+                    string deleteStatementsQuery = "DELETE FROM StatementsTable WHERE MatchId = @MatchId";
+                    dbCmd.CommandText = deleteStatementsQuery;
+
+                    // Create a parameter for the MatchId
+                    IDbDataParameter matchIdParam = dbCmd.CreateParameter();
+                    matchIdParam.ParameterName = "@MatchId";
+                    matchIdParam.Value = matchId;
+                    dbCmd.Parameters.Add(matchIdParam);
+
+                    // Execute the delete query
+                    dbCmd.ExecuteNonQuery();
+                }
+
+                using (IDbCommand dbCmd = dbConnection.CreateCommand())
+                {
+                    // Construct a SQL query to delete the match from MatchTable
+                    string deleteMatchQuery = "DELETE FROM MatchTable WHERE MatchId = @MatchId";
+                    dbCmd.CommandText = deleteMatchQuery;
+
+                    // Create a parameter for the MatchId
+                    IDbDataParameter matchIdParam = dbCmd.CreateParameter();
+                    matchIdParam.ParameterName = "@MatchId";
+                    matchIdParam.Value = matchId;
+                    dbCmd.Parameters.Add(matchIdParam);
+
+                    // Execute the delete query
+                    dbCmd.ExecuteNonQuery();
+                }
+
+                transaction.Commit();
+            }
+            dbConnection.Close();
+        }
+    }
+
     public int newMatch()
     {
         int matchId = -1;
@@ -378,7 +424,7 @@ public class SQLliteHandler
             }
         } catch(Exception e)
         {
-            Debug.Log($"new mathc failed: {e.Message}");
+            Debug.Log($"new match failed: {e.Message}");
         }
         return matchId;
     }

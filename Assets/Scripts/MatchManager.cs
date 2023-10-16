@@ -85,6 +85,14 @@ public class MatchManager : MonoBehaviour
         player2.playerId = handleSql.newPlayer(player2);
     }
 
+    public void restartMatch()
+    {
+        handleSql.DeleteMatchAndStatements(this.matchId);
+        this.player1.health = player1.maxHealth;
+        this.player2.health = player2.maxHealth;
+        this.matchId = handleSql.newMatch();
+    }
+
     public void judging(string text)
     {
         if (text != null)
