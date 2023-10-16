@@ -215,10 +215,12 @@ public class MatchManager : MonoBehaviour
 
         if (currentPlayer == player1)
         {
+            Debug.Log($"Final Damage to player2: {finalDamage}");
             player2.health -= finalDamage;
         }
         else
         {
+            Debug.Log($"Final Damage to player1: {finalDamage}");
             player1.health -= finalDamage;
         }
     }
@@ -237,14 +239,17 @@ public class MatchManager : MonoBehaviour
         if (currentPlayer == player1)
         {
             player1.health += finalHeal;
+            Debug.Log($"Final Heal to player1: {finalHeal}");
             if (player1.health > player1.maxHealth)
             {
+
                 player1.health = player1.maxHealth;
             }
         }
         else
         {
             player2.health += finalHeal;
+            Debug.Log($"Final Heal to player2: {finalHeal}");
             if (player2.health > player2.maxHealth)
             {
                 player2.health = player2.maxHealth;

@@ -127,8 +127,8 @@ public class CoinFlip : MonoBehaviour
 
     private void startMatch(bool firstPlayer)
     {
-        playerObj player1 = new playerObj("Player 1", 100, 40, 30);
-        playerObj player2 = new playerObj("Player 2", 100, 40, 30);
+        playerObj player1 = new playerObj("Player 1", 100, 26, 30);
+        playerObj player2 = new playerObj("Player 2", 100, 26, 30);
         matchInstance.newMatch(player1, player2);
         matchInstance.setFirstPlayer(firstPlayer);
     }

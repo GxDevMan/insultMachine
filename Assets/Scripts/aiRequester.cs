@@ -50,7 +50,7 @@ public class aiRequester
                 {
                     VerdictData verdictdata = JsonUtility.FromJson<VerdictData>(responseData);
                     double judgementNumber = verdictdata.verdict;
-                    double roundedValue = Math.Round(judgementNumber, 2);
+                    double roundedValue = Math.Abs(Math.Round(judgementNumber, 2));
                     editThis.ratingCNNSVM = roundedValue;
                     if (judgementNumber >= 1)
                     {
@@ -104,7 +104,7 @@ public class aiRequester
                     VerdictData verdictdata = JsonUtility.FromJson<VerdictData>(responseData);
                     double judgementNumber = verdictdata.verdict;
                     int toxicOrNot = (int)toxicdata.toxic;
-                    double roundedValue = Math.Round(judgementNumber, 2);
+                    double roundedValue = Math.Abs(Math.Round(judgementNumber, 2));
                     textsToSend.ratingChatFilter = roundedValue;
 
                     if(textsToSend.ratingChatFilter > 1)

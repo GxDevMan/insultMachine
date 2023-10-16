@@ -1,4 +1,6 @@
-﻿public class statementObj
+﻿using System;
+
+public class statementObj
 {
     public int statementId { get; set; }
     public int playerId { get; set; }
@@ -19,8 +21,8 @@
         this.playerId = playerId;
         this.matchId = matchId;
         this.statement = statement;
-        this.ratingCNNSVM = ratingCNNSVM;
-        this.ratingChatFilter = ratingChatFilter;
+        this.ratingCNNSVM = Math.Abs(ratingCNNSVM);
+        this.ratingChatFilter = Math.Abs(ratingChatFilter);
         this.boolCNNSVM = boolCNNSVM;
         this.boolChatFilter = boolChatFilter;
         this.trueEval = trueEval;
@@ -32,8 +34,8 @@
         this.playerId = playerId;
         this.matchId = matchId;
         this.statement = statement;
-        this.ratingCNNSVM = ratingCNNSVM;
-        this.ratingChatFilter = ratingChatFilter;
+        this.ratingCNNSVM = Math.Abs(ratingCNNSVM);
+        this.ratingChatFilter = Math.Abs(ratingChatFilter);
         this.boolCNNSVM = boolCNNSVM;
         this.boolChatFilter = boolChatFilter;
         this.trueEval = trueEval;
@@ -44,8 +46,8 @@
         this.playerId = playerId;
         this.matchId = matchId;
         this.statement = statement;
-        this.ratingCNNSVM = ratingCNNSVM;
-        this.ratingChatFilter = ratingChatFilter;
+        this.ratingCNNSVM = Math.Abs(ratingCNNSVM);
+        this.ratingChatFilter = Math.Abs(ratingChatFilter);
         this.boolCNNSVM = boolCNNSVM;
         this.boolChatFilter = boolChatFilter;
     }
