@@ -221,7 +221,7 @@ public class GameProper : MonoBehaviour
 
 
     // Function to start the countdown
-    private void StartCountdown()
+    public void StartCountdown()
     {
         isCountingDown = true;
         int countdownSeconds = Mathf.CeilToInt(countdownDuration);
