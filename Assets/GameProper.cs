@@ -143,8 +143,8 @@ public class GameProper : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Return))
             {
                 // Stop the "5 seconds left" audio
-                fiveSecondsLeftAudioSource.Stop();
-                isFiveSecondsLeftAudioPlaying = false;
+                //fiveSecondsLeftAudioSource.Stop();
+                //isFiveSecondsLeftAudioPlaying = false;
 
                 // Handle player input here...
             }
