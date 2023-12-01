@@ -2659,7 +2659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abe25c2a18791124e8999941c2e38b29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameDuration: 30
+  gameDuration: 181
   timerText: {fileID: 815778686}
   player1TurnDuration: 20
   player2TurnDuration: 20
@@ -6083,8 +6083,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1821519138}
   m_HandleRect: {fileID: 1821519137}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 0
+  m_Value: 1
+  m_Size: 1
   m_NumberOfSteps: 2
   m_OnValueChanged:
     m_PersistentCalls:
