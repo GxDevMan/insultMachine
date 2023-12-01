@@ -138,7 +138,7 @@ public class MatchManager : MonoBehaviour
         }
         else
         {
-            if (result.ratingChatFilter > 0.5)
+            if (result.boolChatFilter == 1)
             {
                 handleAttack(result.ratingChatFilter);
             }
