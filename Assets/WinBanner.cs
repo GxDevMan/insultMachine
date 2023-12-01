@@ -42,7 +42,12 @@ public class WinBanner : MonoBehaviour
             player2WinnerText.gameObject.SetActive(true);
         }
 
-        double ratingValue = MatchManager.instance.CnnsvmSetting ? MatchManager.instance.CnnSvmRating : MatchManager.instance.ChatFilterRating;
+        MatchManager managerMatch = MatchManager.instance;
+        statementObj damagingStatement = managerMatch.mostDamagingStatement;
+
+        double ratingValue = MatchManager.instance.CnnsvmSetting ? damagingStatement.ratingCNNSVM : damagingStatement.ratingChatFilter;
+        
+
         string ratingLabel = MatchManager.instance.CnnsvmSetting ? "Most Damage Phrases Rating (CNN/SVM): " : "Most Damage Phrases Rating (BagOfWords): ";
 
         if (ratingText != null)
