@@ -32,6 +32,9 @@ public class MessagingScript : MonoBehaviour
 
     private InputField activeInputField; // Track the active input field
 
+    private bool gameIsOver = false;
+
+
     void Start()
     {
         matchInstance = MatchManager.instance;
@@ -66,6 +69,13 @@ public class MessagingScript : MonoBehaviour
                 lastTypeTime = Time.time;
             }
         }
+    }
+
+    public void DisableInputFieldsAfterGameOver()
+    {
+        gameIsOver = true;
+        player1InputField.interactable = false;
+        player2InputField.interactable = false;
     }
 
     void TypeCharacter(char character)

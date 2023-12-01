@@ -583,7 +583,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 607.364}
+  m_AnchoredPosition: {x: 18.752197, y: 607.364}
   m_SizeDelta: {x: -18.752197, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &67317765
@@ -672,7 +672,8 @@ MonoBehaviour:
   player2HealthBar: {fileID: 1592208134}
   player1WinBanner: {fileID: 1305004586}
   player2WinBanner: {fileID: 326895463}
-  gameoverAudioSource: {fileID: 292015369}
+  playerDrawBanner: {fileID: 1127107869}
+  gameWinnerAudioSource: {fileID: 0}
   winSound: {fileID: 8300000, guid: dae49a14016b3a44fbe77bf8f792d0e3, type: 3}
 --- !u!1 &206227740
 GameObject:
@@ -1839,6 +1840,7 @@ RectTransform:
   - {fileID: 409325396}
   - {fileID: 1305004587}
   - {fileID: 326895464}
+  - {fileID: 1127107870}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2657,7 +2659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abe25c2a18791124e8999941c2e38b29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameDuration: 181
+  gameDuration: 30
   timerText: {fileID: 815778686}
   player1TurnDuration: 20
   player2TurnDuration: 20
@@ -2671,6 +2673,7 @@ MonoBehaviour:
   isGameRunning: 0
   coinFlip: {fileID: 0}
   gameoverAudioSource: {fileID: 206227742}
+  gameWinnerAudioSource: {fileID: 292015369}
   countDownAudioSource: {fileID: 1787479300}
   fiveSecondsLeftSoundObject: {fileID: 1400040471}
   fiveSecondsLeftAudioSource: {fileID: 1400040473}
@@ -3826,6 +3829,84 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 843023038}
+  m_CullTransparentMesh: 0
+--- !u!1 &850423105
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 850423106}
+  - component: {fileID: 850423108}
+  - component: {fileID: 850423107}
+  m_Layer: 5
+  m_Name: Draw Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &850423106
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850423105}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1127107870}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -32.227, y: -4.599945}
+  m_SizeDelta: {x: 1423.3226, y: 213.55179}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &850423107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850423105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: edb7f630f22005a429af24e5772c5985, type: 3}
+    m_FontSize: 200
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 300
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: DRAW!
+--- !u!222 &850423108
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850423105}
   m_CullTransparentMesh: 0
 --- !u!1 &854034500
 GameObject:
@@ -5012,6 +5093,81 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1127107869
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1127107870}
+  - component: {fileID: 1127107872}
+  - component: {fileID: 1127107871}
+  m_Layer: 5
+  m_Name: Draw Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1127107870
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127107869}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 850423106}
+  m_Father: {fileID: 362987979}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0, y: 0}
+  m_SizeDelta: {x: 39.596924, y: 95.032715}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1127107871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127107869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1127107872
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127107869}
+  m_CullTransparentMesh: 0
 --- !u!1 &1134522997
 GameObject:
   m_ObjectHideFlags: 0
@@ -5928,7 +6084,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1821519137}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0
   m_NumberOfSteps: 2
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7423,7 +7579,8 @@ MonoBehaviour:
   player2HealthBar: {fileID: 2033646640}
   player1WinBanner: {fileID: 0}
   player2WinBanner: {fileID: 0}
-  gameoverAudioSource: {fileID: 0}
+  playerDrawBanner: {fileID: 0}
+  gameWinnerAudioSource: {fileID: 0}
   winSound: {fileID: 0}
 --- !u!114 &1592208134
 MonoBehaviour:
@@ -9702,7 +9859,8 @@ MonoBehaviour:
   player2HealthBar: {fileID: 1592208134}
   player1WinBanner: {fileID: 0}
   player2WinBanner: {fileID: 0}
-  gameoverAudioSource: {fileID: 0}
+  playerDrawBanner: {fileID: 0}
+  gameWinnerAudioSource: {fileID: 0}
   winSound: {fileID: 0}
 --- !u!114 &2033646640
 MonoBehaviour:

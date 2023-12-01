@@ -5,6 +5,7 @@ public class WinBanner : MonoBehaviour
 {
     public Text player1WinnerText;
     public Text player2WinnerText;
+    public Text playerTieText;
     public Text ratingText;
     public Text mostDamagePhrasesText; // Add a reference to the new Text component
     public Text gameDurationText;
@@ -40,6 +41,10 @@ public class WinBanner : MonoBehaviour
         if (player1.health > player2.health)
         {
             player1WinnerText.gameObject.SetActive(true);
+        }
+        else if (player1.health == player2.health)
+        {
+            playerTieText.gameObject.SetActive(true);
         }
         else
         {

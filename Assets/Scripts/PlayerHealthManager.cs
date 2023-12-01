@@ -13,9 +13,10 @@ public class PlayerHealthManager : MonoBehaviour
     MatchManager matchInstance;
     private bool gameOver = false; 
     public GameObject player1WinBanner; 
-    public GameObject player2WinBanner; 
+    public GameObject player2WinBanner;
+    public GameObject playerDrawBanner;
 
-    public AudioSource gameoverAudioSource; 
+    public AudioSource gameWinnerAudioSource; 
     public AudioClip winSound; 
 
     void Start()
@@ -44,7 +45,7 @@ public class PlayerHealthManager : MonoBehaviour
             gameOver = true;
 
             
-            gameoverAudioSource.Play();
+            gameWinnerAudioSource.Play();
 
             int winnerID;
 

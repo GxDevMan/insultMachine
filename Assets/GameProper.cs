@@ -43,6 +43,7 @@ public class GameProper : MonoBehaviour
     public CoinFlip coinFlip; // Reference to the CoinFlip script
 
     public AudioSource gameoverAudioSource;
+    public AudioSource gameWinnerAudioSource;
     public AudioSource countDownAudioSource;
     public GameObject fiveSecondsLeftSoundObject; // Reference to the GameObject with the "5 seconds left" audio source
     public AudioSource fiveSecondsLeftAudioSource; // Reference to the AudioSource for "5 seconds left" sound
@@ -130,14 +131,14 @@ public class GameProper : MonoBehaviour
             gameTimer -= Time.deltaTime;
 
             // Check if gameTimer is 5 seconds or below
-            if (gameTimer <= 5.0f && !isFiveSecondsLeftAudioPlaying)
-            {
-                if (!fiveSecondsLeftAudioSource.isPlaying)
-                {
-                    fiveSecondsLeftAudioSource.Play();
-                    isFiveSecondsLeftAudioPlaying = true; // Set the flag to indicate it's playing
-                }
-            }
+            //if (gameTimer <= 6.0f && !isFiveSecondsLeftAudioPlaying)
+            //{
+            //    if (!fiveSecondsLeftAudioSource.isPlaying)
+            //    {
+            //        fiveSecondsLeftAudioSource.Play();
+            //        isFiveSecondsLeftAudioPlaying = true; // Set the flag to indicate it's playing
+            //    }
+            //}
 
             // Check for player input and stop the "5 seconds left" audio if input is detected
             if (Input.GetKeyDown(KeyCode.Return))
@@ -326,19 +327,25 @@ public class GameProper : MonoBehaviour
         playerObj player2 = managerMatch.player2;
 
         // Display the appropriate win banner or neither if it's a draw
-        if (player2.health > player1.health)
+        if (player2.health > player1.health && gameTimer != 0)
         {
             playerHealthManager.player2WinBanner.SetActive(true); // Player 2 wins
+            //gameOverPanel.SetActive(true);
+            gameWinnerAudioSource.Play();
         }
-        if (player2.health < player1.health)
+        if (player2.health < player1.health && gameTimer != 0)
         {
             playerHealthManager.player1WinBanner.SetActive(true); // Player 1 wins
+            //gameOverPanel.SetActive(true);
+            gameWinnerAudioSource.Play();
         }
-        if (player1.health == player2.health) { 
-
+        if (player1.health == player2.health) 
+        {
+            //playerHealthManager.playerDrawBanner.SetActive(true); // Draw
+            gameOverPanel.SetActive(true);
+            gameoverAudioSource.Play();
         }
-
-        else
+        if (player1.health == player2.health && gameTimer <= 0 || player2.health > player1.health && gameTimer <= 0 || player2.health < player1.health && gameTimer <= 0)
         {
             // Display the Game Over Panel
             gameOverPanel.SetActive(true);
@@ -354,6 +361,9 @@ public class GameProper : MonoBehaviour
 
         // Pass the actual time remaining to the WinBanner scene by using PlayerPrefs
         PlayerPrefs.SetFloat("TimeRemaining", timeRemaining);
+
+        // Disable input fields in MessagingScript after the game is over
+        messagingScript.DisableInputFieldsAfterGameOver();
 
         // Trigger the scene transition with a delay
         TransitionToWinBanner();
