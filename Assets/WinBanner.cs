@@ -33,11 +33,15 @@ public class WinBanner : MonoBehaviour
         int winnerID = PlayerPrefs.GetInt("WinnerID", 0);
 
         // Check the winner and enable the corresponding text
-        if (winnerID == 1)
+        MatchManager matchInstance = MatchManager.instance;
+        playerObj player1 = matchInstance.player1;
+        playerObj player2 = matchInstance.player2;
+
+        if (player1.health > player2.health)
         {
             player1WinnerText.gameObject.SetActive(true);
         }
-        else if (winnerID == 2)
+        else
         {
             player2WinnerText.gameObject.SetActive(true);
         }

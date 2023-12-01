@@ -49,7 +49,7 @@ public class PlayerHealthManager : MonoBehaviour
             int winnerID;
 
             
-            if (matchInstance.player1.health <= 0)
+            if (matchInstance.player1.health < matchInstance.player2.health)
             {
                 
                 player2WinBanner.SetActive(true);

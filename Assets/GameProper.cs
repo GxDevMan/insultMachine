@@ -320,15 +320,24 @@ public class GameProper : MonoBehaviour
         Debug.Log("Game over!");
         gameOver = true;
 
+        MatchManager managerMatch = MatchManager.instance;
+
+        playerObj player1 = managerMatch.player1;
+        playerObj player2 = managerMatch.player2;
+
         // Display the appropriate win banner or neither if it's a draw
-        if (matchInstance.player1.health <= 0 && matchInstance.player2.health > 0)
+        if (player2.health > player1.health)
         {
             playerHealthManager.player2WinBanner.SetActive(true); // Player 2 wins
         }
-        else if (matchInstance.player2.health <= 0 && matchInstance.player1.health > 0)
+        if (player2.health < player1.health)
         {
             playerHealthManager.player1WinBanner.SetActive(true); // Player 1 wins
         }
+        if (player1.health == player2.health) { 
+
+        }
+
         else
         {
             // Display the Game Over Panel
