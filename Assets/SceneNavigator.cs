@@ -64,9 +64,9 @@ public class SceneNavigator : MonoBehaviour
         SceneManager.LoadScene("CharacterSelect");
     }
 
-    public void LoadCreditsScene()
+    public void LoadGuideScene()
     {
-        SceneManager.LoadScene("Credits");
+        SceneManager.LoadScene("Guide");
     }
 
     public void LoadSettingsScene()

@@ -143,8 +143,8 @@ public class GameProper : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Return))
             {
                 // Stop the "5 seconds left" audio
-                fiveSecondsLeftAudioSource.Stop();
-                isFiveSecondsLeftAudioPlaying = false;
+                //fiveSecondsLeftAudioSource.Stop();
+                //isFiveSecondsLeftAudioPlaying = false;
 
                 // Handle player input here...
             }
@@ -221,7 +221,7 @@ public class GameProper : MonoBehaviour
 
 
     // Function to start the countdown
-    private void StartCountdown()
+    public void StartCountdown()
     {
         isCountingDown = true;
         int countdownSeconds = Mathf.CeilToInt(countdownDuration);

@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.IO;
 using UnityEngine;
 
 public class MatchManager : MonoBehaviour
@@ -31,12 +32,15 @@ public class MatchManager : MonoBehaviour
 
     void Start()
     {
-        string template = "URI=file:";
-        string relativeLoc = "Assets/Scripts/data/loggedArbitration.db";
-        sqlLoc = $"{template}{relativeLoc}";
+        string dbFileName = "loggedArbitration.db";
+        string dbPath = Path.Combine(Application.dataPath, dbFileName);
+
+        // The above code constructs a full path to the database file within the game's directory.
+
+        string connectionString = $"URI=file:{dbPath}";
 
         this.theJudge = new aiRequester();
-        this.handleSql = new SQLliteHandler(sqlLoc, relativeLoc);
+        this.handleSql = new SQLliteHandler(connectionString, dbPath);
         handleSql.CreateTable();
     }
 

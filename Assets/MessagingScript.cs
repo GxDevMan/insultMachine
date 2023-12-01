@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.EventSystems;
 
 public class MessagingScript : MonoBehaviour
 {
@@ -24,6 +25,13 @@ public class MessagingScript : MonoBehaviour
 
     MatchManager matchInstance;
 
+    private string autoTypeMessage = ""; // The message you want to auto-type
+    private float typeDelay = 0.1f; // Delay between typing each character
+    private float lastTypeTime;
+    private int currentCharacterIndex;
+
+    private InputField activeInputField; // Track the active input field
+
     void Start()
     {
         matchInstance = MatchManager.instance;
@@ -39,6 +47,49 @@ public class MessagingScript : MonoBehaviour
         player2PlaceholderText = player2InputField.placeholder.GetComponent<Text>().text;
 
         //DisablePlayer2InputField();
+        currentCharacterIndex = 0;
+        lastTypeTime = Time.time;
+
+        // Start typing in the initially enabled input field
+        SetActiveInputField();
+    }
+
+    void Update()
+    {
+        if (currentCharacterIndex < autoTypeMessage.Length)
+        {
+            if (Time.time - lastTypeTime >= typeDelay)
+            {
+                char nextCharacter = autoTypeMessage[currentCharacterIndex];
+                TypeCharacter(nextCharacter);
+                currentCharacterIndex++;
+                lastTypeTime = Time.time;
+            }
+        }
+    }
+
+    void TypeCharacter(char character)
+    {
+        // Append the character to the active input field's text
+        if (activeInputField != null)
+        {
+            activeInputField.text += character;
+        }
+    }
+
+    void SetActiveInputField()
+    {
+        // Set the initially enabled input field as the active one
+        if (player1InputField.interactable)
+        {
+            activeInputField = player1InputField;
+            EventSystem.current.SetSelectedGameObject(player1InputField.gameObject);
+        }
+        else if (player2InputField.interactable)
+        {
+            activeInputField = player2InputField;
+            EventSystem.current.SetSelectedGameObject(player2InputField.gameObject);
+        }
     }
 
     private void OnPlayer1ValueChanged(string text)
@@ -185,16 +236,22 @@ public class MessagingScript : MonoBehaviour
     public void EnablePlayer2InputField()
     {
         player2InputField.interactable = true;
+        SetActiveInputField();
+
     }
 
     public void EnablePlayer1InputField()
     {
         player1InputField.interactable = true;
+        SetActiveInputField();
+
     }
 
     public void DisablePlayer1InputField()
     {
         player1InputField.interactable = false;
+        SetActiveInputField();
+
         if (!string.IsNullOrEmpty(player1InputField.text))
         {
             
@@ -206,6 +263,8 @@ public class MessagingScript : MonoBehaviour
     public void DisablePlayer2InputField()
     {
         player2InputField.interactable = false;
+        SetActiveInputField();
+
         if (!string.IsNullOrEmpty(player2InputField.text))
         {
             

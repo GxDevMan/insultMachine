@@ -517,7 +517,7 @@ GameObject:
   - component: {fileID: 117985259}
   - component: {fileID: 117985258}
   m_Layer: 5
-  m_Name: Credits Button Text
+  m_Name: Guide Button Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -539,8 +539,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000026703, y: 0.0000031124}
-  m_SizeDelta: {x: 177.00653, y: 59.652542}
+  m_AnchoredPosition: {x: 0.000099182, y: 0.0000031124}
+  m_SizeDelta: {x: 251.79425, y: 59.652542}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &117985258
 MonoBehaviour:
@@ -574,7 +574,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: CREDITS
+  m_Text: GUIDE
 --- !u!222 &117985259
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1418,7 +1418,7 @@ GameObject:
   - component: {fileID: 853950750}
   - component: {fileID: 853950749}
   m_Layer: 5
-  m_Name: Credits Button
+  m_Name: Guide Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1500,7 +1500,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 853950749}
-        m_MethodName: LoadCreditsScene
+        m_MethodName: LoadGuideScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
