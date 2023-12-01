@@ -83,6 +83,7 @@ public class MatchManager : MonoBehaviour
         this.player2 = player2;
         player1.playerId = handleSql.newPlayer(player1);
         player2.playerId = handleSql.newPlayer(player2);
+        mostDamagingStatement = null;
     }
 
     public void restartMatch()
@@ -91,6 +92,7 @@ public class MatchManager : MonoBehaviour
         this.player1.health = player1.maxHealth;
         this.player2.health = player2.maxHealth;
         this.matchId = handleSql.newMatch();
+        mostDamagingStatement = null;
     }
 
     public void judging(string text)
